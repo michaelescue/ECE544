@@ -27,26 +27,41 @@ parameter FALSE = 1'b0;
 parameter CLOCK_CYCLE = 20 ;
 parameter CLOCK_WIDTH = CLOCK_CYCLE/2;
 parameter IDLE_CLOCKS = 2;
-parameter  WIDTH = 8;
+parameter  WIDTH = 1;
+parameter COUNTER_BITS = 32;
+parameter RED_BIT = 8'h1;
+parameter BLUE_BIT = 8'h2;
+parameter GREEN_BIT = 8'h4;
 
 // Outputs of DUT.
-wire q;
+wire [31:0] pdc;
 
 // Simulated Inputs to DUT.
-reg Clock, Reset, d;
+reg Clock, Reset;
+reg [15:0] sw;
+reg [7:0] pwm;
 
-ff_reg #(WIDTH) ff0(Clock, d, q);
+
+// DUTs
+//ff_reg ff0(Clock, d, q);
+//ff_reg ff1(Clock, q, q1);
+//counter counter0(Clock, Reset, q1, count0);
+//counter counter1(Clock, Reset, 1'b1, count1);
+    pwdet detector1 (Clock, Reset, sw, pwm, pdc);
 
 // Establish monitor block
 initial
     begin
-        $monitor($time, "%b", q);
+        $monitor($time, "   %b  %b", sw, pwm);
     end
     
 // Initiate free running clock.
 initial
 begin
     Clock = FALSE;
+    Reset = TRUE;
+    pwm = 0;
+    sw = 0;
     forever #CLOCK_WIDTH Clock = ~Clock;
 end
 
@@ -61,25 +76,26 @@ initial
 // STimulus generation.
 initial
     begin
-        d = 0;
-        repeat(10) @(negedge Clock);
-        d = 1;
-        repeat(10) @(negedge Clock);
-        d = 0;
-        repeat(10) @(negedge Clock);
-        d = 1;
-        repeat(10) @(negedge Clock);
-        d = 0;
-        repeat(10) @(negedge Clock);
-        d = 0;
-        repeat(10) @(negedge Clock);
-        d = 1;
-        repeat(10) @(negedge Clock);
-        d = 0;
-        repeat(10) @(negedge Clock);
-        d = 1;
-        repeat(10) @(negedge Clock);
-        $stop;
+        sw = 32'h0;
+        repeat(1) @(negedge Clock);
+        pwm = pwm ^ RED_BIT;
+        repeat(1) @(negedge Clock);
+        pwm = pwm ^ RED_BIT;
+        repeat(1) @(negedge Clock);
+        pwm = pwm ^ RED_BIT;
+        repeat(1) @(negedge Clock);
+        pwm = pwm ^ RED_BIT;
+        repeat(1) @(negedge Clock);
+        pwm = pwm ^ RED_BIT;
+        repeat(1) @(negedge Clock);
+        pwm = pwm ^ RED_BIT;
+        repeat(1) @(negedge Clock);
+        pwm = pwm ^ RED_BIT;
+        repeat(1) @(negedge Clock);
+        pwm = pwm ^ RED_BIT;
+        repeat(1) @(negedge Clock);
+        
+                        $stop;
     end
       
 

@@ -29,6 +29,8 @@ module ff_reg #(
     output reg  [WIDTH-1:0]     q
     );
     
+    initial q = 0;
+    
     // Synchronizer
     always @(posedge clk)   // Sechnronized-side clock.
         begin

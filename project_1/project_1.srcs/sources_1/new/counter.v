@@ -29,13 +29,15 @@ module counter #(
     output reg [COUNTER_BITS-1:0]       count
     );
     
+    initial count = 0;
+    
     always@(posedge clk)
         begin
             if(reset)
                 begin
                     count <= 0;
                 end
-            if(increment)
+            else if(increment)
                 begin
                     count <= count + 1'b1;
                 end
