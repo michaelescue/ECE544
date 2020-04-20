@@ -1,0 +1,18 @@
+vhdl xil_defaultlib  \
+"../../../bd/embsys/ip/embsys_microblaze_0_1/sim/embsys_microblaze_0_1.vhd" \
+"../../../bd/embsys/ip/embsys_PmodOLEDrgb_0_1/ip/PmodOLEDrgb_axi_quad_spi_0_0/sim/PmodOLEDrgb_axi_quad_spi_0_0.vhd" \
+"../../../bd/embsys/ip/embsys_PmodOLEDrgb_0_1/ip/PmodOLEDrgb_axi_gpio_0_1/sim/PmodOLEDrgb_axi_gpio_0_1.vhd" \
+"../../../bd/embsys/ip/embsys_axi_gpio_0_1/sim/embsys_axi_gpio_0_1.vhd" \
+"../../../bd/embsys/ip/embsys_axi_timer_0_1/sim/embsys_axi_timer_0_1.vhd" \
+"../../../bd/embsys/ip/embsys_fit_timer_0_1/sim/embsys_fit_timer_0_1.vhd" \
+"../../../bd/embsys/ip/embsys_axi_uartlite_0_1/sim/embsys_axi_uartlite_0_1.vhd" \
+"../../../bd/embsys/ip/embsys_microblaze_0_axi_intc_1/sim/embsys_microblaze_0_axi_intc_1.vhd" \
+"../../../bd/embsys/ip/embsys_mdm_1_1/sim/embsys_mdm_1_1.vhd" \
+"../../../bd/embsys/ip/embsys_rst_clk_wiz_1_100M_1/sim/embsys_rst_clk_wiz_1_100M_1.vhd" \
+"../../../bd/embsys/ip/embsys_dlmb_v10_1/sim/embsys_dlmb_v10_1.vhd" \
+"../../../bd/embsys/ip/embsys_ilmb_v10_1/sim/embsys_ilmb_v10_1.vhd" \
+"../../../bd/embsys/ip/embsys_dlmb_bram_if_cntlr_1/sim/embsys_dlmb_bram_if_cntlr_1.vhd" \
+"../../../bd/embsys/ip/embsys_ilmb_bram_if_cntlr_1/sim/embsys_ilmb_bram_if_cntlr_1.vhd" \
+"../../../bd/embsys/ip/embsys_PmodENC_0_1/src/PmodENC_axi_gpio_0_0/sim/PmodENC_axi_gpio_0_0.vhd" \
+
+nosort

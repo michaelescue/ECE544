@@ -1,0 +1,111 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 4116
+License: Customer
+
+Current time: 	Mon Apr 13 14:33:18 PDT 2020
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 267 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	ME
+User home directory: C:/Users/ME
+User working directory: C:/Users/ME/Vivado Projects/project_0
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/ME/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/ME/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/ME/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/ME/Vivado Projects/project_0/vivado.log
+Vivado journal file location: 	C:/Users/ME/Vivado Projects/project_0/vivado.jou
+Engine tmp dir: 	C:/Users/ME/Vivado Projects/project_0/.Xil/Vivado-4116-DESKTOP-J4B3MVP
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	156 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 527 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// [GUI Memory]: 16 MB (+13901kb) [00:00:05]
+// [Engine Memory]: 263 MB (+124094kb) [00:00:05]
+// [GUI Memory]: 19 MB (+2930kb) [00:00:10]
+// [GUI Memory]: 25 MB (+4628kb) [00:00:15]
+// [GUI Memory]: 27 MB (+1514kb) [00:00:20]
+// TclEventType: START_GUI
+// [GUI Memory]: 65 MB (+38398kb) [00:00:27]
+// [Engine Memory]: 469 MB (+202574kb) [00:00:27]
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\Users\ME\Vivado Projects\project_0\project_0.xpr. Version: Vivado v2018.2 
+// bx (ck):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// Tcl Message: open_project {C:/Users/ME/Vivado Projects/project_0/project_0.xpr} 
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// [Engine Memory]: 527 MB (+35849kb) [00:00:31]
+// HMemoryUtils.trashcanNow. Engine heap size: 542 MB. GUI used memory: 37 MB. Current time: 4/13/20 2:33:21 PM PDT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 581 MB (+29446kb) [00:00:36]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 647 MB (+38839kb) [00:00:40]
+// [GUI Memory]: 72 MB (+3174kb) [00:00:40]
+// [GUI Memory]: 75 MB (+136kb) [00:00:41]
+// [Engine Memory]: 714 MB (+36199kb) [00:00:43]
+// [GUI Memory]: 81 MB (+2031kb) [00:00:43]
+// Tcl Message: open_project {C:/Users/ME/Vivado Projects/project_0/project_0.xpr} 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ME/OneDrive/Documents/School/PSU/Spring2020/ECE544/Projects/Project Source Files/ece544ip-library-master'. INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ME/OneDrive/Documents/School/PSU/Spring2020/ECE544/Projects/Project Source Files/vivado-library-v2019.1-1'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+unMaximizeFrame(PAResourceOtoP.PAViews_TCL_CONSOLE, "Tcl Console"); // aw (aE, ck)
+// Project name: project_0; location: C:/Users/ME/Vivado Projects/project_0; part: xc7a50tcsg324-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:16 . Memory (MB): peak = 892.508 ; gain = 213.793 
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 87 MB (+1634kb) [00:00:59]
