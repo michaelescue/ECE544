@@ -2,14 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="XPAR_NEXYS4IO_0_S00_AXI_BASEADDR" key="selection"/>
+		<item value="OLEDrgb_SetFontColor" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="XPAR_NEXYS4IO_0_S00_AXI_BASEADDR"/>
-			<item value="FIT_Handler"/>
+			<item value="OLEDrgb_SetFontColor"/>
+			<item value="__m"/>
+			<item value="__Mi"/>
+			<item value="BTNSW_IN"/>
+			<item value="BTNSW"/>
+			<item value="nexys"/>
+			<item value="nexus"/>
+			<item value="nexsys"/>
 		</list>
 		<list key="replacehistory">
 		</list>

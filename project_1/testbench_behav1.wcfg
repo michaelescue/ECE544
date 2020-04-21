@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testbench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="13961000fs"></ZoomStartTime>
+      <ZoomEndTime time="127513961001fs"></ZoomEndTime>
+      <Cursor1Time time="40230000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="183"></NameColumnWidth>
+      <ValueColumnWidth column_width="140"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="33" />
+   <wvobject fp_name="/testbench/detector1/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/sw" type="array">
+      <obj_property name="ElementShortName">sw[15:0]</obj_property>
+      <obj_property name="ObjectShortName">sw[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/pwm_channel" type="array">
+      <obj_property name="ElementShortName">pwm_channel[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pwm_channel[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/pdc" type="array">
+      <obj_property name="ElementShortName">pdc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pdc[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/red" type="logic">
+      <obj_property name="ElementShortName">red</obj_property>
+      <obj_property name="ObjectShortName">red</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/blue" type="logic">
+      <obj_property name="ElementShortName">blue</obj_property>
+      <obj_property name="ObjectShortName">blue</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/green" type="logic">
+      <obj_property name="ElementShortName">green</obj_property>
+      <obj_property name="ObjectShortName">green</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/count_high" type="array">
+      <obj_property name="ElementShortName">count_high[31:0]</obj_property>
+      <obj_property name="ObjectShortName">count_high[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/count_low" type="array">
+      <obj_property name="ElementShortName">count_low[31:0]</obj_property>
+      <obj_property name="ObjectShortName">count_low[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/state" type="array">
+      <obj_property name="ElementShortName">state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">state[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/next_state" type="array">
+      <obj_property name="ElementShortName">next_state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">next_state[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/counter_reset" type="array">
+      <obj_property name="ElementShortName">counter_reset[1:0]</obj_property>
+      <obj_property name="ObjectShortName">counter_reset[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/increment" type="array">
+      <obj_property name="ElementShortName">increment[1:0]</obj_property>
+      <obj_property name="ObjectShortName">increment[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/sync_data" type="array">
+      <obj_property name="ElementShortName">sync_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sync_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/sync_output" type="array">
+      <obj_property name="ElementShortName">sync_output[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sync_output[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/DIN_SIZE" type="array">
+      <obj_property name="ElementShortName">DIN_SIZE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DIN_SIZE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/DOUT_SIZE" type="array">
+      <obj_property name="ElementShortName">DOUT_SIZE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DOUT_SIZE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/COUNTER_BITS" type="array">
+      <obj_property name="ElementShortName">COUNTER_BITS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">COUNTER_BITS[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/STATE_BITS" type="array">
+      <obj_property name="ElementShortName">STATE_BITS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">STATE_BITS[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/SWITCH_SIZE" type="array">
+      <obj_property name="ElementShortName">SWITCH_SIZE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SWITCH_SIZE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/NUM_OF_COUNTERS" type="array">
+      <obj_property name="ElementShortName">NUM_OF_COUNTERS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NUM_OF_COUNTERS[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/RED_BIT" type="array">
+      <obj_property name="ElementShortName">RED_BIT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RED_BIT[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/BLUE_BIT" type="array">
+      <obj_property name="ElementShortName">BLUE_BIT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BLUE_BIT[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/GREEN_BIT" type="array">
+      <obj_property name="ElementShortName">GREEN_BIT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">GREEN_BIT[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/red_toggle" type="array">
+      <obj_property name="ElementShortName">red_toggle[1:0]</obj_property>
+      <obj_property name="ObjectShortName">red_toggle[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/blue_toggle" type="array">
+      <obj_property name="ElementShortName">blue_toggle[1:0]</obj_property>
+      <obj_property name="ObjectShortName">blue_toggle[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/green_toggle" type="array">
+      <obj_property name="ElementShortName">green_toggle[1:0]</obj_property>
+      <obj_property name="ObjectShortName">green_toggle[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/init_state" type="array">
+      <obj_property name="ElementShortName">init_state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">init_state[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/HIGH_CNTR" type="array">
+      <obj_property name="ElementShortName">HIGH_CNTR[1:0]</obj_property>
+      <obj_property name="ObjectShortName">HIGH_CNTR[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/LOW_CNTR" type="array">
+      <obj_property name="ElementShortName">LOW_CNTR[1:0]</obj_property>
+      <obj_property name="ObjectShortName">LOW_CNTR[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/ALL_OFF" type="array">
+      <obj_property name="ElementShortName">ALL_OFF[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ALL_OFF[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/detector1/ALL_ON" type="array">
+      <obj_property name="ElementShortName">ALL_ON[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ALL_ON[1:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -31,14 +31,14 @@ module counter #(
     
     initial count = 0;
     
-    always@(posedge clk)
+    always@(posedge clk or posedge reset or negedge reset)
         begin
             if(reset)
                 begin
                     count <= 0;
                 end
-            else if(increment)
-                begin
+            else
+                begin if(increment)
                     count <= count + 1'b1;
                 end
         end

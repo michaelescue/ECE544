@@ -29,9 +29,9 @@ parameter CLOCK_WIDTH = CLOCK_CYCLE/2;
 parameter IDLE_CLOCKS = 2;
 parameter  WIDTH = 1;
 parameter COUNTER_BITS = 32;
-parameter RED_BIT = 8'h1;
-parameter BLUE_BIT = 8'h2;
-parameter GREEN_BIT = 8'h4;
+parameter RED_BIT = 0;
+parameter BLUE_BIT = 1;
+parameter GREEN_BIT = 2;
 
 // Outputs of DUT.
 wire [31:0] pdc;
@@ -47,12 +47,14 @@ reg [7:0] pwm;
 //ff_reg ff1(Clock, q, q1);
 //counter counter0(Clock, Reset, q1, count0);
 //counter counter1(Clock, Reset, 1'b1, count1);
-    pwdet detector1 (Clock, Reset, sw, pwm, pdc);
+
+//    pwdet detector1 (Clock, Reset, sw, pwm, pdc);
+        pwdet detector1 (Clock, Reset, sw, pwm, pdc);
 
 // Establish monitor block
 initial
     begin
-        $monitor($time, "   %b  %b", sw, pwm);
+        $monitor($time, "   %b  %b", sw, pdc);
     end
     
 // Initiate free running clock.
@@ -77,24 +79,69 @@ initial
 initial
     begin
         sw = 32'h0;
-        repeat(1) @(negedge Clock);
-        pwm = pwm ^ RED_BIT;
-        repeat(1) @(negedge Clock);
-        pwm = pwm ^ RED_BIT;
-        repeat(1) @(negedge Clock);
-        pwm = pwm ^ RED_BIT;
-        repeat(1) @(negedge Clock);
-        pwm = pwm ^ RED_BIT;
-        repeat(1) @(negedge Clock);
-        pwm = pwm ^ RED_BIT;
-        repeat(1) @(negedge Clock);
-        pwm = pwm ^ RED_BIT;
-        repeat(1) @(negedge Clock);
-        pwm = pwm ^ RED_BIT;
-        repeat(1) @(negedge Clock);
-        pwm = pwm ^ RED_BIT;
-        repeat(1) @(negedge Clock);
+        repeat(10) @(negedge Clock);    // Not included
         
+        pwm[RED_BIT] = ~pwm[RED_BIT];   // Bit goes high.
+        repeat(10) @(negedge Clock);
+        
+        pwm[RED_BIT] = ~pwm[RED_BIT];
+        repeat(10) @(negedge Clock);
+        
+        pwm[RED_BIT] = ~pwm[RED_BIT];   // Bit goes high.
+        repeat(10) @(negedge Clock);
+        
+        pwm[RED_BIT] = ~pwm[RED_BIT];
+        repeat(10) @(negedge Clock);
+        
+        pwm[RED_BIT] = ~pwm[RED_BIT];   // Bit goes high.
+        repeat(10) @(negedge Clock);
+        
+        pwm[RED_BIT] = ~pwm[RED_BIT];
+        repeat(10) @(negedge Clock);
+        
+        pwm[RED_BIT] = ~pwm[RED_BIT];   // Bit goes high.
+        repeat(10) @(negedge Clock);
+        
+        pwm[RED_BIT] = ~pwm[RED_BIT];
+        repeat(10) @(negedge Clock);
+        
+        pwm[RED_BIT] = ~pwm[RED_BIT];   // Bit goes high.
+        repeat(10) @(negedge Clock);
+        
+        pwm[RED_BIT] = ~pwm[RED_BIT];
+        repeat(10) @(negedge Clock);
+        pwm[BLUE_BIT] = ~pwm[BLUE_BIT];
+
+        
+
+        sw = 32'h4;                     // Bit still remains low here (adding to counter).
+        repeat(100) @(negedge Clock);
+        pwm[BLUE_BIT] = ~pwm[BLUE_BIT];
+        repeat(200) @(negedge Clock);
+        repeat(100) @(negedge Clock);
+        pwm[BLUE_BIT] = ~pwm[BLUE_BIT];
+        repeat(200) @(negedge Clock);
+        repeat(100) @(negedge Clock);
+        pwm[BLUE_BIT] = ~pwm[BLUE_BIT];
+        repeat(200) @(negedge Clock);
+        repeat(100) @(negedge Clock);
+        pwm[BLUE_BIT] = ~pwm[BLUE_BIT];
+        repeat(200) @(negedge Clock);
+        repeat(100) @(negedge Clock);
+        pwm[BLUE_BIT] = ~pwm[BLUE_BIT];
+        repeat(200) @(negedge Clock);
+        repeat(100) @(negedge Clock);
+        pwm[BLUE_BIT] = ~pwm[BLUE_BIT];
+        repeat(200) @(negedge Clock);
+       pwm[BLUE_BIT] = ~pwm[BLUE_BIT];
+       
+
+        pwm[GREEN_BIT] = ~pwm[GREEN_BIT];
+        sw = 32'h8;
+        pwm[GREEN_BIT] = ~pwm[GREEN_BIT];
+        repeat(100) @(negedge Clock);
+
+  
                         $stop;
     end
       

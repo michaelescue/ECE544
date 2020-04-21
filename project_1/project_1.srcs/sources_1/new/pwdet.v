@@ -27,9 +27,9 @@ module pwdet #(
                 STATE_BITS =        2,
                 SWITCH_SIZE =       16,
                 NUM_OF_COUNTERS =   2,
-                MASK_BIT_2 =             8'h04,      // Mask for Red PWM signal.
-                MASK_BIT_1 =             8'h02,      // Mask for Blue PWM signal.
-                MASK_BIT_0 =             8'h01       // Mask for Green PWM signal.             
+                RED_BIT =          0,
+                BLUE_BIT =         1,
+                GREEN_BIT =        2      // Mask for Green PWM signal.             
     )(
     input                           clk,      // External clock 5MHz for project 1.
     input                           reset,
@@ -71,9 +71,9 @@ module pwdet #(
                                 sync_output;    // Synchronized value.
     
     // Signals Extracted from input channel.
-    assign red =    (sync_output & MASK_BIT_2);
-    assign blue =   (sync_output & MASK_BIT_1);
-    assign green =  (sync_output & MASK_BIT_0);
+    assign red =    sync_output[RED_BIT];
+    assign blue =   sync_output[BLUE_BIT];
+    assign green =  sync_output[GREEN_BIT];
     
     // Synchronize input: 2 clock cycle delay.
     ff_reg ff_0(clk, pwm_channel, sync_data);       // First stage ff.
@@ -94,7 +94,7 @@ module pwdet #(
             increment = ALL_OFF;
        end
     
-    // Next state clocking.
+    // State Control Clocking.
     always @(posedge clk)
         begin
             if(reset)
@@ -110,42 +110,68 @@ module pwdet #(
         end
     
     // Current State Output
-    always @(posedge red or negedge red or posedge blue or negedge blue or posedge green or negedge green)
+    always @(posedge red or posedge blue or posedge green or negedge red or negedge blue or negedge green)
             begin
                 case(state)
                     red_toggle:         // = 2'b00,
                         begin
-                            if(red)     increment = HIGH_CNTR;
-                            else        increment = LOW_CNTR;
+                            if(red)
+                                begin
+                                    counter_reset = HIGH_CNTR;
+                                    increment = HIGH_CNTR;
+                                    pdc = (count_high  * 99) / (count_high + count_low);
+                                end
+                            else
+                                begin
+                                    counter_reset = LOW_CNTR;
+                                    increment = LOW_CNTR;
+                                end
                         end
                     blue_toggle:        // = 2'b01,
                         begin
-                            if(blue)    increment = HIGH_CNTR;
-                            else        increment = LOW_CNTR;  
+                            if(blue)    
+                                begin
+                                    counter_reset = HIGH_CNTR;
+                                    increment = HIGH_CNTR;
+                                    pdc = (count_high  * 99) / (count_high + count_low);
+                                end
+                            else        
+                                begin
+                                    counter_reset = LOW_CNTR;
+                                    increment = LOW_CNTR;
+                                end
                         end
                     green_toggle:       // = 2'b10,
                         begin
-                            if(green)   increment = HIGH_CNTR;
-                            else        increment = LOW_CNTR;
+                            if(green)
+                                begin
+                                    counter_reset = HIGH_CNTR;
+                                    increment = HIGH_CNTR;
+                                    pdc = (count_high  * 99) / (count_high + count_low);
+                                end
+                            else       
+                                begin
+                                    counter_reset = LOW_CNTR;
+                                    increment = LOW_CNTR;
+                                end
                         end
                     init_state:         // = 2'b11;
                         begin
                             increment =     ALL_OFF;
                             counter_reset = ALL_ON;
+                            pdc = 0;
                         end
                     default:
                         begin
                             increment =     ALL_OFF;
                             counter_reset = ALL_ON;
+                            pdc = 0;
                         end
-                endcase
-                
-                pdc = (count_high / (count_high + count_low)) * 100;
-                
+                endcase                
             end
 
     // Next State Logic
-    always @(state or red or blue or green or sw)
+    always @(state or red or blue or green)
         begin
             case(sw[3:2])
                 red_toggle:         // = 2'b00,
@@ -170,9 +196,14 @@ module pwdet #(
                     end
             endcase
             
-            if(next_state ^ state) counter_reset = ALL_ON;       // Both counters need to reset if next_state differs.
-        
+//            // Check for next_state change from current.
+//            if((next_state ^ state))
+//                begin
+//                    counter_reset = ALL_ON;       // Both counters need to reset if next_state differs.
+//                    increment = ALL_OFF;
+//                end
         end
+        
 endmodule
 
 
