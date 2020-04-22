@@ -96,7 +96,7 @@ module pwdet #(
             else
                 begin
                     counter_reset <= 0;
-                    pdc <= (high_count / period) * 99;
+                    pdc <= ((high_count / period) * 100);
                 end
          end
 

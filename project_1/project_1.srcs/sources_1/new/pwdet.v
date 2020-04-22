@@ -119,7 +119,7 @@ module pwdet #(
                                 begin
                                     counter_reset = HIGH_CNTR;
                                     increment = HIGH_CNTR;
-                                    pdc = (count_high  * 99) / (count_high + count_low);
+                                    pdc = (count_high  * 100) / (count_high + count_low);
                                 end
                             else
                                 begin
@@ -133,7 +133,7 @@ module pwdet #(
                                 begin
                                     counter_reset = HIGH_CNTR;
                                     increment = HIGH_CNTR;
-                                    pdc = (count_high  * 99) / (count_high + count_low);
+                                    pdc = (count_high  * 100) / (count_high + count_low);
                                 end
                             else        
                                 begin
@@ -147,7 +147,7 @@ module pwdet #(
                                 begin
                                     counter_reset = HIGH_CNTR;
                                     increment = HIGH_CNTR;
-                                    pdc = (count_high  * 99) / (count_high + count_low);
+                                    pdc = (count_high  * 100) / (count_high + count_low);
                                 end
                             else       
                                 begin
@@ -195,13 +195,7 @@ module pwdet #(
                         next_state = init_state;
                     end
             endcase
-            
-//            // Check for next_state change from current.
-//            if((next_state ^ state))
-//                begin
-//                    counter_reset = ALL_ON;       // Both counters need to reset if next_state differs.
-//                    increment = ALL_OFF;
-//                end
+
         end
         
 endmodule
