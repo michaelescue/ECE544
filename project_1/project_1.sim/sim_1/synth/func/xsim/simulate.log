@@ -1,0 +1,1027 @@
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+Iteration           0
+                   0	sw:0000	pwm:001	t:         50	pdc: 0	t_high:         50	t_low:        100	duty:33
+                1000	sw:0000	pwm:000	t:         50	pdc: 0	t_high:         50	t_low:        100	duty:33
+Iteration           0
+                   0	sw:0000	pwm:001	t:         50	pdc: 0	t_high:         50	t_low:        100	duty:33
+                1000	sw:0000	pwm:000	t:         50	pdc: 0	t_high:         50	t_low:        100	duty:33
+                3000	sw:0000	pwm:001	t:         50	pdc: 0	t_high:         50	t_low:        100	duty:33
+                4000	sw:0000	pwm:000	t:         50	pdc: 0	t_high:         50	t_low:        100	duty:33
+                6000	sw:0000	pwm:001	t:         50	pdc: 0	t_high:         50	t_low:        100	duty:33
+                6030	sw:0000	pwm:001	t:         50	pdc:33	t_high:         50	t_low:        100	duty:33
+                7000	sw:0000	pwm:000	t:         50	pdc:33	t_high:         50	t_low:        100	duty:33
+                9000	sw:0000	pwm:001	t:         50	pdc:33	t_high:         50	t_low:        100	duty:33
+               10000	sw:0000	pwm:000	t:         50	pdc:33	t_high:         50	t_low:        100	duty:33
+               12000	sw:0000	pwm:001	t:         50	pdc:33	t_high:         50	t_low:        100	duty:33
+               13000	sw:0000	pwm:000	t:         50	pdc:33	t_high:         50	t_low:        100	duty:33
+               15000	sw:0000	pwm:001	t:         50	pdc:33	t_high:         50	t_low:        100	duty:33
+               16000	sw:0000	pwm:000	t:         50	pdc:33	t_high:         50	t_low:        100	duty:33
+               18000	sw:0000	pwm:001	t:         50	pdc:33	t_high:         50	t_low:        100	duty:33
+               19000	sw:0000	pwm:000	t:         50	pdc:33	t_high:         50	t_low:        100	duty:33
+               21000	sw:0000	pwm:001	t:         50	pdc:33	t_high:         50	t_low:        100	duty:33
+               22000	sw:0000	pwm:000	t:         50	pdc:33	t_high:         50	t_low:        100	duty:33
+               24000	sw:0100	pwm:010	t:         50	pdc:33	t_high:         50	t_low:        200	duty:19
+               25000	sw:0100	pwm:000	t:         50	pdc:33	t_high:         50	t_low:        200	duty:19
+               29000	sw:0100	pwm:010	t:         50	pdc:33	t_high:         50	t_low:        200	duty:19
+               29030	sw:0100	pwm:010	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+               30000	sw:0100	pwm:000	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+               34000	sw:0100	pwm:010	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+               35000	sw:0100	pwm:000	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+               39000	sw:0100	pwm:010	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+               40000	sw:0100	pwm:000	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+               44000	sw:0100	pwm:010	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+               45000	sw:0100	pwm:000	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+               49000	sw:0100	pwm:010	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+               50000	sw:0100	pwm:000	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+               54000	sw:0100	pwm:010	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+               55000	sw:0100	pwm:000	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+               59000	sw:0100	pwm:010	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+               60000	sw:0100	pwm:000	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+               64000	sw:1000	pwm:100	t:         50	pdc:20	t_high:         50	t_low:        150	duty:24
+               65000	sw:1000	pwm:000	t:         50	pdc:20	t_high:         50	t_low:        150	duty:24
+               68000	sw:1000	pwm:100	t:         50	pdc:20	t_high:         50	t_low:        150	duty:24
+               68030	sw:1000	pwm:100	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+               69000	sw:1000	pwm:000	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+               72000	sw:1000	pwm:100	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+               73000	sw:1000	pwm:000	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+               76000	sw:1000	pwm:100	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+               77000	sw:1000	pwm:000	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+               80000	sw:1000	pwm:100	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+               81000	sw:1000	pwm:000	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+               84000	sw:1000	pwm:100	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+               85000	sw:1000	pwm:000	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+               88000	sw:1000	pwm:100	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+               89000	sw:1000	pwm:000	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+               92000	sw:1000	pwm:100	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+               93000	sw:1000	pwm:000	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+Iteration           1
+               96000	sw:0000	pwm:001	t:         10	pdc:25	t_high:         10	t_low:         20	duty:33
+               96200	sw:0000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         20	duty:33
+               96600	sw:0000	pwm:001	t:         10	pdc:25	t_high:         10	t_low:         20	duty:33
+               96630	sw:0000	pwm:001	t:         10	pdc:71	t_high:         10	t_low:         20	duty:33
+               96800	sw:0000	pwm:000	t:         10	pdc:71	t_high:         10	t_low:         20	duty:33
+               97200	sw:0000	pwm:001	t:         10	pdc:71	t_high:         10	t_low:         20	duty:33
+               97230	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+               97400	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+               97800	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+               98000	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+               98400	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+               98600	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+               99000	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+               99200	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+               99600	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+               99800	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              100200	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              100400	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              100800	sw:0100	pwm:010	t:         10	pdc:33	t_high:         10	t_low:         40	duty:19
+              101000	sw:0100	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         40	duty:19
+              101800	sw:0100	pwm:010	t:         10	pdc:33	t_high:         10	t_low:         40	duty:19
+              101830	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              102000	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              102800	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              103000	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              103800	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              104000	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              104800	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              105000	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              105800	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              106000	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              106800	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              107000	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              107800	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              108000	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              108800	sw:1000	pwm:100	t:         10	pdc:20	t_high:         10	t_low:         30	duty:24
+              109000	sw:1000	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         30	duty:24
+              109600	sw:1000	pwm:100	t:         10	pdc:20	t_high:         10	t_low:         30	duty:24
+              109630	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              109800	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              110400	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              110600	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              111200	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              111400	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              112000	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              112200	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              112800	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              113000	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              113600	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              113800	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              114400	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              114600	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+Iteration           2
+              115200	sw:0000	pwm:001	t:         20	pdc:25	t_high:         20	t_low:         40	duty:33
+              115600	sw:0000	pwm:000	t:         20	pdc:25	t_high:         20	t_low:         40	duty:33
+              116400	sw:0000	pwm:001	t:         20	pdc:25	t_high:         20	t_low:         40	duty:33
+              116430	sw:0000	pwm:001	t:         20	pdc:20	t_high:         20	t_low:         40	duty:33
+              116800	sw:0000	pwm:000	t:         20	pdc:20	t_high:         20	t_low:         40	duty:33
+              117600	sw:0000	pwm:001	t:         20	pdc:20	t_high:         20	t_low:         40	duty:33
+              117630	sw:0000	pwm:001	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              118000	sw:0000	pwm:000	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              118800	sw:0000	pwm:001	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              119200	sw:0000	pwm:000	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              120000	sw:0000	pwm:001	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              120400	sw:0000	pwm:000	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              121200	sw:0000	pwm:001	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              121600	sw:0000	pwm:000	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              122400	sw:0000	pwm:001	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              122800	sw:0000	pwm:000	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              123600	sw:0000	pwm:001	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              124000	sw:0000	pwm:000	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              124800	sw:0100	pwm:010	t:         20	pdc:33	t_high:         20	t_low:         80	duty:19
+              125200	sw:0100	pwm:000	t:         20	pdc:33	t_high:         20	t_low:         80	duty:19
+              126800	sw:0100	pwm:010	t:         20	pdc:33	t_high:         20	t_low:         80	duty:19
+              126830	sw:0100	pwm:010	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              127200	sw:0100	pwm:000	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              128800	sw:0100	pwm:010	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              129200	sw:0100	pwm:000	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              130800	sw:0100	pwm:010	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              131200	sw:0100	pwm:000	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              132800	sw:0100	pwm:010	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              133200	sw:0100	pwm:000	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              134800	sw:0100	pwm:010	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              135200	sw:0100	pwm:000	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              136800	sw:0100	pwm:010	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              137200	sw:0100	pwm:000	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              138800	sw:0100	pwm:010	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              139200	sw:0100	pwm:000	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              140800	sw:1000	pwm:100	t:         20	pdc:20	t_high:         20	t_low:         60	duty:24
+              141200	sw:1000	pwm:000	t:         20	pdc:20	t_high:         20	t_low:         60	duty:24
+              142400	sw:1000	pwm:100	t:         20	pdc:20	t_high:         20	t_low:         60	duty:24
+              142430	sw:1000	pwm:100	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              142800	sw:1000	pwm:000	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              144000	sw:1000	pwm:100	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              144400	sw:1000	pwm:000	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              145600	sw:1000	pwm:100	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              146000	sw:1000	pwm:000	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              147200	sw:1000	pwm:100	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              147600	sw:1000	pwm:000	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              148800	sw:1000	pwm:100	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              149200	sw:1000	pwm:000	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              150400	sw:1000	pwm:100	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              150800	sw:1000	pwm:000	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              152000	sw:1000	pwm:100	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              152400	sw:1000	pwm:000	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+Iteration           3
+              153600	sw:0000	pwm:001	t:         10	pdc:25	t_high:         10	t_low:         20	duty:33
+              153800	sw:0000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         20	duty:33
+              154200	sw:0000	pwm:001	t:         10	pdc:25	t_high:         10	t_low:         20	duty:33
+              154230	sw:0000	pwm:001	t:         10	pdc:50	t_high:         10	t_low:         20	duty:33
+              154400	sw:0000	pwm:000	t:         10	pdc:50	t_high:         10	t_low:         20	duty:33
+              154800	sw:0000	pwm:001	t:         10	pdc:50	t_high:         10	t_low:         20	duty:33
+              154830	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              155000	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              155400	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              155600	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              156000	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              156200	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              156600	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              156800	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              157200	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              157400	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              157800	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              158000	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              158400	sw:0100	pwm:010	t:         10	pdc:33	t_high:         10	t_low:         40	duty:19
+              158600	sw:0100	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         40	duty:19
+              159400	sw:0100	pwm:010	t:         10	pdc:33	t_high:         10	t_low:         40	duty:19
+              159430	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              159600	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              160400	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              160600	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              161400	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              161600	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              162400	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              162600	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              163400	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              163600	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              164400	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              164600	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              165400	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              165600	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              166400	sw:1000	pwm:100	t:         10	pdc:20	t_high:         10	t_low:         30	duty:24
+              166600	sw:1000	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         30	duty:24
+              167200	sw:1000	pwm:100	t:         10	pdc:20	t_high:         10	t_low:         30	duty:24
+              167230	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              167400	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              168000	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              168200	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              168800	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              169000	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              169600	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              169800	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              170400	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              170600	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              171200	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              171400	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              172000	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              172200	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+Iteration           4
+              172800	sw:0000	pwm:001	t:         20	pdc:25	t_high:         20	t_low:         40	duty:33
+              173200	sw:0000	pwm:000	t:         20	pdc:25	t_high:         20	t_low:         40	duty:33
+              174000	sw:0000	pwm:001	t:         20	pdc:25	t_high:         20	t_low:         40	duty:33
+              174030	sw:0000	pwm:001	t:         20	pdc:20	t_high:         20	t_low:         40	duty:33
+              174400	sw:0000	pwm:000	t:         20	pdc:20	t_high:         20	t_low:         40	duty:33
+              175200	sw:0000	pwm:001	t:         20	pdc:20	t_high:         20	t_low:         40	duty:33
+              175230	sw:0000	pwm:001	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              175600	sw:0000	pwm:000	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              176400	sw:0000	pwm:001	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              176800	sw:0000	pwm:000	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              177600	sw:0000	pwm:001	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              178000	sw:0000	pwm:000	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              178800	sw:0000	pwm:001	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              179200	sw:0000	pwm:000	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              180000	sw:0000	pwm:001	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              180400	sw:0000	pwm:000	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              181200	sw:0000	pwm:001	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              181600	sw:0000	pwm:000	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              182400	sw:0100	pwm:010	t:         20	pdc:33	t_high:         20	t_low:         80	duty:19
+              182800	sw:0100	pwm:000	t:         20	pdc:33	t_high:         20	t_low:         80	duty:19
+              184400	sw:0100	pwm:010	t:         20	pdc:33	t_high:         20	t_low:         80	duty:19
+              184430	sw:0100	pwm:010	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              184800	sw:0100	pwm:000	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              186400	sw:0100	pwm:010	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              186800	sw:0100	pwm:000	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              188400	sw:0100	pwm:010	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              188800	sw:0100	pwm:000	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              190400	sw:0100	pwm:010	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              190800	sw:0100	pwm:000	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              192400	sw:0100	pwm:010	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              192800	sw:0100	pwm:000	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              194400	sw:0100	pwm:010	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              194800	sw:0100	pwm:000	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              196400	sw:0100	pwm:010	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              196800	sw:0100	pwm:000	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              198400	sw:1000	pwm:100	t:         20	pdc:20	t_high:         20	t_low:         60	duty:24
+              198800	sw:1000	pwm:000	t:         20	pdc:20	t_high:         20	t_low:         60	duty:24
+              200000	sw:1000	pwm:100	t:         20	pdc:20	t_high:         20	t_low:         60	duty:24
+              200030	sw:1000	pwm:100	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              200400	sw:1000	pwm:000	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              201600	sw:1000	pwm:100	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              202000	sw:1000	pwm:000	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              203200	sw:1000	pwm:100	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              203600	sw:1000	pwm:000	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              204800	sw:1000	pwm:100	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              205200	sw:1000	pwm:000	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              206400	sw:1000	pwm:100	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              206800	sw:1000	pwm:000	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              208000	sw:1000	pwm:100	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              208400	sw:1000	pwm:000	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              209600	sw:1000	pwm:100	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              210000	sw:1000	pwm:000	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+Iteration           5
+              211200	sw:0000	pwm:001	t:         10	pdc:25	t_high:         10	t_low:         20	duty:33
+              211400	sw:0000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         20	duty:33
+              211800	sw:0000	pwm:001	t:         10	pdc:25	t_high:         10	t_low:         20	duty:33
+              211830	sw:0000	pwm:001	t:         10	pdc:50	t_high:         10	t_low:         20	duty:33
+              212000	sw:0000	pwm:000	t:         10	pdc:50	t_high:         10	t_low:         20	duty:33
+              212400	sw:0000	pwm:001	t:         10	pdc:50	t_high:         10	t_low:         20	duty:33
+              212430	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              212600	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              213000	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              213200	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              213600	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              213800	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              214200	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              214400	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              214800	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              215000	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              215400	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              215600	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              216000	sw:0100	pwm:010	t:         10	pdc:33	t_high:         10	t_low:         40	duty:19
+              216200	sw:0100	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         40	duty:19
+              217000	sw:0100	pwm:010	t:         10	pdc:33	t_high:         10	t_low:         40	duty:19
+              217030	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              217200	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              218000	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              218200	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              219000	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              219200	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              220000	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              220200	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              221000	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              221200	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              222000	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              222200	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              223000	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              223200	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              224000	sw:1000	pwm:100	t:         10	pdc:20	t_high:         10	t_low:         30	duty:24
+              224200	sw:1000	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         30	duty:24
+              224800	sw:1000	pwm:100	t:         10	pdc:20	t_high:         10	t_low:         30	duty:24
+              224830	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              225000	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              225600	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              225800	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              226400	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              226600	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              227200	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              227400	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              228000	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              228200	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              228800	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              229000	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              229600	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              229800	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+Iteration           6
+              230400	sw:0000	pwm:001	t:         50	pdc:25	t_high:         50	t_low:        100	duty:33
+              231400	sw:0000	pwm:000	t:         50	pdc:25	t_high:         50	t_low:        100	duty:33
+              233400	sw:0000	pwm:001	t:         50	pdc:25	t_high:         50	t_low:        100	duty:33
+              233430	sw:0000	pwm:001	t:         50	pdc: 9	t_high:         50	t_low:        100	duty:33
+              234400	sw:0000	pwm:000	t:         50	pdc: 9	t_high:         50	t_low:        100	duty:33
+              236400	sw:0000	pwm:001	t:         50	pdc: 9	t_high:         50	t_low:        100	duty:33
+              236430	sw:0000	pwm:001	t:         50	pdc:33	t_high:         50	t_low:        100	duty:33
+              237400	sw:0000	pwm:000	t:         50	pdc:33	t_high:         50	t_low:        100	duty:33
+              239400	sw:0000	pwm:001	t:         50	pdc:33	t_high:         50	t_low:        100	duty:33
+              240400	sw:0000	pwm:000	t:         50	pdc:33	t_high:         50	t_low:        100	duty:33
+              242400	sw:0000	pwm:001	t:         50	pdc:33	t_high:         50	t_low:        100	duty:33
+              243400	sw:0000	pwm:000	t:         50	pdc:33	t_high:         50	t_low:        100	duty:33
+              245400	sw:0000	pwm:001	t:         50	pdc:33	t_high:         50	t_low:        100	duty:33
+              246400	sw:0000	pwm:000	t:         50	pdc:33	t_high:         50	t_low:        100	duty:33
+              248400	sw:0000	pwm:001	t:         50	pdc:33	t_high:         50	t_low:        100	duty:33
+              249400	sw:0000	pwm:000	t:         50	pdc:33	t_high:         50	t_low:        100	duty:33
+              251400	sw:0000	pwm:001	t:         50	pdc:33	t_high:         50	t_low:        100	duty:33
+              252400	sw:0000	pwm:000	t:         50	pdc:33	t_high:         50	t_low:        100	duty:33
+              254400	sw:0100	pwm:010	t:         50	pdc:33	t_high:         50	t_low:        200	duty:19
+              255400	sw:0100	pwm:000	t:         50	pdc:33	t_high:         50	t_low:        200	duty:19
+              259400	sw:0100	pwm:010	t:         50	pdc:33	t_high:         50	t_low:        200	duty:19
+              259430	sw:0100	pwm:010	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+              260400	sw:0100	pwm:000	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+              264400	sw:0100	pwm:010	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+              265400	sw:0100	pwm:000	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+              269400	sw:0100	pwm:010	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+              270400	sw:0100	pwm:000	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+              274400	sw:0100	pwm:010	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+              275400	sw:0100	pwm:000	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+              279400	sw:0100	pwm:010	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+              280400	sw:0100	pwm:000	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+              284400	sw:0100	pwm:010	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+              285400	sw:0100	pwm:000	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+              289400	sw:0100	pwm:010	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+              290400	sw:0100	pwm:000	t:         50	pdc:20	t_high:         50	t_low:        200	duty:19
+              294400	sw:1000	pwm:100	t:         50	pdc:20	t_high:         50	t_low:        150	duty:24
+              295400	sw:1000	pwm:000	t:         50	pdc:20	t_high:         50	t_low:        150	duty:24
+              298400	sw:1000	pwm:100	t:         50	pdc:20	t_high:         50	t_low:        150	duty:24
+              298430	sw:1000	pwm:100	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+              299400	sw:1000	pwm:000	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+              302400	sw:1000	pwm:100	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+              303400	sw:1000	pwm:000	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+              306400	sw:1000	pwm:100	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+              307400	sw:1000	pwm:000	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+              310400	sw:1000	pwm:100	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+              311400	sw:1000	pwm:000	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+              314400	sw:1000	pwm:100	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+              315400	sw:1000	pwm:000	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+              318400	sw:1000	pwm:100	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+              319400	sw:1000	pwm:000	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+              322400	sw:1000	pwm:100	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+              323400	sw:1000	pwm:000	t:         50	pdc:25	t_high:         50	t_low:        150	duty:24
+Iteration           7
+              326400	sw:0000	pwm:001	t:         10	pdc:25	t_high:         10	t_low:         20	duty:33
+              326600	sw:0000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         20	duty:33
+              327000	sw:0000	pwm:001	t:         10	pdc:25	t_high:         10	t_low:         20	duty:33
+              327030	sw:0000	pwm:001	t:         10	pdc:71	t_high:         10	t_low:         20	duty:33
+              327200	sw:0000	pwm:000	t:         10	pdc:71	t_high:         10	t_low:         20	duty:33
+              327600	sw:0000	pwm:001	t:         10	pdc:71	t_high:         10	t_low:         20	duty:33
+              327630	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              327800	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              328200	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              328400	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              328800	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              329000	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              329400	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              329600	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              330000	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              330200	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              330600	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              330800	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              331200	sw:0100	pwm:010	t:         10	pdc:33	t_high:         10	t_low:         40	duty:19
+              331400	sw:0100	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         40	duty:19
+              332200	sw:0100	pwm:010	t:         10	pdc:33	t_high:         10	t_low:         40	duty:19
+              332230	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              332400	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              333200	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              333400	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              334200	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              334400	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              335200	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              335400	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              336200	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              336400	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              337200	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              337400	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              338200	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              338400	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              339200	sw:1000	pwm:100	t:         10	pdc:20	t_high:         10	t_low:         30	duty:24
+              339400	sw:1000	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         30	duty:24
+              340000	sw:1000	pwm:100	t:         10	pdc:20	t_high:         10	t_low:         30	duty:24
+              340030	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              340200	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              340800	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              341000	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              341600	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              341800	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              342400	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              342600	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              343200	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              343400	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              344000	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              344200	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              344800	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              345000	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+Iteration           8
+              345600	sw:0000	pwm:001	t:         20	pdc:25	t_high:         20	t_low:         40	duty:33
+              346000	sw:0000	pwm:000	t:         20	pdc:25	t_high:         20	t_low:         40	duty:33
+              346800	sw:0000	pwm:001	t:         20	pdc:25	t_high:         20	t_low:         40	duty:33
+              346830	sw:0000	pwm:001	t:         20	pdc:20	t_high:         20	t_low:         40	duty:33
+              347200	sw:0000	pwm:000	t:         20	pdc:20	t_high:         20	t_low:         40	duty:33
+              348000	sw:0000	pwm:001	t:         20	pdc:20	t_high:         20	t_low:         40	duty:33
+              348030	sw:0000	pwm:001	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              348400	sw:0000	pwm:000	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              349200	sw:0000	pwm:001	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              349600	sw:0000	pwm:000	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              350400	sw:0000	pwm:001	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              350800	sw:0000	pwm:000	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              351600	sw:0000	pwm:001	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              352000	sw:0000	pwm:000	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              352800	sw:0000	pwm:001	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              353200	sw:0000	pwm:000	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              354000	sw:0000	pwm:001	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              354400	sw:0000	pwm:000	t:         20	pdc:33	t_high:         20	t_low:         40	duty:33
+              355200	sw:0100	pwm:010	t:         20	pdc:33	t_high:         20	t_low:         80	duty:19
+              355600	sw:0100	pwm:000	t:         20	pdc:33	t_high:         20	t_low:         80	duty:19
+              357200	sw:0100	pwm:010	t:         20	pdc:33	t_high:         20	t_low:         80	duty:19
+              357230	sw:0100	pwm:010	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              357600	sw:0100	pwm:000	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              359200	sw:0100	pwm:010	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              359600	sw:0100	pwm:000	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              361200	sw:0100	pwm:010	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              361600	sw:0100	pwm:000	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              363200	sw:0100	pwm:010	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              363600	sw:0100	pwm:000	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              365200	sw:0100	pwm:010	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              365600	sw:0100	pwm:000	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              367200	sw:0100	pwm:010	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              367600	sw:0100	pwm:000	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              369200	sw:0100	pwm:010	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              369600	sw:0100	pwm:000	t:         20	pdc:20	t_high:         20	t_low:         80	duty:19
+              371200	sw:1000	pwm:100	t:         20	pdc:20	t_high:         20	t_low:         60	duty:24
+              371600	sw:1000	pwm:000	t:         20	pdc:20	t_high:         20	t_low:         60	duty:24
+              372800	sw:1000	pwm:100	t:         20	pdc:20	t_high:         20	t_low:         60	duty:24
+              372830	sw:1000	pwm:100	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              373200	sw:1000	pwm:000	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              374400	sw:1000	pwm:100	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              374800	sw:1000	pwm:000	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              376000	sw:1000	pwm:100	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              376400	sw:1000	pwm:000	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              377600	sw:1000	pwm:100	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              378000	sw:1000	pwm:000	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              379200	sw:1000	pwm:100	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              379600	sw:1000	pwm:000	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              380800	sw:1000	pwm:100	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              381200	sw:1000	pwm:000	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              382400	sw:1000	pwm:100	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+              382800	sw:1000	pwm:000	t:         20	pdc:25	t_high:         20	t_low:         60	duty:24
+Iteration           9
+              384000	sw:0000	pwm:001	t:         10	pdc:25	t_high:         10	t_low:         20	duty:33
+              384200	sw:0000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         20	duty:33
+              384600	sw:0000	pwm:001	t:         10	pdc:25	t_high:         10	t_low:         20	duty:33
+              384630	sw:0000	pwm:001	t:         10	pdc:50	t_high:         10	t_low:         20	duty:33
+              384800	sw:0000	pwm:000	t:         10	pdc:50	t_high:         10	t_low:         20	duty:33
+              385200	sw:0000	pwm:001	t:         10	pdc:50	t_high:         10	t_low:         20	duty:33
+              385230	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              385400	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              385800	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              386000	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              386400	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              386600	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              387000	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              387200	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              387600	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              387800	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              388200	sw:0000	pwm:001	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              388400	sw:0000	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         20	duty:33
+              388800	sw:0100	pwm:010	t:         10	pdc:33	t_high:         10	t_low:         40	duty:19
+              389000	sw:0100	pwm:000	t:         10	pdc:33	t_high:         10	t_low:         40	duty:19
+              389800	sw:0100	pwm:010	t:         10	pdc:33	t_high:         10	t_low:         40	duty:19
+              389830	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              390000	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              390800	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              391000	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              391800	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              392000	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              392800	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              393000	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              393800	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              394000	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              394800	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              395000	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              395800	sw:0100	pwm:010	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              396000	sw:0100	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         40	duty:19
+              396800	sw:1000	pwm:100	t:         10	pdc:20	t_high:         10	t_low:         30	duty:24
+              397000	sw:1000	pwm:000	t:         10	pdc:20	t_high:         10	t_low:         30	duty:24
+              397600	sw:1000	pwm:100	t:         10	pdc:20	t_high:         10	t_low:         30	duty:24
+              397630	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              397800	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              398400	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              398600	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              399200	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              399400	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              400000	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              400200	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              400800	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              401000	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              401600	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              401800	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              402400	sw:1000	pwm:100	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              402600	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+Iteration:	          0
+              403200	sw:0000	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              404800	sw:0100	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              405000	sw:0100	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              405600	sw:0100	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              405630	sw:0100	pwm:111	t:         50	pdc:75	t_high:         10	t_low:         30	duty:24
+              405800	sw:0100	pwm:000	t:         50	pdc:75	t_high:         10	t_low:         30	duty:24
+              406400	sw:0100	pwm:111	t:         50	pdc:75	t_high:         10	t_low:         30	duty:24
+              406430	sw:0100	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              406600	sw:0100	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              407200	sw:0100	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              407400	sw:0100	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              408000	sw:0100	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              408200	sw:0100	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              408800	sw:0100	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              409000	sw:0100	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              409600	sw:0100	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              409800	sw:0100	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              410400	sw:0100	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              410600	sw:0100	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              411200	sw:1000	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              411400	sw:1000	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              412000	sw:1000	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              412200	sw:1000	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              412800	sw:1000	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              413000	sw:1000	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              413600	sw:1000	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              413800	sw:1000	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              414400	sw:1000	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              414600	sw:1000	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              415200	sw:1000	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              415400	sw:1000	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              416000	sw:1000	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              416200	sw:1000	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              416800	sw:1000	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              417000	sw:1000	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+Iteration:	          1
+              417600	sw:0000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              417800	sw:0000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              418400	sw:0000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              418600	sw:0000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              419200	sw:0000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              419400	sw:0000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              420000	sw:0000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              420200	sw:0000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              420800	sw:0000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              421000	sw:0000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              421600	sw:0000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              421800	sw:0000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              422400	sw:0000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              422600	sw:0000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              423200	sw:0000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              423400	sw:0000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              424000	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              424200	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              424800	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              425000	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              425600	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              425800	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              426400	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              426600	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              427200	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              427400	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              428000	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              428200	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              428800	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              429000	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              429600	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              429800	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              430400	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              430600	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              431200	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              431400	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              432000	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              432200	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              432800	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              433000	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              433600	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              433800	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              434400	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              434600	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              435200	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              435400	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              436000	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              436200	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+Iteration:	          2
+              436800	sw:0000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              437000	sw:0000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              438200	sw:0000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              438230	sw:0000	pwm:111	t:         10	pdc:14	t_high:         10	t_low:         30	duty:24
+              438400	sw:0000	pwm:000	t:         10	pdc:14	t_high:         10	t_low:         30	duty:24
+              439600	sw:0000	pwm:111	t:         10	pdc:14	t_high:         10	t_low:         30	duty:24
+              439800	sw:0000	pwm:000	t:         10	pdc:14	t_high:         10	t_low:         30	duty:24
+              441000	sw:0000	pwm:111	t:         10	pdc:14	t_high:         10	t_low:         30	duty:24
+              441200	sw:0000	pwm:000	t:         10	pdc:14	t_high:         10	t_low:         30	duty:24
+              442400	sw:0000	pwm:111	t:         10	pdc:14	t_high:         10	t_low:         30	duty:24
+              442600	sw:0000	pwm:000	t:         10	pdc:14	t_high:         10	t_low:         30	duty:24
+              443800	sw:0000	pwm:111	t:         10	pdc:14	t_high:         10	t_low:         30	duty:24
+              444000	sw:0000	pwm:000	t:         10	pdc:14	t_high:         10	t_low:         30	duty:24
+              445200	sw:0000	pwm:111	t:         10	pdc:14	t_high:         10	t_low:         30	duty:24
+              445400	sw:0000	pwm:000	t:         10	pdc:14	t_high:         10	t_low:         30	duty:24
+              446600	sw:0000	pwm:111	t:         10	pdc:14	t_high:         10	t_low:         30	duty:24
+              446800	sw:0000	pwm:000	t:         10	pdc:14	t_high:         10	t_low:         30	duty:24
+              448000	sw:0100	pwm:111	t:         10	pdc:14	t_high:         10	t_low:         30	duty:24
+              448200	sw:0100	pwm:000	t:         10	pdc:14	t_high:         10	t_low:         30	duty:24
+              448800	sw:0100	pwm:111	t:         10	pdc:14	t_high:         10	t_low:         30	duty:24
+              448830	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              449000	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              449600	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              449800	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              450400	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              450600	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              451200	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              451400	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              452000	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              452200	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              452800	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              453000	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              453600	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              453800	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              454400	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              454600	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              455200	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              455400	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              456000	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              456200	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              456800	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              457000	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              457600	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              457800	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              458400	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              458600	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              459200	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              459400	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              460000	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              460200	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+Iteration:	          3
+              460800	sw:0000	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              461000	sw:0000	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              462800	sw:0000	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              462830	sw:0000	pwm:111	t:         20	pdc:10	t_high:         10	t_low:         30	duty:24
+              463000	sw:0000	pwm:000	t:         20	pdc:10	t_high:         10	t_low:         30	duty:24
+              464800	sw:0000	pwm:111	t:         20	pdc:10	t_high:         10	t_low:         30	duty:24
+              465000	sw:0000	pwm:000	t:         20	pdc:10	t_high:         10	t_low:         30	duty:24
+              466800	sw:0000	pwm:111	t:         20	pdc:10	t_high:         10	t_low:         30	duty:24
+              467000	sw:0000	pwm:000	t:         20	pdc:10	t_high:         10	t_low:         30	duty:24
+              468800	sw:0000	pwm:111	t:         20	pdc:10	t_high:         10	t_low:         30	duty:24
+              469000	sw:0000	pwm:000	t:         20	pdc:10	t_high:         10	t_low:         30	duty:24
+              470800	sw:0000	pwm:111	t:         20	pdc:10	t_high:         10	t_low:         30	duty:24
+              471000	sw:0000	pwm:000	t:         20	pdc:10	t_high:         10	t_low:         30	duty:24
+              472800	sw:0000	pwm:111	t:         20	pdc:10	t_high:         10	t_low:         30	duty:24
+              473000	sw:0000	pwm:000	t:         20	pdc:10	t_high:         10	t_low:         30	duty:24
+              474800	sw:0000	pwm:111	t:         20	pdc:10	t_high:         10	t_low:         30	duty:24
+              475000	sw:0000	pwm:000	t:         20	pdc:10	t_high:         10	t_low:         30	duty:24
+              476800	sw:0100	pwm:111	t:         20	pdc:10	t_high:         10	t_low:         30	duty:24
+              477000	sw:0100	pwm:000	t:         20	pdc:10	t_high:         10	t_low:         30	duty:24
+              477600	sw:0100	pwm:111	t:         20	pdc:10	t_high:         10	t_low:         30	duty:24
+              477630	sw:0100	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              477800	sw:0100	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              478400	sw:0100	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              478600	sw:0100	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              479200	sw:0100	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              479400	sw:0100	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              480000	sw:0100	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              480200	sw:0100	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              480800	sw:0100	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              481000	sw:0100	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              481600	sw:0100	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              481800	sw:0100	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              482400	sw:0100	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              482600	sw:0100	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              483200	sw:1000	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              483400	sw:1000	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              484000	sw:1000	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              484200	sw:1000	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              484800	sw:1000	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              485000	sw:1000	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              485600	sw:1000	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              485800	sw:1000	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              486400	sw:1000	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              486600	sw:1000	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              487200	sw:1000	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              487400	sw:1000	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              488000	sw:1000	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              488200	sw:1000	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              488800	sw:1000	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              489000	sw:1000	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+Iteration:	          4
+              489600	sw:0000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              489800	sw:0000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              492200	sw:0000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              492230	sw:0000	pwm:111	t:         10	pdc: 7	t_high:         10	t_low:         30	duty:24
+              492400	sw:0000	pwm:000	t:         10	pdc: 7	t_high:         10	t_low:         30	duty:24
+              494800	sw:0000	pwm:111	t:         10	pdc: 7	t_high:         10	t_low:         30	duty:24
+              495000	sw:0000	pwm:000	t:         10	pdc: 7	t_high:         10	t_low:         30	duty:24
+              497400	sw:0000	pwm:111	t:         10	pdc: 7	t_high:         10	t_low:         30	duty:24
+              497600	sw:0000	pwm:000	t:         10	pdc: 7	t_high:         10	t_low:         30	duty:24
+              500000	sw:0000	pwm:111	t:         10	pdc: 7	t_high:         10	t_low:         30	duty:24
+              500200	sw:0000	pwm:000	t:         10	pdc: 7	t_high:         10	t_low:         30	duty:24
+              502600	sw:0000	pwm:111	t:         10	pdc: 7	t_high:         10	t_low:         30	duty:24
+              502800	sw:0000	pwm:000	t:         10	pdc: 7	t_high:         10	t_low:         30	duty:24
+              505200	sw:0000	pwm:111	t:         10	pdc: 7	t_high:         10	t_low:         30	duty:24
+              505400	sw:0000	pwm:000	t:         10	pdc: 7	t_high:         10	t_low:         30	duty:24
+              507800	sw:0000	pwm:111	t:         10	pdc: 7	t_high:         10	t_low:         30	duty:24
+              508000	sw:0000	pwm:000	t:         10	pdc: 7	t_high:         10	t_low:         30	duty:24
+              510400	sw:0100	pwm:111	t:         10	pdc: 7	t_high:         10	t_low:         30	duty:24
+              510600	sw:0100	pwm:000	t:         10	pdc: 7	t_high:         10	t_low:         30	duty:24
+              511200	sw:0100	pwm:111	t:         10	pdc: 7	t_high:         10	t_low:         30	duty:24
+              511230	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              511400	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              512000	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              512200	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              512800	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              513000	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              513600	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              513800	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              514400	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              514600	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              515200	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              515400	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              516000	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              516200	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              516800	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              517000	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              517600	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              517800	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              518400	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              518600	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              519200	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              519400	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              520000	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              520200	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              520800	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              521000	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              521600	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              521800	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              522400	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              522600	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+Iteration:	          5
+              523200	sw:0000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              523400	sw:0000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              526400	sw:0000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              526430	sw:0000	pwm:111	t:         10	pdc: 6	t_high:         10	t_low:         30	duty:24
+              526600	sw:0000	pwm:000	t:         10	pdc: 6	t_high:         10	t_low:         30	duty:24
+              529600	sw:0000	pwm:111	t:         10	pdc: 6	t_high:         10	t_low:         30	duty:24
+              529800	sw:0000	pwm:000	t:         10	pdc: 6	t_high:         10	t_low:         30	duty:24
+              532800	sw:0000	pwm:111	t:         10	pdc: 6	t_high:         10	t_low:         30	duty:24
+              533000	sw:0000	pwm:000	t:         10	pdc: 6	t_high:         10	t_low:         30	duty:24
+              536000	sw:0000	pwm:111	t:         10	pdc: 6	t_high:         10	t_low:         30	duty:24
+              536200	sw:0000	pwm:000	t:         10	pdc: 6	t_high:         10	t_low:         30	duty:24
+              539200	sw:0000	pwm:111	t:         10	pdc: 6	t_high:         10	t_low:         30	duty:24
+              539400	sw:0000	pwm:000	t:         10	pdc: 6	t_high:         10	t_low:         30	duty:24
+              542400	sw:0000	pwm:111	t:         10	pdc: 6	t_high:         10	t_low:         30	duty:24
+              542600	sw:0000	pwm:000	t:         10	pdc: 6	t_high:         10	t_low:         30	duty:24
+              545600	sw:0000	pwm:111	t:         10	pdc: 6	t_high:         10	t_low:         30	duty:24
+              545800	sw:0000	pwm:000	t:         10	pdc: 6	t_high:         10	t_low:         30	duty:24
+              548800	sw:0100	pwm:111	t:         10	pdc: 6	t_high:         10	t_low:         30	duty:24
+              549000	sw:0100	pwm:000	t:         10	pdc: 6	t_high:         10	t_low:         30	duty:24
+              549600	sw:0100	pwm:111	t:         10	pdc: 6	t_high:         10	t_low:         30	duty:24
+              549630	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              549800	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              550400	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              550600	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              551200	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              551400	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              552000	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              552200	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              552800	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              553000	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              553600	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              553800	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              554400	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              554600	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              555200	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              555400	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              556000	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              556200	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              556800	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              557000	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              557600	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              557800	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              558400	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              558600	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              559200	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              559400	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              560000	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              560200	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              560800	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              561000	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+Iteration:	          6
+              561600	sw:0000	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              561800	sw:0000	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              565400	sw:0000	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              565430	sw:0000	pwm:111	t:         50	pdc: 5	t_high:         10	t_low:         30	duty:24
+              565600	sw:0000	pwm:000	t:         50	pdc: 5	t_high:         10	t_low:         30	duty:24
+              569200	sw:0000	pwm:111	t:         50	pdc: 5	t_high:         10	t_low:         30	duty:24
+              569400	sw:0000	pwm:000	t:         50	pdc: 5	t_high:         10	t_low:         30	duty:24
+              573000	sw:0000	pwm:111	t:         50	pdc: 5	t_high:         10	t_low:         30	duty:24
+              573200	sw:0000	pwm:000	t:         50	pdc: 5	t_high:         10	t_low:         30	duty:24
+              576800	sw:0000	pwm:111	t:         50	pdc: 5	t_high:         10	t_low:         30	duty:24
+              577000	sw:0000	pwm:000	t:         50	pdc: 5	t_high:         10	t_low:         30	duty:24
+              580600	sw:0000	pwm:111	t:         50	pdc: 5	t_high:         10	t_low:         30	duty:24
+              580800	sw:0000	pwm:000	t:         50	pdc: 5	t_high:         10	t_low:         30	duty:24
+              584400	sw:0000	pwm:111	t:         50	pdc: 5	t_high:         10	t_low:         30	duty:24
+              584600	sw:0000	pwm:000	t:         50	pdc: 5	t_high:         10	t_low:         30	duty:24
+              588200	sw:0000	pwm:111	t:         50	pdc: 5	t_high:         10	t_low:         30	duty:24
+              588400	sw:0000	pwm:000	t:         50	pdc: 5	t_high:         10	t_low:         30	duty:24
+              592000	sw:0100	pwm:111	t:         50	pdc: 5	t_high:         10	t_low:         30	duty:24
+              592200	sw:0100	pwm:000	t:         50	pdc: 5	t_high:         10	t_low:         30	duty:24
+              592800	sw:0100	pwm:111	t:         50	pdc: 5	t_high:         10	t_low:         30	duty:24
+              592830	sw:0100	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              593000	sw:0100	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              593600	sw:0100	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              593800	sw:0100	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              594400	sw:0100	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              594600	sw:0100	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              595200	sw:0100	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              595400	sw:0100	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              596000	sw:0100	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              596200	sw:0100	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              596800	sw:0100	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              597000	sw:0100	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              597600	sw:0100	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              597800	sw:0100	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              598400	sw:1000	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              598600	sw:1000	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              599200	sw:1000	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              599400	sw:1000	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              600000	sw:1000	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              600200	sw:1000	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              600800	sw:1000	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              601000	sw:1000	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              601600	sw:1000	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              601800	sw:1000	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              602400	sw:1000	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              602600	sw:1000	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              603200	sw:1000	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              603400	sw:1000	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              604000	sw:1000	pwm:111	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+              604200	sw:1000	pwm:000	t:         50	pdc:25	t_high:         10	t_low:         30	duty:24
+Iteration:	          7
+              604800	sw:0000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              605000	sw:0000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              609200	sw:0000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              609230	sw:0000	pwm:111	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              609400	sw:0000	pwm:000	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              613600	sw:0000	pwm:111	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              613800	sw:0000	pwm:000	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              618000	sw:0000	pwm:111	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              618200	sw:0000	pwm:000	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              622400	sw:0000	pwm:111	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              622600	sw:0000	pwm:000	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              626800	sw:0000	pwm:111	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              627000	sw:0000	pwm:000	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              631200	sw:0000	pwm:111	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              631400	sw:0000	pwm:000	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              635600	sw:0000	pwm:111	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              635800	sw:0000	pwm:000	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              640000	sw:0100	pwm:111	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              640200	sw:0100	pwm:000	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              640800	sw:0100	pwm:111	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              640830	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              641000	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              641600	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              641800	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              642400	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              642600	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              643200	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              643400	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              644000	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              644200	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              644800	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              645000	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              645600	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              645800	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              646400	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              646600	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              647200	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              647400	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              648000	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              648200	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              648800	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              649000	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              649600	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              649800	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              650400	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              650600	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              651200	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              651400	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              652000	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              652200	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+Iteration:	          8
+              652800	sw:0000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              653000	sw:0000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              657800	sw:0000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              657830	sw:0000	pwm:111	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              658000	sw:0000	pwm:000	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              662800	sw:0000	pwm:111	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              663000	sw:0000	pwm:000	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              667800	sw:0000	pwm:111	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              668000	sw:0000	pwm:000	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              672800	sw:0000	pwm:111	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              673000	sw:0000	pwm:000	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              677800	sw:0000	pwm:111	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              678000	sw:0000	pwm:000	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              682800	sw:0000	pwm:111	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              683000	sw:0000	pwm:000	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              687800	sw:0000	pwm:111	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              688000	sw:0000	pwm:000	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              692800	sw:0100	pwm:111	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              693000	sw:0100	pwm:000	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              693600	sw:0100	pwm:111	t:         10	pdc: 4	t_high:         10	t_low:         30	duty:24
+              693630	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              693800	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              694400	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              694600	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              695200	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              695400	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              696000	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              696200	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              696800	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              697000	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              697600	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              697800	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              698400	sw:0100	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              698600	sw:0100	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              699200	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              699400	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              700000	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              700200	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              700800	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              701000	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              701600	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              701800	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              702400	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              702600	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              703200	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              703400	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              704000	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              704200	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              704800	sw:1000	pwm:111	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+              705000	sw:1000	pwm:000	t:         10	pdc:25	t_high:         10	t_low:         30	duty:24
+Iteration:	          9
+              705600	sw:0000	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              705800	sw:0000	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              711200	sw:0000	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              711230	sw:0000	pwm:111	t:         20	pdc: 3	t_high:         10	t_low:         30	duty:24
+              711400	sw:0000	pwm:000	t:         20	pdc: 3	t_high:         10	t_low:         30	duty:24
+              716800	sw:0000	pwm:111	t:         20	pdc: 3	t_high:         10	t_low:         30	duty:24
+              717000	sw:0000	pwm:000	t:         20	pdc: 3	t_high:         10	t_low:         30	duty:24
+              722400	sw:0000	pwm:111	t:         20	pdc: 3	t_high:         10	t_low:         30	duty:24
+              722600	sw:0000	pwm:000	t:         20	pdc: 3	t_high:         10	t_low:         30	duty:24
+              728000	sw:0000	pwm:111	t:         20	pdc: 3	t_high:         10	t_low:         30	duty:24
+              728200	sw:0000	pwm:000	t:         20	pdc: 3	t_high:         10	t_low:         30	duty:24
+              733600	sw:0000	pwm:111	t:         20	pdc: 3	t_high:         10	t_low:         30	duty:24
+              733800	sw:0000	pwm:000	t:         20	pdc: 3	t_high:         10	t_low:         30	duty:24
+              739200	sw:0000	pwm:111	t:         20	pdc: 3	t_high:         10	t_low:         30	duty:24
+              739400	sw:0000	pwm:000	t:         20	pdc: 3	t_high:         10	t_low:         30	duty:24
+              744800	sw:0000	pwm:111	t:         20	pdc: 3	t_high:         10	t_low:         30	duty:24
+              745000	sw:0000	pwm:000	t:         20	pdc: 3	t_high:         10	t_low:         30	duty:24
+              750400	sw:0100	pwm:111	t:         20	pdc: 3	t_high:         10	t_low:         30	duty:24
+              750600	sw:0100	pwm:000	t:         20	pdc: 3	t_high:         10	t_low:         30	duty:24
+              751200	sw:0100	pwm:111	t:         20	pdc: 3	t_high:         10	t_low:         30	duty:24
+              751230	sw:0100	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              751400	sw:0100	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              752000	sw:0100	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              752200	sw:0100	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              752800	sw:0100	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              753000	sw:0100	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              753600	sw:0100	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              753800	sw:0100	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              754400	sw:0100	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              754600	sw:0100	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              755200	sw:0100	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              755400	sw:0100	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              756000	sw:0100	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              756200	sw:0100	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              756800	sw:1000	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              757000	sw:1000	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              757600	sw:1000	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              757800	sw:1000	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              758400	sw:1000	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              758600	sw:1000	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              759200	sw:1000	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              759400	sw:1000	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              760000	sw:1000	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              760200	sw:1000	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              760800	sw:1000	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              761000	sw:1000	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              761600	sw:1000	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              761800	sw:1000	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              762400	sw:1000	pwm:111	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24
+              762600	sw:1000	pwm:000	t:         20	pdc:25	t_high:         10	t_low:         30	duty:24

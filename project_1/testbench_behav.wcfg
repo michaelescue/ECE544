@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="48247968000fs"></ZoomStartTime>
-      <ZoomEndTime time="475447968001fs"></ZoomEndTime>
-      <Cursor1Time time="109944602000fs"></Cursor1Time>
+      <ZoomStartTime time="525024667347fs"></ZoomStartTime>
+      <ZoomEndTime time="527695259278fs"></ZoomEndTime>
+      <Cursor1Time time="580933955000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="183"></NameColumnWidth>
-      <ValueColumnWidth column_width="136"></ValueColumnWidth>
+      <ValueColumnWidth column_width="132"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="14" />
    <wvobject fp_name="/testbench/detector1/clk" type="logic">
@@ -31,16 +31,16 @@
    <wvobject fp_name="/testbench/detector1/sw" type="array">
       <obj_property name="ElementShortName">sw[15:0]</obj_property>
       <obj_property name="ObjectShortName">sw[15:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/detector1/pwm_channel" type="array">
       <obj_property name="ElementShortName">pwm_channel[7:0]</obj_property>
       <obj_property name="ObjectShortName">pwm_channel[7:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/detector1/pdc" type="array">
-      <obj_property name="ElementShortName">pdc[31:0]</obj_property>
-      <obj_property name="ObjectShortName">pdc[31:0]</obj_property>
+      <obj_property name="ElementShortName">pdc[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pdc[7:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/detector1/red" type="logic">
@@ -84,6 +84,7 @@
    <wvobject fp_name="/testbench/detector1/counter_reset" type="array">
       <obj_property name="ElementShortName">counter_reset[1:0]</obj_property>
       <obj_property name="ObjectShortName">counter_reset[1:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/detector1/increment" type="array">
       <obj_property name="ElementShortName">increment[1:0]</obj_property>

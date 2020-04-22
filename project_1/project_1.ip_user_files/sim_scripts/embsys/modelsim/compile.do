@@ -234,6 +234,12 @@ vlog -work xil_defaultlib -64 -incr "+incdir+../../../../project_1.srcs/sources_
 "../../../../project_1.srcs/sources_1/bd/embsys/ipshared/4239/src/PmodENC.v" \
 "../../../bd/embsys/ip/embsys_PmodENC_0_1/sim/embsys_PmodENC_0_1.v" \
 
+vcom -work xil_defaultlib -64 -93 \
+"../../../bd/embsys/ip/embsys_axi_gpio_1_0/sim/embsys_axi_gpio_1_0.vhd" \
+
+vlog -work xil_defaultlib -64 -incr "+incdir+../../../../project_1.srcs/sources_1/bd/embsys/ipshared/b65a" "+incdir+../../../../project_1.srcs/sources_1/bd/embsys/ipshared/ec67/hdl" "+incdir+../../../../project_1.srcs/sources_1/bd/embsys/ipshared/b65a" "+incdir+../../../../project_1.srcs/sources_1/bd/embsys/ipshared/ec67/hdl" \
+"../../../bd/embsys/sim/embsys.v" \
+
 vlog -work xil_defaultlib \
 "glbl.v"
 

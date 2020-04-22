@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="embsys_microblaze_0_1_synth_1" LaunchDir="C:/Users/ME/Vivado_Projects/project_1/project_1.runs/embsys_microblaze_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys_nexys4IO_0_1_synth_1" LaunchDir="C:/Users/ME/Vivado_Projects/project_1/project_1.runs/embsys_nexys4IO_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys_PmodOLEDrgb_0_1_synth_1" LaunchDir="C:/Users/ME/Vivado_Projects/project_1/project_1.runs/embsys_PmodOLEDrgb_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys_axi_gpio_0_1_synth_1" LaunchDir="C:/Users/ME/Vivado_Projects/project_1/project_1.runs/embsys_axi_gpio_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys_axi_timer_0_1_synth_1" LaunchDir="C:/Users/ME/Vivado_Projects/project_1/project_1.runs/embsys_axi_timer_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys_fit_timer_0_1_synth_1" LaunchDir="C:/Users/ME/Vivado_Projects/project_1/project_1.runs/embsys_fit_timer_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys_axi_uartlite_0_1_synth_1" LaunchDir="C:/Users/ME/Vivado_Projects/project_1/project_1.runs/embsys_axi_uartlite_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys_microblaze_0_axi_intc_1_synth_1" LaunchDir="C:/Users/ME/Vivado_Projects/project_1/project_1.runs/embsys_microblaze_0_axi_intc_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys_microblaze_0_xlconcat_1_synth_1" LaunchDir="C:/Users/ME/Vivado_Projects/project_1/project_1.runs/embsys_microblaze_0_xlconcat_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys_mdm_1_1_synth_1" LaunchDir="C:/Users/ME/Vivado_Projects/project_1/project_1.runs/embsys_mdm_1_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys_clk_wiz_1_1_synth_1" LaunchDir="C:/Users/ME/Vivado_Projects/project_1/project_1.runs/embsys_clk_wiz_1_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys_rst_clk_wiz_1_100M_1_synth_1" LaunchDir="C:/Users/ME/Vivado_Projects/project_1/project_1.runs/embsys_rst_clk_wiz_1_100M_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys_xbar_1_synth_1" LaunchDir="C:/Users/ME/Vivado_Projects/project_1/project_1.runs/embsys_xbar_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys_dlmb_v10_1_synth_1" LaunchDir="C:/Users/ME/Vivado_Projects/project_1/project_1.runs/embsys_dlmb_v10_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys_ilmb_v10_1_synth_1" LaunchDir="C:/Users/ME/Vivado_Projects/project_1/project_1.runs/embsys_ilmb_v10_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="embsys_dlmb_v10_1_synth_1"/>
+	</Run>
+	<Run Id="embsys_dlmb_bram_if_cntlr_1_synth_1" LaunchDir="C:/Users/ME/Vivado_Projects/project_1/project_1.runs/embsys_dlmb_bram_if_cntlr_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys_ilmb_bram_if_cntlr_1_synth_1" LaunchDir="C:/Users/ME/Vivado_Projects/project_1/project_1.runs/embsys_ilmb_bram_if_cntlr_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys_lmb_bram_1_synth_1" LaunchDir="C:/Users/ME/Vivado_Projects/project_1/project_1.runs/embsys_lmb_bram_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys_PmodENC_0_1_synth_1" LaunchDir="C:/Users/ME/Vivado_Projects/project_1/project_1.runs/embsys_PmodENC_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="embsys_axi_gpio_1_0_synth_1" LaunchDir="C:/Users/ME/Vivado_Projects/project_1/project_1.runs/embsys_axi_gpio_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

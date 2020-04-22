@@ -22,7 +22,7 @@
 
 module pwdet #(
     parameter   DIN_SIZE =          8,
-                DOUT_SIZE =         32,
+                DOUT_SIZE =         8,
                 COUNTER_BITS =      32,
                 STATE_BITS =        2,
                 SWITCH_SIZE =       16,
@@ -44,7 +44,7 @@ module pwdet #(
                                     green;
     
     // Counter Signals
-    wire     [DOUT_SIZE-1:0]        count_high,
+    wire     [COUNTER_BITS-1:0]        count_high,
                                     count_low;
                                     
     reg     [STATE_BITS-1:0]        state,
@@ -100,13 +100,36 @@ module pwdet #(
             if(reset)
                 begin
                     state <= init_state;
-                    counter_reset = ALL_ON;
                 end
             else
                 begin
                     state <= next_state;
-                    counter_reset = ALL_OFF;
                 end
+        end
+
+    // Reset condition block.
+    always @(*)
+        begin
+           case(state)
+                red_toggle:
+                    begin
+                        if(~increment[1] & red)  counter_reset = HIGH_CNTR;
+                        else if(~increment[0] & ~red) counter_reset = LOW_CNTR;
+                        else counter_reset = ALL_OFF;
+                    end
+                blue_toggle:
+                    begin 
+                        if(~increment[1] & blue)  counter_reset = HIGH_CNTR;
+                        else if(~increment[0] & ~blue) counter_reset = LOW_CNTR;
+                        else counter_reset = ALL_OFF;                    
+                    end
+                green_toggle:
+                    begin
+                        if(~increment[1] & green)  counter_reset = HIGH_CNTR;
+                        else if(~increment[0] & ~green) counter_reset = LOW_CNTR;
+                        else counter_reset = ALL_OFF;                    
+                    end
+           endcase      
         end
     
     // Current State Output
@@ -117,13 +140,11 @@ module pwdet #(
                         begin
                             if(red)
                                 begin
-                                    counter_reset = HIGH_CNTR;
                                     increment = HIGH_CNTR;
                                     pdc = (count_high  * 100) / (count_high + count_low);
                                 end
                             else
                                 begin
-                                    counter_reset = LOW_CNTR;
                                     increment = LOW_CNTR;
                                 end
                         end
@@ -131,13 +152,11 @@ module pwdet #(
                         begin
                             if(blue)    
                                 begin
-                                    counter_reset = HIGH_CNTR;
                                     increment = HIGH_CNTR;
                                     pdc = (count_high  * 100) / (count_high + count_low);
                                 end
                             else        
                                 begin
-                                    counter_reset = LOW_CNTR;
                                     increment = LOW_CNTR;
                                 end
                         end
@@ -145,26 +164,22 @@ module pwdet #(
                         begin
                             if(green)
                                 begin
-                                    counter_reset = HIGH_CNTR;
                                     increment = HIGH_CNTR;
                                     pdc = (count_high  * 100) / (count_high + count_low);
                                 end
                             else       
                                 begin
-                                    counter_reset = LOW_CNTR;
                                     increment = LOW_CNTR;
                                 end
                         end
                     init_state:         // = 2'b11;
                         begin
                             increment =     ALL_OFF;
-                            counter_reset = ALL_ON;
                             pdc = 0;
                         end
                     default:
                         begin
                             increment =     ALL_OFF;
-                            counter_reset = ALL_ON;
                             pdc = 0;
                         end
                 endcase                

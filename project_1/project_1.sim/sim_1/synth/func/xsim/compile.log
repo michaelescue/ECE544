@@ -1,4 +1,4 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.sim/sim_1/synth/func/xsim/nexysA7fpga_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.sim/sim_1/synth/func/xsim/testbench_func_synth.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module embsys
 INFO: [VRFC 10-311] analyzing module embsys_PmodENC_0_1
 INFO: [VRFC 10-311] analyzing module embsys_PmodENC_0_1_GPIO_Core
@@ -139,6 +139,13 @@ INFO: [VRFC 10-311] analyzing module embsys_axi_gpio_0_1_cdc_sync
 INFO: [VRFC 10-311] analyzing module embsys_axi_gpio_0_1_pselect_f
 INFO: [VRFC 10-311] analyzing module embsys_axi_gpio_0_1_pselect_f__parameterized1
 INFO: [VRFC 10-311] analyzing module embsys_axi_gpio_0_1_slave_attachment
+INFO: [VRFC 10-311] analyzing module embsys_axi_gpio_1_0
+INFO: [VRFC 10-311] analyzing module embsys_axi_gpio_1_0_GPIO_Core
+INFO: [VRFC 10-311] analyzing module embsys_axi_gpio_1_0_address_decoder
+INFO: [VRFC 10-311] analyzing module embsys_axi_gpio_1_0_axi_gpio
+INFO: [VRFC 10-311] analyzing module embsys_axi_gpio_1_0_axi_lite_ipif
+INFO: [VRFC 10-311] analyzing module embsys_axi_gpio_1_0_cdc_sync
+INFO: [VRFC 10-311] analyzing module embsys_axi_gpio_1_0_slave_attachment
 INFO: [VRFC 10-311] analyzing module embsys_axi_timer_0_1
 INFO: [VRFC 10-311] analyzing module embsys_axi_timer_0_1_address_decoder
 INFO: [VRFC 10-311] analyzing module embsys_axi_timer_0_1_axi_lite_ipif
@@ -1006,3 +1013,14 @@ INFO: [VRFC 10-311] analyzing module embsys_microblaze_0_1_mb_sync_vec__paramete
 INFO: [VRFC 10-311] analyzing module embsys_microblaze_0_1_msr_reg_gti
 INFO: [VRFC 10-311] analyzing module embsys_microblaze_0_1_mux_bus
 INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/new/counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/new/ff_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ff_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/new/pwdet.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pwdet
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sim_1/new/testbench.v:93]
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sim_1/new/testbench.v:146]
+WARNING: [VRFC 10-1581] illegal format specifier - for monitor [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sim_1/new/testbench.v:69]

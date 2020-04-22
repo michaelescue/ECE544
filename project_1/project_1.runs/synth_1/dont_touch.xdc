@@ -66,4 +66,7 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==embsys_lmb_bram
 # IP: bd/embsys/ip/embsys_PmodENC_0_1/embsys_PmodENC_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==embsys_PmodENC_0_1 || ORIG_REF_NAME==embsys_PmodENC_0_1} -quiet] -quiet
 
+# IP: bd/embsys/ip/embsys_axi_gpio_1_0/embsys_axi_gpio_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==embsys_axi_gpio_1_0 || ORIG_REF_NAME==embsys_axi_gpio_1_0} -quiet] -quiet
+
 # XDC: bd/embsys/embsys_ooc.xdc

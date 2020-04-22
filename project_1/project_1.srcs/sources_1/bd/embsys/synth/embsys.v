@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Sun Apr 19 23:59:07 2020
+//Date        : Wed Apr 22 01:45:16 2020
 //Host        : DESKTOP-J4B3MVP running 64-bit major release  (build 9200)
 //Command     : generate_target embsys.bd
 //Design      : embsys
@@ -71,6 +71,7 @@ module embsys
     btnL_0,
     btnR_0,
     btnU_0,
+    clk_out3_0,
     dp_0,
     gpio_rtl_0_tri_i,
     gpio_rtl_1_tri_o,
@@ -145,12 +146,13 @@ module embsys
   input btnL_0;
   input btnR_0;
   input btnU_0;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_OUT3_0 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_OUT3_0, CLK_DOMAIN /clk_wiz_1_clk_out1, FREQ_HZ 5078125, PHASE 0.0" *) output clk_out3_0;
   output dp_0;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_rtl_0 TRI_I" *) input [7:0]gpio_rtl_0_tri_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_rtl_1 TRI_O" *) output [7:0]gpio_rtl_1_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_rtl_2 TRI_I" *) input [31:0]gpio_rtl_2_tri_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_rtl_2 TRI_O" *) output [31:0]gpio_rtl_2_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_rtl_2 TRI_T" *) output [31:0]gpio_rtl_2_tri_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_rtl_2 TRI_I" *) input [7:0]gpio_rtl_2_tri_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_rtl_2 TRI_O" *) output [7:0]gpio_rtl_2_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_rtl_2 TRI_T" *) output [7:0]gpio_rtl_2_tri_t;
   output [15:0]led_0;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET_RTL_0 RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET_RTL_0, POLARITY ACTIVE_LOW" *) input reset_rtl_0;
   output [6:0]seg_0;
@@ -210,9 +212,9 @@ module embsys
   wire PmodOLEDrgb_0_PmodOLEDrgb_out_PIN9_T;
   wire [7:0]axi_gpio_0_GPIO2_TRI_O;
   wire [7:0]axi_gpio_0_GPIO_TRI_I;
-  wire [31:0]axi_gpio_1_GPIO_TRI_I;
-  wire [31:0]axi_gpio_1_GPIO_TRI_O;
-  wire [31:0]axi_gpio_1_GPIO_TRI_T;
+  wire [7:0]axi_gpio_1_GPIO_TRI_I;
+  wire [7:0]axi_gpio_1_GPIO_TRI_O;
+  wire [7:0]axi_gpio_1_GPIO_TRI_T;
   wire axi_timer_0_generateout0;
   wire axi_timer_0_interrupt;
   wire axi_uartlite_0_UART_RxD;
@@ -224,6 +226,7 @@ module embsys
   wire btnU_0_1;
   wire clk_100MHz_1;
   wire clk_wiz_1_clk_out2;
+  wire clk_wiz_1_clk_out3;
   wire clk_wiz_1_locked;
   wire fit_timer_0_Interrupt;
   wire mdm_1_debug_sys_rst;
@@ -529,7 +532,7 @@ module embsys
   assign RGB2_Red_0 = nexys4IO_0_RGB2_Red;
   assign an_0[7:0] = nexys4IO_0_an;
   assign axi_gpio_0_GPIO_TRI_I = gpio_rtl_0_tri_i[7:0];
-  assign axi_gpio_1_GPIO_TRI_I = gpio_rtl_2_tri_i[31:0];
+  assign axi_gpio_1_GPIO_TRI_I = gpio_rtl_2_tri_i[7:0];
   assign axi_uartlite_0_UART_RxD = uart_rtl_0_rxd;
   assign btnC_0_1 = btnC_0;
   assign btnD_0_1 = btnD_0;
@@ -537,10 +540,11 @@ module embsys
   assign btnR_0_1 = btnR_0;
   assign btnU_0_1 = btnU_0;
   assign clk_100MHz_1 = sysclk;
+  assign clk_out3_0 = clk_wiz_1_clk_out3;
   assign dp_0 = nexys4IO_0_dp;
   assign gpio_rtl_1_tri_o[7:0] = axi_gpio_0_GPIO2_TRI_O;
-  assign gpio_rtl_2_tri_o[31:0] = axi_gpio_1_GPIO_TRI_O;
-  assign gpio_rtl_2_tri_t[31:0] = axi_gpio_1_GPIO_TRI_T;
+  assign gpio_rtl_2_tri_o[7:0] = axi_gpio_1_GPIO_TRI_O;
+  assign gpio_rtl_2_tri_t[7:0] = axi_gpio_1_GPIO_TRI_T;
   assign led_0[15:0] = nexys4IO_0_led;
   assign reset_rtl_0_0_1 = sysreset_n;
   assign seg_0[6:0] = nexys4IO_0_seg;
@@ -753,6 +757,7 @@ module embsys
        (.clk_in1(clk_100MHz_1),
         .clk_out1(microblaze_0_Clk),
         .clk_out2(clk_wiz_1_clk_out2),
+        .clk_out3(clk_wiz_1_clk_out3),
         .locked(clk_wiz_1_locked));
   embsys_fit_timer_0_1 fit_timer_0
        (.Clk(microblaze_0_Clk),

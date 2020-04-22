@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Mon Apr 13 14:36:26 2020
+| Date         : Wed Apr 22 04:10:54 2020
 | Host         : DESKTOP-J4B3MVP running 64-bit major release  (build 9200)
 | Command      : report_utilization -file nexysA7fpga_utilization_synth.rpt -pb nexysA7fpga_utilization_synth.pb
 | Design       : nexysA7fpga
@@ -30,12 +30,12 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |    0 |     0 |     32600 |  0.00 |
-|   LUT as Logic          |    0 |     0 |     32600 |  0.00 |
+| Slice LUTs*             | 1141 |     0 |     32600 |  3.50 |
+|   LUT as Logic          | 1141 |     0 |     32600 |  3.50 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
-| Slice Registers         |    0 |     0 |     65200 |  0.00 |
-|   Register as Flip Flop |    0 |     0 |     65200 |  0.00 |
-|   Register as Latch     |    0 |     0 |     65200 |  0.00 |
+| Slice Registers         |   94 |     0 |     65200 |  0.14 |
+|   Register as Flip Flop |   84 |     0 |     65200 |  0.13 |
+|   Register as Latch     |   10 |     0 |     65200 |  0.02 |
 | F7 Muxes                |    0 |     0 |     16300 |  0.00 |
 | F8 Muxes                |    0 |     0 |      8150 |  0.00 |
 +-------------------------+------+-------+-----------+-------+
@@ -55,9 +55,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 0     |          Yes |           - |        Reset |
-| 0     |          Yes |         Set |            - |
-| 0     |          Yes |       Reset |            - |
+| 86    |          Yes |           - |        Reset |
+| 2     |          Yes |         Set |            - |
+| 6     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   94 |     0 |       210 | 44.76 |
+| Bonded IOB                  |   95 |     0 |       210 | 45.24 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         5 |  0.00 |
 | PHASER_REF                  |    0 |     0 |         5 |  0.00 |
@@ -112,7 +112,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    0 |     0 |        32 |  0.00 |
+| BUFGCTRL   |    1 |     0 |        32 |  3.13 |
 | BUFIO      |    0 |     0 |        20 |  0.00 |
 | MMCME2_ADV |    0 |     0 |         5 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |         5 |  0.00 |
@@ -146,9 +146,20 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
+| LUT3     | 1024 |                 LUT |
+| CARRY4   |  319 |          CarryLogic |
+| FDCE     |   76 |        Flop & Latch |
+| LUT2     |   72 |                 LUT |
+| LUT1     |   64 |                 LUT |
 | OBUF     |   55 |                  IO |
-| IBUF     |   39 |                  IO |
+| IBUF     |   40 |                  IO |
+| LUT4     |   25 |                 LUT |
 | OBUFT    |   16 |                  IO |
+| LDCE     |   10 |        Flop & Latch |
+| FDRE     |    6 |        Flop & Latch |
+| LUT5     |    4 |                 LUT |
+| FDSE     |    2 |        Flop & Latch |
+| BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 
 
@@ -174,6 +185,7 @@ Table of Contents
 | embsys_clk_wiz_1_1             |    1 |
 | embsys_axi_uartlite_0_1        |    1 |
 | embsys_axi_timer_0_1           |    1 |
+| embsys_axi_gpio_1_0            |    1 |
 | embsys_axi_gpio_0_1            |    1 |
 | embsys_PmodOLEDrgb_0_1         |    1 |
 | embsys_PmodENC_0_1             |    1 |

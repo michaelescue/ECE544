@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/ME/Vivado Projects/project_0/project_0.runs/impl_1'
+HD_PWD='C:/Users/ME/Vivado_Projects/project_1/project_1.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
+/bin/touch .post_route_phys_opt_design.begin.rst
 EAStep vivado -log nexysA7fpga.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source nexysA7fpga.tcl -notrace
 
 

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date                      : Mon Apr 13 14:38:25 2020
+| Date                      : Wed Apr 22 04:18:16 2020
 | Host                      : DESKTOP-J4B3MVP running 64-bit major release  (build 9200)
 | Command                   : report_io -file nexysA7fpga_io_placed.rpt
 | Design                    : nexysA7fpga
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            95 |
+|            96 |
 +---------------+
 
 
@@ -121,7 +121,7 @@ Table of Contents
 | E12        |              | Dedicated  | TMS_0                        | Config      |             |       0 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | E13        |              | Dedicated  | TDO_0                        | Config      |             |       0 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | E14        |              |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
-| E15        |              | High Range | IO_L11P_T1_SRCC_15           | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| E15        | pwdet_clk    | High Range | IO_L11P_T1_SRCC_15           | INPUT       | LVCMOS33    |      15 |            |      |                     |                 NONE |         | UNFIXED    |           |          |      | NONE             |              |                   |              |
 | E16        | JB[4]        | High Range | IO_L11N_T1_SRCC_15           | BIDIR       | LVCMOS33    |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | E17        | JA[5]        | High Range | IO_L16P_T2_A28_15            | OUTPUT      | LVCMOS33    |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | E18        | JA[2]        | High Range | IO_L21P_T3_DQS_15            | OUTPUT      | LVCMOS33    |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |

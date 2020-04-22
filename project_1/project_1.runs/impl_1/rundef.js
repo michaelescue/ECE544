@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 // pre-commands:
-ISETouchFile( "init_design", "begin" );
+ISETouchFile( "post_route_phys_opt_design", "begin" );
 ISEStep( "vivado",
          "-log nexysA7fpga.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source nexysA7fpga.tcl -notrace" );
 

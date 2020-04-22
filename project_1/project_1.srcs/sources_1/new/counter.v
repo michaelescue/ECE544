@@ -31,7 +31,7 @@ module counter #(
     
     initial count = 0;
     
-    always@(posedge clk or posedge reset or negedge reset)
+    always@(posedge clk or posedge reset)
         begin
             if(reset)
                 begin

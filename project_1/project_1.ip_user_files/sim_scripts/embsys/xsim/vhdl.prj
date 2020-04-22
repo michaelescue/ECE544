@@ -14,5 +14,6 @@ vhdl xil_defaultlib  \
 "../../../bd/embsys/ip/embsys_dlmb_bram_if_cntlr_1/sim/embsys_dlmb_bram_if_cntlr_1.vhd" \
 "../../../bd/embsys/ip/embsys_ilmb_bram_if_cntlr_1/sim/embsys_ilmb_bram_if_cntlr_1.vhd" \
 "../../../bd/embsys/ip/embsys_PmodENC_0_1/src/PmodENC_axi_gpio_0_0/sim/PmodENC_axi_gpio_0_0.vhd" \
+"../../../bd/embsys/ip/embsys_axi_gpio_1_0/sim/embsys_axi_gpio_1_0.vhd" \
 
 nosort

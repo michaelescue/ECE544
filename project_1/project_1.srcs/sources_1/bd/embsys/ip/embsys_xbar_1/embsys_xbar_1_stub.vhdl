@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
 -- Date        : Tue Apr 21 18:19:47 2020
 -- Host        : DESKTOP-J4B3MVP running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_xbar_1/embsys_xbar_1_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top embsys_xbar_1 -prefix
+--               embsys_xbar_1_ embsys_xbar_1_stub.vhdl
 -- Design      : embsys_xbar_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a50tcsg324-1

@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
 -- Date        : Tue Apr 21 18:19:47 2020
 -- Host        : DESKTOP-J4B3MVP running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_xbar_1/embsys_xbar_1_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top embsys_xbar_1 -prefix
+--               embsys_xbar_1_ embsys_xbar_1_sim_netlist.vhdl
 -- Design      : embsys_xbar_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -97,8 +97,6 @@ entity embsys_xbar_1_axi_crossbar_v2_1_18_addr_arbiter_sasd is
     mi_wready : in STD_LOGIC_VECTOR ( 0 to 0 );
     mi_bvalid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of embsys_xbar_1_axi_crossbar_v2_1_18_addr_arbiter_sasd : entity is "axi_crossbar_v2_1_18_addr_arbiter_sasd";
 end embsys_xbar_1_axi_crossbar_v2_1_18_addr_arbiter_sasd;
 
 architecture STRUCTURE of embsys_xbar_1_axi_crossbar_v2_1_18_addr_arbiter_sasd is
@@ -2370,8 +2368,6 @@ entity embsys_xbar_1_axi_crossbar_v2_1_18_decerr_slave is
     mi_awvalid_en : in STD_LOGIC;
     p_4_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of embsys_xbar_1_axi_crossbar_v2_1_18_decerr_slave : entity is "axi_crossbar_v2_1_18_decerr_slave";
 end embsys_xbar_1_axi_crossbar_v2_1_18_decerr_slave;
 
 architecture STRUCTURE of embsys_xbar_1_axi_crossbar_v2_1_18_decerr_slave is
@@ -2672,8 +2668,6 @@ entity embsys_xbar_1_axi_crossbar_v2_1_18_splitter is
     \f_mux_return__1\ : in STD_LOGIC;
     \f_mux_return__3\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of embsys_xbar_1_axi_crossbar_v2_1_18_splitter : entity is "axi_crossbar_v2_1_18_splitter";
 end embsys_xbar_1_axi_crossbar_v2_1_18_splitter;
 
 architecture STRUCTURE of embsys_xbar_1_axi_crossbar_v2_1_18_splitter is
@@ -3223,8 +3217,6 @@ entity embsys_xbar_1_axi_register_slice_v2_1_17_axic_register_slice is
     m_atarget_hot0 : in STD_LOGIC_VECTOR ( 8 downto 0 );
     reset : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of embsys_xbar_1_axi_register_slice_v2_1_17_axic_register_slice : entity is "axi_register_slice_v2_1_17_axic_register_slice";
 end embsys_xbar_1_axi_register_slice_v2_1_17_axic_register_slice;
 
 architecture STRUCTURE of embsys_xbar_1_axi_register_slice_v2_1_17_axic_register_slice is
@@ -6955,8 +6947,6 @@ entity embsys_xbar_1_axi_crossbar_v2_1_18_crossbar_sasd is
     s_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awvalid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of embsys_xbar_1_axi_crossbar_v2_1_18_crossbar_sasd : entity is "axi_crossbar_v2_1_18_crossbar_sasd";
 end embsys_xbar_1_axi_crossbar_v2_1_18_crossbar_sasd;
 
 architecture STRUCTURE of embsys_xbar_1_axi_crossbar_v2_1_18_crossbar_sasd is
@@ -7904,8 +7894,6 @@ entity embsys_xbar_1_axi_crossbar_v2_1_18_axi_crossbar is
   attribute C_S_AXI_WRITE_ACCEPTANCE of embsys_xbar_1_axi_crossbar_v2_1_18_axi_crossbar : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of embsys_xbar_1_axi_crossbar_v2_1_18_axi_crossbar : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of embsys_xbar_1_axi_crossbar_v2_1_18_axi_crossbar : entity is "axi_crossbar_v2_1_18_axi_crossbar";
   attribute P_ADDR_DECODE : integer;
   attribute P_ADDR_DECODE of embsys_xbar_1_axi_crossbar_v2_1_18_axi_crossbar : entity is 1;
   attribute P_AXI3 : integer;

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Mon Apr 13 14:39:39 2020
+| Date             : Wed Apr 22 04:19:21 2020
 | Host             : DESKTOP-J4B3MVP running 64-bit major release  (build 9200)
 | Command          : report_power -file nexysA7fpga_power_routed.rpt -pb nexysA7fpga_power_summary_routed.pb -rpx nexysA7fpga_power_routed.rpx
 | Design           : nexysA7fpga
@@ -30,11 +30,11 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.220        |
+| Total On-Chip Power (W)  | 0.234        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.147        |
-| Device Static (W)        | 0.073        |
+| Dynamic (W)              | 0.161        |
+| Device Static (W)        | 0.074        |
 | Effective TJA (C/W)      | 4.8          |
 | Max Ambient (C)          | 83.9         |
 | Junction Temperature (C) | 26.1         |
@@ -52,21 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.016 |       12 |       --- |             --- |
-| Slice Logic              |     0.005 |     8147 |       --- |             --- |
-|   LUT as Logic           |     0.004 |     2782 |     32600 |            8.53 |
+| Clocks                   |     0.018 |       13 |       --- |             --- |
+| Slice Logic              |     0.007 |    10005 |       --- |             --- |
+|   LUT as Logic           |     0.005 |     4011 |     32600 |           12.30 |
 |   LUT as Distributed RAM |    <0.001 |      112 |      9600 |            1.17 |
-|   Register               |    <0.001 |     3581 |     65200 |            5.49 |
-|   CARRY4                 |    <0.001 |       96 |      8150 |            1.18 |
+|   Register               |    <0.001 |     3813 |     65200 |            5.85 |
+|   CARRY4                 |    <0.001 |      415 |      8150 |            5.09 |
 |   F7/F8 Muxes            |    <0.001 |      215 |     32600 |            0.66 |
 |   LUT as Shift Register  |    <0.001 |       95 |      9600 |            0.99 |
-|   Others                 |    <0.001 |      758 |       --- |             --- |
-| Signals                  |     0.010 |     5486 |       --- |             --- |
-| Block RAM                |    <0.001 |       32 |        75 |           42.67 |
-| MMCM                     |     0.106 |        1 |         5 |           20.00 |
-| I/O                      |     0.009 |       95 |       210 |           45.24 |
-| Static Power             |     0.073 |          |           |                 |
-| Total                    |     0.220 |          |           |                 |
+|   Others                 |    <0.001 |      780 |       --- |             --- |
+| Signals                  |     0.012 |     7181 |       --- |             --- |
+| Block RAM                |     0.015 |       32 |        75 |           42.67 |
+| MMCM                     |     0.098 |        1 |         5 |           20.00 |
+| I/O                      |     0.010 |       96 |       210 |           45.71 |
+| Static Power             |     0.074 |          |           |                 |
+| Total                    |     0.234 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,8 +76,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.043 |       0.033 |      0.011 |
-| Vccaux    |       1.800 |     0.072 |       0.059 |      0.013 |
+| Vccint    |       1.000 |     0.062 |       0.051 |      0.011 |
+| Vccaux    |       1.800 |     0.067 |       0.055 |      0.013 |
 | Vcco33    |       3.300 |     0.004 |       0.003 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -85,7 +85,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
+| Vccbram   |       1.000 |     0.002 |       0.001 |      0.001 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -141,6 +141,7 @@ Table of Contents
 | clk_out2_embsys_clk_wiz_1_1_1                          | EMBSYS/clk_wiz_1/inst/clk_out2_embsys_clk_wiz_1_1 |            20.0 |
 | clkfbout_embsys_clk_wiz_1_1                            | EMBSYS/clk_wiz_1/inst/clkfbout_embsys_clk_wiz_1_1 |            10.0 |
 | clkfbout_embsys_clk_wiz_1_1_1                          | EMBSYS/clk_wiz_1/inst/clkfbout_embsys_clk_wiz_1_1 |            10.0 |
+| pwdet_clk_pin                                          | pwdet_clk                                         |           200.0 |
 | sys_clk_pin                                            | clk                                               |            10.0 |
 +--------------------------------------------------------+---------------------------------------------------+-----------------+
 
@@ -154,8 +155,8 @@ Table of Contents
 +-------------------------------------------------------------------------------------------------+-----------+
 | Name                                                                                            | Power (W) |
 +-------------------------------------------------------------------------------------------------+-----------+
-| nexysA7fpga                                                                                     |     0.147 |
-|   EMBSYS                                                                                        |     0.138 |
+| nexysA7fpga                                                                                     |     0.161 |
+|   EMBSYS                                                                                        |     0.149 |
 |     PmodENC_0                                                                                   |    <0.001 |
 |       inst                                                                                      |    <0.001 |
 |         axi_gpio_0                                                                              |    <0.001 |
@@ -172,8 +173,8 @@ Table of Contents
 |         xlslice_o_1                                                                             |     0.000 |
 |         xlslice_t_0                                                                             |     0.000 |
 |         xlslice_t_1                                                                             |     0.000 |
-|     PmodOLEDrgb_0                                                                               |     0.004 |
-|       inst                                                                                      |     0.004 |
+|     PmodOLEDrgb_0                                                                               |     0.005 |
+|       inst                                                                                      |     0.005 |
 |         axi_gpio_0                                                                              |    <0.001 |
 |           U0                                                                                    |    <0.001 |
 |             AXI_LITE_IPIF_I                                                                     |    <0.001 |
@@ -295,6 +296,13 @@ Table of Contents
 |               MEM_DECODE_GEN[0].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I                     |    <0.001 |
 |         gpio_core_1                                                                             |    <0.001 |
 |           Dual.INPUT_DOUBLE_REGS4                                                               |    <0.001 |
+|     axi_gpio_1                                                                                  |    <0.001 |
+|       U0                                                                                        |    <0.001 |
+|         AXI_LITE_IPIF_I                                                                         |    <0.001 |
+|           I_SLAVE_ATTACHMENT                                                                    |    <0.001 |
+|             I_DECODER                                                                           |    <0.001 |
+|         gpio_core_1                                                                             |    <0.001 |
+|           Not_Dual.INPUT_DOUBLE_REGS3                                                           |    <0.001 |
 |     axi_timer_0                                                                                 |     0.002 |
 |       U0                                                                                        |     0.002 |
 |         AXI4_LITE_I                                                                             |    <0.001 |
@@ -334,8 +342,8 @@ Table of Contents
 |               I_SRL_FIFO_RBU_F                                                                  |    <0.001 |
 |                 CNTR_INCR_DECR_ADDN_F_I                                                         |    <0.001 |
 |                 DYNSHREG_F_I                                                                    |    <0.001 |
-|     clk_wiz_1                                                                                   |     0.107 |
-|       inst                                                                                      |     0.107 |
+|     clk_wiz_1                                                                                   |     0.099 |
+|       inst                                                                                      |     0.099 |
 |     fit_timer_0                                                                                 |    <0.001 |
 |       U0                                                                                        |    <0.001 |
 |         Using_SRL16s.SRL16s[1].Divide_I                                                         |    <0.001 |
@@ -393,11 +401,11 @@ Table of Contents
 |               MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I                     |     0.000 |
 |               MEM_DECODE_GEN[0].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I                     |     0.000 |
 |         Use_E2.BSCAN_I                                                                          |    <0.001 |
-|     microblaze_0                                                                                |     0.015 |
-|       U0                                                                                        |     0.015 |
-|         MicroBlaze_Core_I                                                                       |     0.015 |
-|           Performance.Core                                                                      |     0.015 |
-|             Data_Flow_I                                                                         |     0.006 |
+|     microblaze_0                                                                                |     0.017 |
+|       U0                                                                                        |     0.017 |
+|         MicroBlaze_Core_I                                                                       |     0.017 |
+|           Performance.Core                                                                      |     0.017 |
+|             Data_Flow_I                                                                         |     0.007 |
 |               ALU_I                                                                             |     0.002 |
 |                 Using_FPGA.ALL_Bits[0].ALU_Bit_I1                                               |    <0.001 |
 |                   Last_Bit.I_ALU_LUT_2                                                          |    <0.001 |
@@ -528,7 +536,7 @@ Table of Contents
 |                   Not_Last_Bit.I_ALU_LUT_V5                                                     |    <0.001 |
 |                     Using_FPGA.Native                                                           |    <0.001 |
 |                   Not_Last_Bit.MUXCY_XOR_I                                                      |     0.000 |
-|               Byte_Doublet_Handle_gti_I                                                         |    <0.001 |
+|               Byte_Doublet_Handle_gti_I                                                         |     0.001 |
 |               Data_Flow_Logic_I                                                                 |    <0.001 |
 |                 Gen_Bits[0].MEM_EX_Result_Inst                                                  |    <0.001 |
 |                 Gen_Bits[10].MEM_EX_Result_Inst                                                 |    <0.001 |
@@ -636,7 +644,7 @@ Table of Contents
 |                 Part_Of_Zero_Carry_Start                                                        |    <0.001 |
 |                 Zero_Detecting[2].I_Part_Of_Zero_Detect                                         |     0.000 |
 |                 Zero_Detecting[3].I_Part_Of_Zero_Detect                                         |    <0.001 |
-|               exception_registers_I1                                                            |     0.001 |
+|               exception_registers_I1                                                            |    <0.001 |
 |                 CarryIn_MUXCY                                                                   |    <0.001 |
 |                 Using_FPGA_LUT6.Gen_Ret_Addr[0].I_RET_ADDR_WB                                   |    <0.001 |
 |                   Using_FPGA.Native                                                             |    <0.001 |
@@ -775,7 +783,7 @@ Table of Contents
 |                 OF_EX_MSR_Bits[29].Using_FDR.MSR_ex_I                                           |    <0.001 |
 |                 OF_EX_MSR_Bits[30].Using_FDR.MSR_ex_I                                           |    <0.001 |
 |                 OF_EX_MSR_Bits[30].Using_FDR.MSR_of_I                                           |    <0.001 |
-|             Decode_I                                                                            |     0.007 |
+|             Decode_I                                                                            |     0.008 |
 |               PC_Module_I                                                                       |    <0.001 |
 |                 Instruction_Prefetch_Mux[0].Gen_Instr_DFF                                       |    <0.001 |
 |                 Instruction_Prefetch_Mux[0].PC_Mux_MUXF7                                        |    <0.001 |
@@ -1024,13 +1032,13 @@ Table of Contents
 |                 MUXCY_I                                                                         |    <0.001 |
 |               if_pc_incr_carry_and_3                                                            |     0.000 |
 |                 MUXCY_I                                                                         |     0.000 |
-|               jump_logic_I1                                                                     |     0.003 |
+|               jump_logic_I1                                                                     |     0.002 |
 |                 MUXCY_JUMP_CARRY                                                                |     0.000 |
 |                 MUXCY_JUMP_CARRY2                                                               |    <0.001 |
 |                 MUXCY_JUMP_CARRY3                                                               |    <0.001 |
 |                 MUXCY_JUMP_CARRY4                                                               |     0.000 |
 |                 MUXCY_JUMP_CARRY5                                                               |     0.000 |
-|                 MUXCY_JUMP_CARRY6                                                               |     0.003 |
+|                 MUXCY_JUMP_CARRY6                                                               |     0.002 |
 |               mem_PipeRun_carry_and                                                             |    <0.001 |
 |                 MUXCY_I                                                                         |    <0.001 |
 |               mem_wait_on_ready_N_carry_or                                                      |    <0.001 |
@@ -1168,7 +1176,7 @@ Table of Contents
 |             reg_slice_r                                                                         |    <0.001 |
 |             splitter_ar                                                                         |    <0.001 |
 |             splitter_aw                                                                         |    <0.001 |
-|     microblaze_0_local_memory                                                                   |    <0.001 |
+|     microblaze_0_local_memory                                                                   |     0.015 |
 |       dlmb_bram_if_cntlr                                                                        |    <0.001 |
 |         U0                                                                                      |    <0.001 |
 |       dlmb_v10                                                                                  |     0.000 |
@@ -1177,11 +1185,11 @@ Table of Contents
 |         U0                                                                                      |    <0.001 |
 |       ilmb_v10                                                                                  |     0.000 |
 |         U0                                                                                      |     0.000 |
-|       lmb_bram                                                                                  |    <0.001 |
-|         U0                                                                                      |    <0.001 |
-|           inst_blk_mem_gen                                                                      |    <0.001 |
-|             gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen                               |    <0.001 |
-|               valid.cstr                                                                        |    <0.001 |
+|       lmb_bram                                                                                  |     0.015 |
+|         U0                                                                                      |     0.015 |
+|           inst_blk_mem_gen                                                                      |     0.015 |
+|             gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen                               |     0.015 |
+|               valid.cstr                                                                        |     0.015 |
 |                 ramloop[0].ram.r                                                                |    <0.001 |
 |                   prim_noinit.ram                                                               |    <0.001 |
 |                 ramloop[10].ram.r                                                               |    <0.001 |
@@ -1271,7 +1279,7 @@ Table of Contents
 |           SEQ_COUNTER                                                                           |    <0.001 |
 |   Pmod_out_0_pin10_iobuf                                                                        |    <0.001 |
 |   Pmod_out_0_pin1_iobuf                                                                         |    <0.001 |
-|   Pmod_out_0_pin2_iobuf                                                                         |    <0.001 |
+|   Pmod_out_0_pin2_iobuf                                                                         |     0.001 |
 |   Pmod_out_0_pin3_iobuf                                                                         |    <0.001 |
 |   Pmod_out_0_pin4_iobuf                                                                         |    <0.001 |
 |   Pmod_out_0_pin7_iobuf                                                                         |    <0.001 |
@@ -1285,6 +1293,11 @@ Table of Contents
 |   pmodoledrgb_out_pin7_iobuf                                                                    |    <0.001 |
 |   pmodoledrgb_out_pin8_iobuf                                                                    |    <0.001 |
 |   pmodoledrgb_out_pin9_iobuf                                                                    |    <0.001 |
+|   pwdet0                                                                                        |     0.001 |
+|     ff_0                                                                                        |    <0.001 |
+|     ff_1                                                                                        |    <0.001 |
+|     high                                                                                        |    <0.001 |
+|     low                                                                                         |    <0.001 |
 +-------------------------------------------------------------------------------------------------+-----------+
 
 

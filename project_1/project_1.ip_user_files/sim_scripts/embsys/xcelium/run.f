@@ -172,6 +172,12 @@
   "../../../bd/embsys/ip/embsys_PmodENC_0_1/sim/embsys_PmodENC_0_1.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/embsys/ip/embsys_axi_gpio_1_0/sim/embsys_axi_gpio_1_0.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/embsys/sim/embsys.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
   glbl.v
 -endlib
 

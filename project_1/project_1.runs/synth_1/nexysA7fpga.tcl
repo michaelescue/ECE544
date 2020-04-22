@@ -17,15 +17,17 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_msg_config -id {Common 17-41} -limit 10000000
+set_param synth.incrementalSynthesisCache C:/Users/ME/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-29992-DESKTOP-J4B3MVP/incrSyn
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a50tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir {C:/Users/ME/Vivado Projects/project_0/project_0.cache/wt} [current_project]
-set_property parent.project_path {C:/Users/ME/Vivado Projects/project_0/project_0.xpr} [current_project]
+set_property webtalk.parent_dir C:/Users/ME/Vivado_Projects/project_1/project_1.cache/wt [current_project]
+set_property parent.project_path C:/Users/ME/Vivado_Projects/project_1/project_1.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
@@ -33,60 +35,68 @@ set_property ip_repo_paths {
   {c:/Users/ME/OneDrive/Documents/School/PSU/Spring2020/ECE544/Projects/Project Source Files/ece544ip-library-master}
   {c:/Users/ME/OneDrive/Documents/School/PSU/Spring2020/ECE544/Projects/Project Source Files/vivado-library-v2019.1-1}
 } [current_project]
-set_property ip_output_repo {c:/Users/ME/Vivado Projects/project_0/project_0.cache/ip} [current_project]
+set_property ip_output_repo c:/Users/ME/Vivado_Projects/project_1/project_1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib {{C:/Users/ME/OneDrive/Documents/School/PSU/Spring2020/ECE544/Projects/Project 0-Getting_Started/hardware/nexysA7fpga.v}}
-add_files {{C:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/embsys.bd}}
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_microblaze_0_1/embsys_microblaze_0_1.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_microblaze_0_1/embsys_microblaze_0_1_ooc_debug.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_microblaze_0_1/embsys_microblaze_0_1_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_PmodOLEDrgb_0_1/ip/PmodOLEDrgb_axi_quad_spi_0_0/PmodOLEDrgb_axi_quad_spi_0_0_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_PmodOLEDrgb_0_1/ip/PmodOLEDrgb_axi_quad_spi_0_0/PmodOLEDrgb_axi_quad_spi_0_0.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_PmodOLEDrgb_0_1/ip/PmodOLEDrgb_axi_quad_spi_0_0/PmodOLEDrgb_axi_quad_spi_0_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_PmodOLEDrgb_0_1/ip/PmodOLEDrgb_axi_quad_spi_0_0/PmodOLEDrgb_axi_quad_spi_0_0_clocks.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_PmodOLEDrgb_0_1/ip/PmodOLEDrgb_axi_gpio_0_1/PmodOLEDrgb_axi_gpio_0_1_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_PmodOLEDrgb_0_1/ip/PmodOLEDrgb_axi_gpio_0_1/PmodOLEDrgb_axi_gpio_0_1_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_PmodOLEDrgb_0_1/ip/PmodOLEDrgb_axi_gpio_0_1/PmodOLEDrgb_axi_gpio_0_1.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_PmodOLEDrgb_0_1/ip/PmodOLEDrgb_pmod_bridge_0_0/PmodOLEDrgb_pmod_bridge_0_0_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_PmodOLEDrgb_0_1/ip/PmodOLEDrgb_pmod_bridge_0_0/src/pmod_concat_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_PmodOLEDrgb_0_1/embsys_PmodOLEDrgb_0_1_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_axi_gpio_0_1/embsys_axi_gpio_0_1_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_axi_gpio_0_1/embsys_axi_gpio_0_1_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_axi_gpio_0_1/embsys_axi_gpio_0_1.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_axi_timer_0_1/embsys_axi_timer_0_1.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_axi_timer_0_1/embsys_axi_timer_0_1_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_fit_timer_0_1/embsys_fit_timer_0_1_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_axi_uartlite_0_1/embsys_axi_uartlite_0_1_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_axi_uartlite_0_1/embsys_axi_uartlite_0_1_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_axi_uartlite_0_1/embsys_axi_uartlite_0_1.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_microblaze_0_axi_intc_1/embsys_microblaze_0_axi_intc_1.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_microblaze_0_axi_intc_1/embsys_microblaze_0_axi_intc_1_clocks.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_microblaze_0_axi_intc_1/embsys_microblaze_0_axi_intc_1_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_mdm_1_1/embsys_mdm_1_1.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_mdm_1_1/embsys_mdm_1_1_ooc_trace.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_mdm_1_1/embsys_mdm_1_1_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_clk_wiz_1_1/embsys_clk_wiz_1_1_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_clk_wiz_1_1/embsys_clk_wiz_1_1.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_clk_wiz_1_1/embsys_clk_wiz_1_1_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_rst_clk_wiz_1_100M_1/embsys_rst_clk_wiz_1_100M_1_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_rst_clk_wiz_1_100M_1/embsys_rst_clk_wiz_1_100M_1.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_rst_clk_wiz_1_100M_1/embsys_rst_clk_wiz_1_100M_1_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_xbar_1/embsys_xbar_1_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_dlmb_v10_1/embsys_dlmb_v10_1.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_dlmb_v10_1/embsys_dlmb_v10_1_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_ilmb_v10_1/embsys_ilmb_v10_1.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_ilmb_v10_1/embsys_ilmb_v10_1_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_dlmb_bram_if_cntlr_1/embsys_dlmb_bram_if_cntlr_1_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_ilmb_bram_if_cntlr_1/embsys_ilmb_bram_if_cntlr_1_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_lmb_bram_1/embsys_lmb_bram_1_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_PmodENC_0_1/src/PmodENC_pmod_bridge_0_0/PmodENC_pmod_bridge_0_0_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_PmodENC_0_1/src/PmodENC_pmod_bridge_0_0/src/pmod_concat_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_PmodENC_0_1/src/PmodENC_axi_gpio_0_0/PmodENC_axi_gpio_0_0_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_PmodENC_0_1/src/PmodENC_axi_gpio_0_0/PmodENC_axi_gpio_0_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_PmodENC_0_1/src/PmodENC_axi_gpio_0_0/PmodENC_axi_gpio_0_0.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_PmodENC_0_1/embsys_PmodENC_0_1_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/ip/embsys_PmodENC_0_1/src/PmodENC_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{C:/Users/ME/Vivado Projects/project_0/project_0.srcs/sources_1/bd/embsys/embsys_ooc.xdc}}]
+read_verilog -library xil_defaultlib {
+  C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/new/counter.v
+  C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/new/ff_reg.v
+  C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/new/pwdet.v
+  C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/imports/hardware/nexysA7fpga.v
+}
+add_files C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/embsys.bd
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_microblaze_0_1/embsys_microblaze_0_1.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_microblaze_0_1/embsys_microblaze_0_1_ooc_debug.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_microblaze_0_1/embsys_microblaze_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_PmodOLEDrgb_0_1/ip/PmodOLEDrgb_axi_quad_spi_0_0/PmodOLEDrgb_axi_quad_spi_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_PmodOLEDrgb_0_1/ip/PmodOLEDrgb_axi_quad_spi_0_0/PmodOLEDrgb_axi_quad_spi_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_PmodOLEDrgb_0_1/ip/PmodOLEDrgb_axi_quad_spi_0_0/PmodOLEDrgb_axi_quad_spi_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_PmodOLEDrgb_0_1/ip/PmodOLEDrgb_axi_quad_spi_0_0/PmodOLEDrgb_axi_quad_spi_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_PmodOLEDrgb_0_1/ip/PmodOLEDrgb_axi_gpio_0_1/PmodOLEDrgb_axi_gpio_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_PmodOLEDrgb_0_1/ip/PmodOLEDrgb_axi_gpio_0_1/PmodOLEDrgb_axi_gpio_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_PmodOLEDrgb_0_1/ip/PmodOLEDrgb_axi_gpio_0_1/PmodOLEDrgb_axi_gpio_0_1.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_PmodOLEDrgb_0_1/ip/PmodOLEDrgb_pmod_bridge_0_0/PmodOLEDrgb_pmod_bridge_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_PmodOLEDrgb_0_1/ip/PmodOLEDrgb_pmod_bridge_0_0/src/pmod_concat_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_PmodOLEDrgb_0_1/embsys_PmodOLEDrgb_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_axi_gpio_0_1/embsys_axi_gpio_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_axi_gpio_0_1/embsys_axi_gpio_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_axi_gpio_0_1/embsys_axi_gpio_0_1.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_axi_timer_0_1/embsys_axi_timer_0_1.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_axi_timer_0_1/embsys_axi_timer_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_fit_timer_0_1/embsys_fit_timer_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_axi_uartlite_0_1/embsys_axi_uartlite_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_axi_uartlite_0_1/embsys_axi_uartlite_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_axi_uartlite_0_1/embsys_axi_uartlite_0_1.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_microblaze_0_axi_intc_1/embsys_microblaze_0_axi_intc_1.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_microblaze_0_axi_intc_1/embsys_microblaze_0_axi_intc_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_microblaze_0_axi_intc_1/embsys_microblaze_0_axi_intc_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_mdm_1_1/embsys_mdm_1_1.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_mdm_1_1/embsys_mdm_1_1_ooc_trace.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_mdm_1_1/embsys_mdm_1_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_clk_wiz_1_1/embsys_clk_wiz_1_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_clk_wiz_1_1/embsys_clk_wiz_1_1.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_clk_wiz_1_1/embsys_clk_wiz_1_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_rst_clk_wiz_1_100M_1/embsys_rst_clk_wiz_1_100M_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_rst_clk_wiz_1_100M_1/embsys_rst_clk_wiz_1_100M_1.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_rst_clk_wiz_1_100M_1/embsys_rst_clk_wiz_1_100M_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_xbar_1/embsys_xbar_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_dlmb_v10_1/embsys_dlmb_v10_1.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_dlmb_v10_1/embsys_dlmb_v10_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_ilmb_v10_1/embsys_ilmb_v10_1.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_ilmb_v10_1/embsys_ilmb_v10_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_dlmb_bram_if_cntlr_1/embsys_dlmb_bram_if_cntlr_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_ilmb_bram_if_cntlr_1/embsys_ilmb_bram_if_cntlr_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_lmb_bram_1/embsys_lmb_bram_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_PmodENC_0_1/src/PmodENC_pmod_bridge_0_0/PmodENC_pmod_bridge_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_PmodENC_0_1/src/PmodENC_pmod_bridge_0_0/src/pmod_concat_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_PmodENC_0_1/src/PmodENC_axi_gpio_0_0/PmodENC_axi_gpio_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_PmodENC_0_1/src/PmodENC_axi_gpio_0_0/PmodENC_axi_gpio_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_PmodENC_0_1/src/PmodENC_axi_gpio_0_0/PmodENC_axi_gpio_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_PmodENC_0_1/embsys_PmodENC_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_PmodENC_0_1/src/PmodENC_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_axi_gpio_1_0/embsys_axi_gpio_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_axi_gpio_1_0/embsys_axi_gpio_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_axi_gpio_1_0/embsys_axi_gpio_1_0.xdc]
+set_property used_in_implementation false [get_files -all C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/embsys_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -96,8 +106,8 @@ set_property used_in_implementation false [get_files -all {{C:/Users/ME/Vivado P
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/ME/Vivado Projects/project_0/project_0.srcs/constrs_1/imports/A7-50t Constraint Files/Nexys-A7-50T-Master.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/ME/Vivado Projects/project_0/project_0.srcs/constrs_1/imports/A7-50t Constraint Files/Nexys-A7-50T-Master.xdc}}]
+read_xdc {{C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/constrs_1/imports/A7-50t Constraint Files/Nexys-A7-50T-Master.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/constrs_1/imports/A7-50t Constraint Files/Nexys-A7-50T-Master.xdc}}]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

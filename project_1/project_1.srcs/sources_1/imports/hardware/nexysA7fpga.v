@@ -16,6 +16,7 @@
 //////////////////////////////////////////////////////////////////////
 module nexysA7fpga(
     input				clk,			// 100Mhz clock input
+    input               pwdet_clk,      // Project 1: Added primary clock for pwdet. see .xdc
     input				btnC,			// center pushbutton
     input				btnU,			// UP (North) pusbhbutton
     input				btnL,			// LEFT (West) pushbutton
@@ -124,28 +125,37 @@ assign  Pmod_out_0_pin8_io = JC[5];
 assign  Pmod_out_0_pin9_io = JC[6];
 assign  Pmod_out_0_pin10_io = JC[7];
 
-// Project 1: ****************************************************************//
+// Project 1 Code:
+// ***********************************************************************
 
-// Project1:    Signals
-wire                clk_out1;   // clk_wiz_0 clock. 
+// Project 1:    Parameters
+parameter   DOUT_SIZE = 8;
 
+// Project 1:    Signals
+wire    [DOUT_SIZE-1:0]     pdc_out;
+
+// Project 1: gpio_in connections.
+// gpio_in = {5'b00000, w_RGB1_Red, w_RGB1_Blue, w_RGB1_Green}
 assign w_RGB1_Blue = RGB1_Blue; 
 assign w_RGB1_Red = RGB1_Red;
 assign w_RGB1_Green = RGB1_Green;
 
-// Project1:    Instantiations
-pwdet pwdet0(clk_out1, sysreset, sw, gpio_in);   // Pulse Width Detector
+// Project 1:    Instantiations
+pwdet pwdet0(pwdet_clk, sysreset, sw, gpio_in, pdc_out);   // Pulse Width Detector
 
-clk_wiz_0 clk_wiz_0 // External Clock used for PWDET.
-   (
-    // Clock out ports
-    .clk_out1(clk_out1),     // output clk_out1, 5Mhz clock for project 1.
-   // Clock in ports
-    .clk_in1(sysclk));      // input clk_in1, sysclk is 100MHz input clock.
+// END Project 1 code 
+// *************************************************************************
 
 // instantiate the embedded system
 embsys EMBSYS
-       (// PMOD OLED pins 
+       (
+        // Project 1:   Added external clk_wiz_1.clk_out3 pin
+        .clk_out3_0(clk_out3),
+
+        // Project 1:   Added external axi_gpio_1.gpio_rtl_2
+        .gpio_rtl_2_tri_i(pdc_out),
+
+        // PMOD OLED pins 
         .PmodOLEDrgb_out_0_pin10_i(pmodoledrgb_out_pin10_i),
 	    .PmodOLEDrgb_out_0_pin10_o(pmodoledrgb_out_pin10_o),
 	    .PmodOLEDrgb_out_0_pin10_t(pmodoledrgb_out_pin10_t),
@@ -173,6 +183,7 @@ embsys EMBSYS
 	    // GPIO pins 
         .gpio_rtl_0_tri_i(gpio_in),
         .gpio_rtl_1_tri_o(gpio_out),
+
         // Pmod Rotary Encoder
 	    .Pmod_out_0_pin10_i(Pmod_out_0_pin10_i),
         .Pmod_out_0_pin10_o(Pmod_out_0_pin10_o),
