@@ -33,20 +33,20 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="284"/>
+    <Option Name="WTXSimLaunchSim" Val="285"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="8"/>
-    <Option Name="WTModelSimExportSim" Val="8"/>
-    <Option Name="WTQuestaExportSim" Val="8"/>
-    <Option Name="WTIesExportSim" Val="8"/>
-    <Option Name="WTVcsExportSim" Val="8"/>
-    <Option Name="WTRivieraExportSim" Val="8"/>
-    <Option Name="WTActivehdlExportSim" Val="8"/>
+    <Option Name="WTXSimExportSim" Val="10"/>
+    <Option Name="WTModelSimExportSim" Val="10"/>
+    <Option Name="WTQuestaExportSim" Val="10"/>
+    <Option Name="WTIesExportSim" Val="10"/>
+    <Option Name="WTVcsExportSim" Val="10"/>
+    <Option Name="WTRivieraExportSim" Val="10"/>
+    <Option Name="WTActivehdlExportSim" Val="10"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -69,8 +69,56 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_microblaze_0_1/embsys_microblaze_0_1.xci">
+          <Proxy FileSetName="embsys_microblaze_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_nexys4IO_0_1/embsys_nexys4IO_0_1.xci">
+          <Proxy FileSetName="embsys_nexys4IO_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_PmodOLEDrgb_0_1/embsys_PmodOLEDrgb_0_1.xci">
+          <Proxy FileSetName="embsys_PmodOLEDrgb_0_1"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_axi_timer_0_1/embsys_axi_timer_0_1.xci">
           <Proxy FileSetName="embsys_axi_timer_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_axi_gpio_0_1/embsys_axi_gpio_0_1.xci">
+          <Proxy FileSetName="embsys_axi_gpio_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_clk_wiz_1_1/embsys_clk_wiz_1_1.xci">
+          <Proxy FileSetName="embsys_clk_wiz_1_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_dlmb_v10_1/embsys_dlmb_v10_1.xci">
+          <Proxy FileSetName="embsys_dlmb_v10_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_axi_gpio_1_0/embsys_axi_gpio_1_0.xci">
+          <Proxy FileSetName="embsys_axi_gpio_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_dlmb_bram_if_cntlr_1/embsys_dlmb_bram_if_cntlr_1.xci">
+          <Proxy FileSetName="embsys_dlmb_bram_if_cntlr_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_ilmb_v10_1/embsys_ilmb_v10_1.xci">
+          <Proxy FileSetName="embsys_ilmb_v10_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_ilmb_bram_if_cntlr_1/embsys_ilmb_bram_if_cntlr_1.xci">
+          <Proxy FileSetName="embsys_ilmb_bram_if_cntlr_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_PmodENC_0_1/embsys_PmodENC_0_1.xci">
+          <Proxy FileSetName="embsys_PmodENC_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_lmb_bram_1/embsys_lmb_bram_1.xci">
+          <Proxy FileSetName="embsys_lmb_bram_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_xbar_1/embsys_xbar_1.xci">
+          <Proxy FileSetName="embsys_xbar_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_axi_uartlite_0_1/embsys_axi_uartlite_0_1.xci">
+          <Proxy FileSetName="embsys_axi_uartlite_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_rst_clk_wiz_1_100M_1/embsys_rst_clk_wiz_1_100M_1.xci">
+          <Proxy FileSetName="embsys_rst_clk_wiz_1_100M_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_mdm_1_1/embsys_mdm_1_1.xci">
+          <Proxy FileSetName="embsys_mdm_1_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_microblaze_0_axi_intc_1/embsys_microblaze_0_axi_intc_1.xci">
           <Proxy FileSetName="embsys_microblaze_0_axi_intc_1"/>
@@ -80,54 +128,6 @@
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_fit_timer_0_1/embsys_fit_timer_0_1.xci">
           <Proxy FileSetName="embsys_fit_timer_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_PmodOLEDrgb_0_1/embsys_PmodOLEDrgb_0_1.xci">
-          <Proxy FileSetName="embsys_PmodOLEDrgb_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_axi_gpio_0_1/embsys_axi_gpio_0_1.xci">
-          <Proxy FileSetName="embsys_axi_gpio_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_microblaze_0_1/embsys_microblaze_0_1.xci">
-          <Proxy FileSetName="embsys_microblaze_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_nexys4IO_0_1/embsys_nexys4IO_0_1.xci">
-          <Proxy FileSetName="embsys_nexys4IO_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_axi_uartlite_0_1/embsys_axi_uartlite_0_1.xci">
-          <Proxy FileSetName="embsys_axi_uartlite_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_clk_wiz_1_1/embsys_clk_wiz_1_1.xci">
-          <Proxy FileSetName="embsys_clk_wiz_1_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_axi_gpio_1_0/embsys_axi_gpio_1_0.xci">
-          <Proxy FileSetName="embsys_axi_gpio_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_dlmb_v10_1/embsys_dlmb_v10_1.xci">
-          <Proxy FileSetName="embsys_dlmb_v10_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_ilmb_v10_1/embsys_ilmb_v10_1.xci">
-          <Proxy FileSetName="embsys_ilmb_v10_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_dlmb_bram_if_cntlr_1/embsys_dlmb_bram_if_cntlr_1.xci">
-          <Proxy FileSetName="embsys_dlmb_bram_if_cntlr_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_xbar_1/embsys_xbar_1.xci">
-          <Proxy FileSetName="embsys_xbar_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_lmb_bram_1/embsys_lmb_bram_1.xci">
-          <Proxy FileSetName="embsys_lmb_bram_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_rst_clk_wiz_1_100M_1/embsys_rst_clk_wiz_1_100M_1.xci">
-          <Proxy FileSetName="embsys_rst_clk_wiz_1_100M_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_PmodENC_0_1/embsys_PmodENC_0_1.xci">
-          <Proxy FileSetName="embsys_PmodENC_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_ilmb_bram_if_cntlr_1/embsys_ilmb_bram_if_cntlr_1.xci">
-          <Proxy FileSetName="embsys_ilmb_bram_if_cntlr_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_mdm_1_1/embsys_mdm_1_1.xci">
-          <Proxy FileSetName="embsys_mdm_1_1"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/counter.v">
@@ -196,6 +196,7 @@
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
+        <Option Name="SimMode" Val="post-synthesis"/>
         <Option Name="SrcSet" Val="sources_1"/>
         <Option Name="NLNetlistMode" Val="funcsim"/>
       </Config>
@@ -345,8 +346,8 @@
         <StratHandle Name="bestone" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design">
           <Option Id="ReTiming">1</Option>
-          <Option Id="Directive">6</Option>
           <Option Id="RepFanoutThreshold">1000</Option>
+          <Option Id="Directive">6</Option>
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -358,8 +359,8 @@
         <StratHandle Name="bestone" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design">
           <Option Id="ReTiming">1</Option>
-          <Option Id="Directive">6</Option>
           <Option Id="RepFanoutThreshold">1000</Option>
+          <Option Id="Directive">6</Option>
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -371,8 +372,8 @@
         <StratHandle Name="bestone" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design">
           <Option Id="ReTiming">1</Option>
-          <Option Id="Directive">6</Option>
           <Option Id="RepFanoutThreshold">1000</Option>
+          <Option Id="Directive">6</Option>
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -384,8 +385,8 @@
         <StratHandle Name="bestone" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design">
           <Option Id="ReTiming">1</Option>
-          <Option Id="Directive">6</Option>
           <Option Id="RepFanoutThreshold">1000</Option>
+          <Option Id="Directive">6</Option>
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -397,8 +398,8 @@
         <StratHandle Name="bestone" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design">
           <Option Id="ReTiming">1</Option>
-          <Option Id="Directive">6</Option>
           <Option Id="RepFanoutThreshold">1000</Option>
+          <Option Id="Directive">6</Option>
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -410,8 +411,8 @@
         <StratHandle Name="bestone" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design">
           <Option Id="ReTiming">1</Option>
-          <Option Id="Directive">6</Option>
           <Option Id="RepFanoutThreshold">1000</Option>
+          <Option Id="Directive">6</Option>
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -423,8 +424,8 @@
         <StratHandle Name="bestone" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design">
           <Option Id="ReTiming">1</Option>
-          <Option Id="Directive">6</Option>
           <Option Id="RepFanoutThreshold">1000</Option>
+          <Option Id="Directive">6</Option>
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -436,8 +437,8 @@
         <StratHandle Name="bestone" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design">
           <Option Id="ReTiming">1</Option>
-          <Option Id="Directive">6</Option>
           <Option Id="RepFanoutThreshold">1000</Option>
+          <Option Id="Directive">6</Option>
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -449,8 +450,8 @@
         <StratHandle Name="bestone" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design">
           <Option Id="ReTiming">1</Option>
-          <Option Id="Directive">6</Option>
           <Option Id="RepFanoutThreshold">1000</Option>
+          <Option Id="Directive">6</Option>
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -462,8 +463,8 @@
         <StratHandle Name="bestone" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design">
           <Option Id="ReTiming">1</Option>
-          <Option Id="Directive">6</Option>
           <Option Id="RepFanoutThreshold">1000</Option>
+          <Option Id="Directive">6</Option>
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -475,8 +476,8 @@
         <StratHandle Name="bestone" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design">
           <Option Id="ReTiming">1</Option>
-          <Option Id="Directive">6</Option>
           <Option Id="RepFanoutThreshold">1000</Option>
+          <Option Id="Directive">6</Option>
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -488,8 +489,8 @@
         <StratHandle Name="bestone" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design">
           <Option Id="ReTiming">1</Option>
-          <Option Id="Directive">6</Option>
           <Option Id="RepFanoutThreshold">1000</Option>
+          <Option Id="Directive">6</Option>
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -501,8 +502,8 @@
         <StratHandle Name="bestone" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design">
           <Option Id="ReTiming">1</Option>
-          <Option Id="Directive">6</Option>
           <Option Id="RepFanoutThreshold">1000</Option>
+          <Option Id="Directive">6</Option>
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -514,8 +515,8 @@
         <StratHandle Name="bestone" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design">
           <Option Id="ReTiming">1</Option>
-          <Option Id="Directive">6</Option>
           <Option Id="RepFanoutThreshold">1000</Option>
+          <Option Id="Directive">6</Option>
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -527,8 +528,8 @@
         <StratHandle Name="bestone" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design">
           <Option Id="ReTiming">1</Option>
-          <Option Id="Directive">6</Option>
           <Option Id="RepFanoutThreshold">1000</Option>
+          <Option Id="Directive">6</Option>
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -540,8 +541,8 @@
         <StratHandle Name="bestone" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design">
           <Option Id="ReTiming">1</Option>
-          <Option Id="Directive">6</Option>
           <Option Id="RepFanoutThreshold">1000</Option>
+          <Option Id="Directive">6</Option>
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -553,8 +554,8 @@
         <StratHandle Name="bestone" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design">
           <Option Id="ReTiming">1</Option>
-          <Option Id="Directive">6</Option>
           <Option Id="RepFanoutThreshold">1000</Option>
+          <Option Id="Directive">6</Option>
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -566,8 +567,8 @@
         <StratHandle Name="bestone" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design">
           <Option Id="ReTiming">1</Option>
-          <Option Id="Directive">6</Option>
           <Option Id="RepFanoutThreshold">1000</Option>
+          <Option Id="Directive">6</Option>
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -579,8 +580,8 @@
         <StratHandle Name="bestone" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design">
           <Option Id="ReTiming">1</Option>
-          <Option Id="Directive">6</Option>
           <Option Id="RepFanoutThreshold">1000</Option>
+          <Option Id="Directive">6</Option>
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -592,8 +593,8 @@
         <StratHandle Name="bestone" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design">
           <Option Id="ReTiming">1</Option>
-          <Option Id="Directive">6</Option>
           <Option Id="RepFanoutThreshold">1000</Option>
+          <Option Id="Directive">6</Option>
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -605,8 +606,8 @@
         <StratHandle Name="bestone" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design">
           <Option Id="ReTiming">1</Option>
-          <Option Id="Directive">6</Option>
           <Option Id="RepFanoutThreshold">1000</Option>
+          <Option Id="Directive">6</Option>
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>

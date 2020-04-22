@@ -3,6 +3,7 @@ Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
 Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 289aadecf8174a878af1689dab97325b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot testbench_func_synth xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 8 for port pdc [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sim_1/new/testbench.v:64]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis

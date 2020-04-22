@@ -12,10 +12,9 @@ set_property -dict {PACKAGE_PIN E3 IOSTANDARD LVCMOS33} [get_ports clk]
 create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk]
 
 ## Added for ECE 544 Project 1
-set_property -dict {PACKAGE_PIN E3 IOSTANDARD LVCMOS33} [get_ports pwdet_clk]
-create_clock -period 200.000 -name pwdet_clk_pin -waveform {0.000 5.000} -add [get_ports pwdet_clk]
+##create_clock -period 200.000 -name pwdet_clk_pin -waveform {0.000 5.000} -add [get_ports pwdet_clk]
 
-set_clock_groups -asynchronous -group [get_clocks clk]
+##set_clock_groups -asynchronous -group [get_clocks clk]
 
 
 ##Switches
@@ -92,8 +91,8 @@ set_property -dict {PACKAGE_PIN U13 IOSTANDARD LVCMOS33} [get_ports {an[7]}]
 ##Buttons
 
 set_property -dict {PACKAGE_PIN C12 IOSTANDARD LVCMOS33} [get_ports btnCpuReset]
-set_property -dict {PACKAGE_PIN N17 IOSTANDARD LVCMOS33} [get_ports btnC]
-set_property -dict {PACKAGE_PIN M18 IOSTANDARD LVCMOS33} [get_ports btnU]
+set_property -dict {PACKAGE_PIN M18 IOSTANDARD LVCMOS33} [get_ports btnC]
+set_property -dict {PACKAGE_PIN N17 IOSTANDARD LVCMOS33} [get_ports btnU]
 set_property -dict {PACKAGE_PIN P17 IOSTANDARD LVCMOS33} [get_ports btnL]
 set_property -dict {PACKAGE_PIN M17 IOSTANDARD LVCMOS33} [get_ports btnR]
 set_property -dict {PACKAGE_PIN P18 IOSTANDARD LVCMOS33} [get_ports btnD]
@@ -263,7 +262,7 @@ set_property -dict {PACKAGE_PIN D4 IOSTANDARD LVCMOS33} [get_ports uart_rtl_txd]
 #set_property -dict { PACKAGE_PIN L13   IOSTANDARD LVCMOS33 } [get_ports { QSPI_CSN }]; #IO_L6P_T0_FCS_B_14 Sch=qspi_csn
 
 ## Configuration options, can be used for all designs
-set_property CONFIG_VOLTAGE 3.3 [current_design]
-set_property CFGBVS VCCO [current_design]
+##set_property CONFIG_VOLTAGE 3.3 [current_design]
+##set_property CFGBVS VCCO [current_design]
 
-set_property IOSTANDARD LVCMOS33 [get_ports pwdet_clk]
+##set_property IOSTANDARD LVCMOS33 [get_ports pwdet_clk]

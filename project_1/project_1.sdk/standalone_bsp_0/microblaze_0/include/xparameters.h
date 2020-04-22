@@ -468,7 +468,9 @@
 #define PLATFORM_MB
  
 /* Definitions for sleep timer configuration */
-#define XSLEEP_TIMER_IS_DEFAULT_TIMER
+#define SLEEP_TIMER_BASEADDR XPAR_AXI_TIMER_0_BASEADDR 
+#define SLEEP_TIMER_FREQUENCY XPAR_AXI_TIMER_0_CLOCK_FREQ_HZ 
+#define XSLEEP_TIMER_IS_AXI_TIMER
  
  
 /******************************************************************/
@@ -571,7 +573,7 @@
 /******************************************************************/
 
 /* Definitions for driver GPIO */
-#define XPAR_XGPIO_NUM_INSTANCES 1
+#define XPAR_XGPIO_NUM_INSTANCES 2
 
 /* Definitions for peripheral AXI_GPIO_0 */
 #define XPAR_AXI_GPIO_0_BASEADDR 0x40000000
@@ -579,6 +581,14 @@
 #define XPAR_AXI_GPIO_0_DEVICE_ID 0
 #define XPAR_AXI_GPIO_0_INTERRUPT_PRESENT 0
 #define XPAR_AXI_GPIO_0_IS_DUAL 1
+
+
+/* Definitions for peripheral AXI_GPIO_1 */
+#define XPAR_AXI_GPIO_1_BASEADDR 0x40010000
+#define XPAR_AXI_GPIO_1_HIGHADDR 0x4001FFFF
+#define XPAR_AXI_GPIO_1_DEVICE_ID 1
+#define XPAR_AXI_GPIO_1_INTERRUPT_PRESENT 0
+#define XPAR_AXI_GPIO_1_IS_DUAL 0
 
 
 /******************************************************************/
@@ -589,6 +599,13 @@
 #define XPAR_GPIO_0_DEVICE_ID XPAR_AXI_GPIO_0_DEVICE_ID
 #define XPAR_GPIO_0_INTERRUPT_PRESENT 0
 #define XPAR_GPIO_0_IS_DUAL 1
+
+/* Canonical definitions for peripheral AXI_GPIO_1 */
+#define XPAR_GPIO_1_BASEADDR 0x40010000
+#define XPAR_GPIO_1_HIGHADDR 0x4001FFFF
+#define XPAR_GPIO_1_DEVICE_ID XPAR_AXI_GPIO_1_DEVICE_ID
+#define XPAR_GPIO_1_INTERRUPT_PRESENT 0
+#define XPAR_GPIO_1_IS_DUAL 0
 
 
 /******************************************************************/
@@ -644,7 +661,7 @@
 /* Definitions for peripheral NEXYS4IO_0 */
 #define XPAR_NEXYS4IO_0_DEVICE_ID 0
 #define XPAR_NEXYS4IO_0_S00_AXI_BASEADDR 0x44a00000
-#define XPAR_NEXYS4IO_0_S00_AXI_HIGHADDR 0x44a0ffff
+#define XPAR_NEXYS4IO_0_S00_AXI_HIGHADDR 0x44a0FFFF
 
 
 /******************************************************************/

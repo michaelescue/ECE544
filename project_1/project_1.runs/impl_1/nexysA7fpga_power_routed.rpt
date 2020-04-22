@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Wed Apr 22 04:19:21 2020
+| Date             : Wed Apr 22 11:45:52 2020
 | Host             : DESKTOP-J4B3MVP running 64-bit major release  (build 9200)
 | Command          : report_power -file nexysA7fpga_power_routed.rpt -pb nexysA7fpga_power_summary_routed.pb -rpx nexysA7fpga_power_routed.rpx
 | Design           : nexysA7fpga
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.234        |
+| Total On-Chip Power (W)  | 0.235        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.161        |
+| Dynamic (W)              | 0.162        |
 | Device Static (W)        | 0.074        |
 | Effective TJA (C/W)      | 4.8          |
 | Max Ambient (C)          | 83.9         |
@@ -52,21 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.018 |       13 |       --- |             --- |
-| Slice Logic              |     0.007 |    10005 |       --- |             --- |
-|   LUT as Logic           |     0.005 |     4011 |     32600 |           12.30 |
+| Clocks                   |     0.018 |       14 |       --- |             --- |
+| Slice Logic              |     0.007 |    10006 |       --- |             --- |
+|   LUT as Logic           |     0.005 |     4019 |     32600 |           12.33 |
 |   LUT as Distributed RAM |    <0.001 |      112 |      9600 |            1.17 |
-|   Register               |    <0.001 |     3813 |     65200 |            5.85 |
+|   Register               |    <0.001 |     3814 |     65200 |            5.85 |
 |   CARRY4                 |    <0.001 |      415 |      8150 |            5.09 |
 |   F7/F8 Muxes            |    <0.001 |      215 |     32600 |            0.66 |
 |   LUT as Shift Register  |    <0.001 |       95 |      9600 |            0.99 |
 |   Others                 |    <0.001 |      780 |       --- |             --- |
-| Signals                  |     0.012 |     7181 |       --- |             --- |
+| Signals                  |     0.014 |     7176 |       --- |             --- |
 | Block RAM                |     0.015 |       32 |        75 |           42.67 |
 | MMCM                     |     0.098 |        1 |         5 |           20.00 |
-| I/O                      |     0.010 |       96 |       210 |           45.71 |
+| I/O                      |     0.010 |       95 |       210 |           45.24 |
 | Static Power             |     0.074 |          |           |                 |
-| Total                    |     0.234 |          |           |                 |
+| Total                    |     0.235 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.062 |       0.051 |      0.011 |
+| Vccint    |       1.000 |     0.063 |       0.053 |      0.011 |
 | Vccaux    |       1.800 |     0.067 |       0.055 |      0.013 |
 | Vcco33    |       3.300 |     0.004 |       0.003 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -139,9 +139,10 @@ Table of Contents
 | clk_out1_embsys_clk_wiz_1_1_1                          | EMBSYS/clk_wiz_1/inst/clk_out1_embsys_clk_wiz_1_1 |            10.0 |
 | clk_out2_embsys_clk_wiz_1_1                            | EMBSYS/clk_wiz_1/inst/clk_out2_embsys_clk_wiz_1_1 |            20.0 |
 | clk_out2_embsys_clk_wiz_1_1_1                          | EMBSYS/clk_wiz_1/inst/clk_out2_embsys_clk_wiz_1_1 |            20.0 |
+| clk_out3_embsys_clk_wiz_1_1                            | EMBSYS/clk_wiz_1/inst/clk_out3_embsys_clk_wiz_1_1 |           196.9 |
+| clk_out3_embsys_clk_wiz_1_1_1                          | EMBSYS/clk_wiz_1/inst/clk_out3_embsys_clk_wiz_1_1 |           196.9 |
 | clkfbout_embsys_clk_wiz_1_1                            | EMBSYS/clk_wiz_1/inst/clkfbout_embsys_clk_wiz_1_1 |            10.0 |
 | clkfbout_embsys_clk_wiz_1_1_1                          | EMBSYS/clk_wiz_1/inst/clkfbout_embsys_clk_wiz_1_1 |            10.0 |
-| pwdet_clk_pin                                          | pwdet_clk                                         |           200.0 |
 | sys_clk_pin                                            | clk                                               |            10.0 |
 +--------------------------------------------------------+---------------------------------------------------+-----------------+
 
@@ -155,8 +156,8 @@ Table of Contents
 +-------------------------------------------------------------------------------------------------+-----------+
 | Name                                                                                            | Power (W) |
 +-------------------------------------------------------------------------------------------------+-----------+
-| nexysA7fpga                                                                                     |     0.161 |
-|   EMBSYS                                                                                        |     0.149 |
+| nexysA7fpga                                                                                     |     0.162 |
+|   EMBSYS                                                                                        |     0.150 |
 |     PmodENC_0                                                                                   |    <0.001 |
 |       inst                                                                                      |    <0.001 |
 |         axi_gpio_0                                                                              |    <0.001 |
@@ -182,9 +183,9 @@ Table of Contents
 |                 I_DECODER                                                                       |    <0.001 |
 |             gpio_core_1                                                                         |    <0.001 |
 |               Not_Dual.INPUT_DOUBLE_REGS3                                                       |    <0.001 |
-|         axi_quad_spi_0                                                                          |     0.004 |
-|           U0                                                                                    |     0.004 |
-|             NO_DUAL_QUAD_MODE.QSPI_NORMAL                                                       |     0.004 |
+|         axi_quad_spi_0                                                                          |     0.005 |
+|           U0                                                                                    |     0.005 |
+|             NO_DUAL_QUAD_MODE.QSPI_NORMAL                                                       |     0.005 |
 |               QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I                                                |    <0.001 |
 |                 I_SLAVE_ATTACHMENT                                                              |    <0.001 |
 |                   I_DECODER                                                                     |    <0.001 |
@@ -315,7 +316,7 @@ Table of Contents
 |               MEM_DECODE_GEN[0].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I                     |     0.000 |
 |               MEM_DECODE_GEN[0].PER_CE_GEN[7].MULTIPLE_CES_THIS_CS_GEN.CE_I                     |     0.000 |
 |         TC_CORE_I                                                                               |     0.002 |
-|           COUNTER_0_I                                                                           |     0.001 |
+|           COUNTER_0_I                                                                           |     0.002 |
 |             COUNTER_I                                                                           |     0.001 |
 |           READ_MUX_I                                                                            |    <0.001 |
 |           TIMER_CONTROL_I                                                                       |    <0.001 |
@@ -401,9 +402,9 @@ Table of Contents
 |               MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I                     |     0.000 |
 |               MEM_DECODE_GEN[0].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I                     |     0.000 |
 |         Use_E2.BSCAN_I                                                                          |    <0.001 |
-|     microblaze_0                                                                                |     0.017 |
-|       U0                                                                                        |     0.017 |
-|         MicroBlaze_Core_I                                                                       |     0.017 |
+|     microblaze_0                                                                                |     0.018 |
+|       U0                                                                                        |     0.018 |
+|         MicroBlaze_Core_I                                                                       |     0.018 |
 |           Performance.Core                                                                      |     0.017 |
 |             Data_Flow_I                                                                         |     0.007 |
 |               ALU_I                                                                             |     0.002 |
@@ -644,7 +645,7 @@ Table of Contents
 |                 Part_Of_Zero_Carry_Start                                                        |    <0.001 |
 |                 Zero_Detecting[2].I_Part_Of_Zero_Detect                                         |     0.000 |
 |                 Zero_Detecting[3].I_Part_Of_Zero_Detect                                         |    <0.001 |
-|               exception_registers_I1                                                            |    <0.001 |
+|               exception_registers_I1                                                            |     0.001 |
 |                 CarryIn_MUXCY                                                                   |    <0.001 |
 |                 Using_FPGA_LUT6.Gen_Ret_Addr[0].I_RET_ADDR_WB                                   |    <0.001 |
 |                   Using_FPGA.Native                                                             |    <0.001 |
@@ -1032,13 +1033,13 @@ Table of Contents
 |                 MUXCY_I                                                                         |    <0.001 |
 |               if_pc_incr_carry_and_3                                                            |     0.000 |
 |                 MUXCY_I                                                                         |     0.000 |
-|               jump_logic_I1                                                                     |     0.002 |
+|               jump_logic_I1                                                                     |     0.003 |
 |                 MUXCY_JUMP_CARRY                                                                |     0.000 |
 |                 MUXCY_JUMP_CARRY2                                                               |    <0.001 |
 |                 MUXCY_JUMP_CARRY3                                                               |    <0.001 |
 |                 MUXCY_JUMP_CARRY4                                                               |     0.000 |
 |                 MUXCY_JUMP_CARRY5                                                               |     0.000 |
-|                 MUXCY_JUMP_CARRY6                                                               |     0.002 |
+|                 MUXCY_JUMP_CARRY6                                                               |     0.003 |
 |               mem_PipeRun_carry_and                                                             |    <0.001 |
 |                 MUXCY_I                                                                         |    <0.001 |
 |               mem_wait_on_ready_N_carry_or                                                      |    <0.001 |

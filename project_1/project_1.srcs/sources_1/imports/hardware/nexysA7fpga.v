@@ -16,7 +16,6 @@
 //////////////////////////////////////////////////////////////////////
 module nexysA7fpga(
     input				clk,			// 100Mhz clock input
-    input               pwdet_clk,      // Project 1: Added primary clock for pwdet. see .xdc
     input				btnC,			// center pushbutton
     input				btnU,			// UP (North) pusbhbutton
     input				btnL,			// LEFT (West) pushbutton
@@ -94,7 +93,7 @@ assign led = led_int;                   // LEDs are driven by led
 // make the connections
 // system-wide signals
 assign sysclk = clk;
-assign sysreset_n = btnCpuReset || ~btnC;		// The CPU reset pushbutton is asserted low.  The other pushbuttons are asserted high
+assign sysreset_n = btnCpuReset | btnC;		// The CPU reset pushbutton is asserted low.  The other pushbuttons are asserted high
 										// but the Microblaze for Nexys 4 expects reset to be asserted low
 assign sysreset = ~sysreset_n;			// Generate a reset signal that is asserted high for any logic blocks expecting it.
 
@@ -141,7 +140,7 @@ assign w_RGB1_Red = RGB1_Red;
 assign w_RGB1_Green = RGB1_Green;
 
 // Project 1:    Instantiations
-pwdet pwdet0(pwdet_clk, sysreset, sw, gpio_in, pdc_out);   // Pulse Width Detector
+pwdet pwdet0(clk_out3, sysreset, sw, gpio_in, pdc_out);   // Pulse Width Detector
 
 // END Project 1 code 
 // *************************************************************************

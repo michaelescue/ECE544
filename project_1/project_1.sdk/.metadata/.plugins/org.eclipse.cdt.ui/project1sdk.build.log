@@ -1,0 +1,33 @@
+14:51:05 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:394:6: warning: unused variable 'toggle' [-Wunused-variable]
+  int toggle = 0;
+      ^~~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building target: project1sdk.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1sdk.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1sdk.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1sdk.elf  |tee "project1sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26992	    400	   2720	  30112	   75a0	project1sdk.elf
+Finished building: project1sdk.elf.size
+ 
+
+14:51:08 Build Finished (took 2s.49ms)
+
