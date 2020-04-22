@@ -37,7 +37,10 @@ parameter p1 = p0 * 2,
             p2 = p0 + p1,
             p3 = p2 + p1;
 parameter PEAK_TO_PEAK = 4;
-parameter PTH_RATIO = 6; // duty cycle = (1 / PTH_RATIO) * 100
+parameter PTH_RATIO = 1; // duty cycle = (1 / PTH_RATIO) * 100
+parameter RED_DC = PTH_RATIO * 2;
+parameter BLUE_DC = PTH_RATIO * 4;
+parameter GREEN_DC = PTH_RATIO * 3;
 integer t;
 integer t_high,
         t_low;
@@ -87,20 +90,22 @@ initial
 // STimulus generation.
 initial
     begin
-        for( integer i = 0; i < 10; i = i + 1) 
+        for(integer i = 0; i < 10; i = i + 1) 
             begin
                 $display("Iteration %d", i);
                 if(i % 2) t = p0;
                 else if( i % 3) t = p1;
                 else t = p3;
                 
-                t_high = t;
-                t_low = t * PTH_RATIO;
+
                 
                 //***********************************************************************************//
                 sw = 32'h0;
                // repeat(t) @(negedge Clock);    // Not included
                
+                t_high = t;
+                t_low = t * RED_DC;
+
                 repeat(4*PEAK_TO_PEAK)
                     begin 
                         pwm[RED_BIT] = ~pwm[RED_BIT];   // Bit goes high.
@@ -112,20 +117,28 @@ initial
                 sw = 32'h4;                     // Bit still remains low here (adding to counter).
               //  repeat(1) @(negedge Clock);
 
+                t_high = t;
+                t_low = t * BLUE_DC;
+
                 repeat(4*PEAK_TO_PEAK)
                     begin
-                        pwm[BLUE_BIT] = ~pwm[BLUE_BIT];
-                        repeat(t) @(negedge Clock);
+                        pwm[BLUE_BIT] = ~pwm[BLUE_BIT];   // Bit goes high.
+                        if(pwm[BLUE_BIT]) repeat(t_high) @(negedge Clock);
+                        else repeat(t_low) @(negedge Clock);
                     end
         
                 //***********************************************************************************//        sw = 32'h8;
                 sw = 32'h8; 
                // repeat(t) @(negedge Clock);     
                 
+                t_high = t;
+                t_low = t * GREEN_DC;
+            
                 repeat(4*PEAK_TO_PEAK)
                     begin
-                        pwm[GREEN_BIT] = ~pwm[GREEN_BIT];
-                        repeat(t) @(negedge Clock);
+                        pwm[GREEN_BIT] = ~pwm[GREEN_BIT];   // Bit goes high.
+                        if(pwm[GREEN_BIT]) repeat(t_high) @(negedge Clock);
+                        else               repeat(t_low) @(negedge Clock);
                     end
             end
             
@@ -137,6 +150,7 @@ initial
                         else if( i % 2) t = p1;
                         else t = p3;
                         
+                        
                         //***********************************************************************************//
                         sw = 32'h0;
                        // repeat(t) @(negedge Clock);    // Not included
@@ -146,7 +160,8 @@ initial
                                                     pwm[RED_BIT] = ~pwm[RED_BIT];   // Bit goes high.
                                                     pwm[BLUE_BIT] = ~pwm[BLUE_BIT];
                                                     pwm[GREEN_BIT] = ~pwm[GREEN_BIT];
-                                                    repeat(t) @(negedge Clock); 
+                                                    if(pwm[GREEN_BIT] | pwm[RED_BIT] | pwm[BLUE_BIT]) repeat(t_high) @(negedge Clock);
+                                                    else               repeat(t_low*i) @(negedge Clock);
                                                 end
                 
                         //***********************************************************************************//
@@ -158,8 +173,10 @@ initial
                                                       pwm[RED_BIT] = ~pwm[RED_BIT];   // Bit goes high.
                                                       pwm[BLUE_BIT] = ~pwm[BLUE_BIT];
                                                       pwm[GREEN_BIT] = ~pwm[GREEN_BIT];
-                                                      repeat(t) @(negedge Clock); 
-                                                  end
+                                                    if(pwm[GREEN_BIT] | pwm[RED_BIT] | pwm[BLUE_BIT]) repeat(t_high) @(negedge Clock);
+                                                    else               repeat(t_low) @(negedge Clock);
+                                                end
+
                 
                         //***********************************************************************************//        sw = 32'h8;
                         sw = 32'h8; 
@@ -170,8 +187,10 @@ initial
                                                        pwm[RED_BIT] = ~pwm[RED_BIT];   // Bit goes high.
                                                        pwm[BLUE_BIT] = ~pwm[BLUE_BIT];
                                                        pwm[GREEN_BIT] = ~pwm[GREEN_BIT];
-                                                       repeat(t) @(negedge Clock); 
-                                                   end
+                                                        if(pwm[GREEN_BIT] | pwm[RED_BIT] | pwm[BLUE_BIT]) repeat(t_high) @(negedge Clock);
+                                                        else               repeat(t_low) @(negedge Clock);
+                                                end
+
                     end
                         $stop;
     end

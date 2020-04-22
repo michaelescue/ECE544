@@ -208,3 +208,6 @@ C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/tmrctr_v4_4/src -s l
 C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling uartlite"
 'Finished building libraries'
+18:06:23 **** Build of configuration Debug for project gettingstarted ****
+make all 
+make: Nothing to be done for `all'.
