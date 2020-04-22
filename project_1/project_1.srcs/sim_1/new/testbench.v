@@ -66,7 +66,7 @@ reg [7:0] pwm;
 // Establish monitor block
 initial
     begin
-        $monitor($time,"\tsw:%4b\tpwm:%3b\tt:%d\tpdc%d\tt_high:%d\tt_low:%d\tduty:%d", sw, pwm, t, pdc, t_high, t_low, (t_high * 99)/(t_high+t_low) );
+        $monitor($time,"\tsw:%-4b\tpwm:%-3b\tt:%-d\tpdc:%2-d\tt_high:%-d\tt_low:%-d\tduty:%-2d", sw, pwm, t, pdc, t_high, t_low, (t_high * 99)/(t_high+t_low) );
     end
     
 // Initiate free running clock.

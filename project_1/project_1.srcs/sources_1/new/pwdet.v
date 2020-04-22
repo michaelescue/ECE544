@@ -110,7 +110,7 @@ module pwdet #(
         end
     
     // Current State Output
-    always @(posedge red or posedge blue or posedge green or negedge red or negedge blue or negedge green)
+    always @(red or blue or green)
             begin
                 case(state)
                     red_toggle:         // = 2'b00,

@@ -2167,3 +2167,6 @@ For each bit:
 "microblaze_0_local_memory_ilmb_bram_if_cntlr": {},
 "nexys4IO_0": {},
 }]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-04-21 18:39:21.829
+!MESSAGE Executed Webtalk command
