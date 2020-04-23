@@ -387,9 +387,14 @@ void RunTest4(void)
 {
 	uint32_t state, laststate; //comparing current and previous state to detect edges on GPIO pins.
 	int ticks = 0, lastticks = 1;
-	unsigned int value, hue, red, blue, green = 0;
-	int saturation = 1;
-	int level = 1;
+	 unsigned int value = 0;
+	// int saturation = 1;
+	// int level = 1;
+
+	unsigned char hue,  sat = 0 ,  val = 0,
+			 region, remain, p, q, t,
+			 R, G, B = 0;
+	// HSV
 
 	int toggle = 0;
 	char s[] = " End Test 4 ";
@@ -435,27 +440,27 @@ void RunTest4(void)
 		// update the count if it is not
 		if (NX4IO_isPressed(BTNU))
 		{
-			if(level <= 255) level = (level << 1) | 0x1;
-			else level = level;
+			if(val <= 255) val = (val << 1) | 0x1;
+			else val = val;
 			while(NX4IO_isPressed(BTNU));
 		}
 		if (NX4IO_isPressed(BTND))
 		{
-			if(level >= 1) level = (level >> 1) & 0x7FFFFFFF;
-			else level = level;
+			if(val >= 1) val = (val>> 1) & 0x7F;
+			else val = val;
 			while(NX4IO_isPressed(BTND));
 
 		}
 		if (NX4IO_isPressed(BTNL))
 		{
-			if(saturation >=1) saturation = (saturation >> 1) & 0x0FFFFFFF;
-			else saturation = saturation;
+			if(sat >=1) sat = (sat >> 1)  & 0x7F;
+			else sat = sat;
 			while(NX4IO_isPressed(BTNL));
 		}
 		if (NX4IO_isPressed(BTNR))
 		{
-			if(saturation <= 255) saturation = (saturation << 1) | 0x1;
-			else saturation = saturation;
+			if(sat <= 255) sat = (sat << 1) | 0x1;
+			else sat = sat;
 			while(NX4IO_isPressed(BTNR));
 		}
 		else
@@ -464,32 +469,74 @@ void RunTest4(void)
 			ticks += 5*(ENC_getRotation(state, laststate));
 		}
 		
+		if(val > 255) val = 255;
+		if(sat > 255) sat = 255;
 		if(ticks > 359) ticks = 0;
 		if(ticks < 0) ticks = 355;
 		hue = ticks;
 
 
-		// 360 color wheel hues.
-		// red
-		if((hue >= 0) && (hue < 120)){
-			red =  (((120 - hue))*level) +saturation;	   ;//5 bits
-			blue =  (((hue - 0))*level) +saturation;
-			green = (saturation*(((red+blue)/2)*level))/2;
+		// // 360 color wheel hues.
+		// // red
+		// if((hue >= 0) && (hue < 120)){
+		// 	red =  ((level/(120 - hue))) +saturation;	   ;//5 bits
+		// 	blue =  ((level/(hue - 0))) +saturation;
+		// 	green = level/120 + (saturation*(((red+blue)/2)))/2;
 
-		}
-		if((hue>= 120) && (hue < 240)){
-			blue =  (((240 - hue))*level) +saturation ;	   ;//5 bits
-			green = (((hue - 120))*level) +saturation;
-			red = (saturation*(((blue+green)/2)*level))/2;
-		}
-		if((hue >= 240) && (hue < 360)){
-			red =  (((hue - 240))*level) +saturation;
-			green =  (((360 - hue))*level) +saturation;	   ;//5 bits
-			blue =  (saturation*(((red+green)/2)*level))/2;
-		}
+		// }
+		// if((hue>= 120) && (hue < 240)){
+		// 	blue =  ((level/(240 - hue))) +saturation ;	   ;//5 bits
+		// 	green = ((level/(hue - 120))) +saturation;
+		// 	red = level/120 + (saturation*(((blue+green)/2)))/2;
+		// }
+		// if((hue >= 240) && (hue < 360)){
+		// 	red =  ((level/(hue - 240))) +saturation;
+		// 	green =  ((level/(360 - hue))) +saturation;	   ;//5 bits
+		// 	blue =  level/120 + (saturation*(((red+green)/2)))/2;
+		// }
+		
+		
+		region = hue / 43;
+		remain = (hue - (region * 43)) * 6;
+		p = (val * (255 - sat)) >> 8;
+		q = (val * (255 - ((sat * remain) >> 8))) >> 8;
+		t = (val * (255 - ((sat * (255 - remain)) >> 8))) >> 8;
 
+		switch (region) {
+		case 0:
+			R = val;
+			G = t;
+			B = p;
+			break;
+		case 1:
+			R = q;
+			G = val;
+			B = p;
+			break;
+		case 2:
+			R = p;
+			G = val;
+			B = t;
+			break;
+		case 3:
+			R = p;
+			G = q;
+			B = val;
+			break;
+		case 4:
+			R = t;
+			G = p;
+			B = val;
+			break;
+		default:
+			R = val;
+			G = p;
+			B = q;
+			break;
+		}
+		
 
-		NX4IO_RGBLED_setDutyCycle(RGB1, red, green, blue);
+		NX4IO_RGBLED_setDutyCycle(RGB1, R, G, B);
 		NX4IO_RGBLED_setChnlEn(RGB1, true, true, true);
 
 
@@ -497,22 +544,22 @@ void RunTest4(void)
 //		value = XGpio_DiscreteRead(&GPIOInst0, GPIO_0_INPUT_0_CHANNEL);	// Works
 
 		// display the count on the LEDs and seven segment display while we're at it
-		NX4IO_setLEDs(saturation);
-		NX4IO_SSEG_putU32Dec(level, false);
+		NX4IO_setLEDs(val);
+		NX4IO_SSEG_putU32Dec(sat, true);
 
 		// update the display with the new count if the count has changed
 		if (ticks != lastticks) {
 			OLEDrgb_SetCursor(&pmodOLEDrgb_inst, 4, 1);
 			OLEDrgb_PutString(&pmodOLEDrgb_inst,"         ");
 			OLEDrgb_SetCursor(&pmodOLEDrgb_inst, 4, 1);
-			PMDIO_putnum(&pmodOLEDrgb_inst, value, 10);
+			PMDIO_putnum(&pmodOLEDrgb_inst, sat, 10);
 
 
 
 			OLEDrgb_SetCursor(&pmodOLEDrgb_inst, 2, 5);
 			OLEDrgb_PutString(&pmodOLEDrgb_inst,"         ");
 			OLEDrgb_SetCursor(&pmodOLEDrgb_inst, 2, 5);
-			PMDIO_puthex(&pmodOLEDrgb_inst, saturation);
+			PMDIO_puthex(&pmodOLEDrgb_inst, val);
 
 
 		}
@@ -699,19 +746,19 @@ int AXI_Timer_initialize(void){
 	uint32_t status;				// status from Xilinx Lib calls
 	uint32_t		ctlsts;		// control/status register or mask
 
-	status = XTmrCtr_Initialize(&AXITimerInst,AXI_TIMER_DEVICE_ID);
+	status = XTmrCtr_Initialize(&AXITimerInst,AXI_TIMER_DEVICE_ID);																// Initialize Counter.
 		if (status != XST_SUCCESS) {
 			return XST_FAILURE;
 		}
-	status = XTmrCtr_SelfTest(&AXITimerInst, TmrCtrNumber);
+	status = XTmrCtr_SelfTest(&AXITimerInst, TmrCtrNumber);																		// Selftest
 		if (status != XST_SUCCESS) {
 			return XST_FAILURE;
 		}
-	ctlsts = XTC_CSR_AUTO_RELOAD_MASK | XTC_CSR_EXT_GENERATE_MASK | XTC_CSR_LOAD_MASK |XTC_CSR_DOWN_COUNT_MASK ;
-	XTmrCtr_SetControlStatusReg(AXI_TIMER_BASEADDR, TmrCtrNumber,ctlsts);
+	ctlsts = XTC_CSR_AUTO_RELOAD_MASK | XTC_CSR_EXT_GENERATE_MASK | XTC_CSR_LOAD_MASK |XTC_CSR_DOWN_COUNT_MASK ;				// Control or Status Register Mask
+	XTmrCtr_SetControlStatusReg(AXI_TIMER_BASEADDR, TmrCtrNumber,ctlsts);														// Set Timer Control Status Reg
 
 	//Set the value that is loaded into the timer counter and cause it to be loaded into the timer counter
-	XTmrCtr_SetLoadReg(AXI_TIMER_BASEADDR, TmrCtrNumber, 24998);
+	XTmrCtr_SetLoadReg(AXI_TIMER_BASEADDR, TmrCtrNumber, 2498);																	// Default count = 24998. (modified)
 	XTmrCtr_LoadTimerCounterReg(AXI_TIMER_BASEADDR, TmrCtrNumber);
 	ctlsts = XTmrCtr_GetControlStatusReg(AXI_TIMER_BASEADDR, TmrCtrNumber);
 	ctlsts &= (~XTC_CSR_LOAD_MASK);

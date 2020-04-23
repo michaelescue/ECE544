@@ -5711,3 +5711,1281 @@ mb-size project1sdk.elf  |tee "project1sdk.elf.size"
   26992	    400	   2720	  30112	   75a0	project1sdk.elf
 Finished building: project1sdk.elf.size
  
+14:56:02 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:394:6: warning: unused variable 'toggle' [-Wunused-variable]
+  int toggle = 0;
+      ^~~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building target: project1sdk.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1sdk.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1sdk.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1sdk.elf  |tee "project1sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27140	    400	   2724	  30264	   7638	project1sdk.elf
+Finished building: project1sdk.elf.size
+ 
+14:57:50 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:394:6: warning: unused variable 'toggle' [-Wunused-variable]
+  int toggle = 0;
+      ^~~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building target: project1sdk.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1sdk.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1sdk.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1sdk.elf  |tee "project1sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27080	    400	   2720	  30200	   75f8	project1sdk.elf
+Finished building: project1sdk.elf.size
+ 
+15:00:53 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:394:6: warning: unused variable 'toggle' [-Wunused-variable]
+  int toggle = 0;
+      ^~~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building target: project1sdk.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1sdk.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1sdk.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1sdk.elf  |tee "project1sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27196	    400	   2724	  30320	   7670	project1sdk.elf
+Finished building: project1sdk.elf.size
+ 
+15:01:15 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+15:01:21 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+15:03:39 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:394:6: warning: unused variable 'toggle' [-Wunused-variable]
+  int toggle = 0;
+      ^~~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building target: project1sdk.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1sdk.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1sdk.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1sdk.elf  |tee "project1sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27316	    400	   2724	  30440	   76e8	project1sdk.elf
+Finished building: project1sdk.elf.size
+ 
+15:04:31 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+15:05:08 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+15:05:48 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+15:07:54 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:394:6: warning: unused variable 'toggle' [-Wunused-variable]
+  int toggle = 0;
+      ^~~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building target: project1sdk.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1sdk.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1sdk.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1sdk.elf  |tee "project1sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27316	    400	   2724	  30440	   76e8	project1sdk.elf
+Finished building: project1sdk.elf.size
+ 
+15:09:29 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:394:6: warning: unused variable 'toggle' [-Wunused-variable]
+  int toggle = 0;
+      ^~~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building target: project1sdk.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1sdk.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1sdk.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1sdk.elf  |tee "project1sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27168	    400	   2720	  30288	   7650	project1sdk.elf
+Finished building: project1sdk.elf.size
+ 
+15:12:07 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:394:6: warning: unused variable 'toggle' [-Wunused-variable]
+  int toggle = 0;
+      ^~~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building target: project1sdk.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1sdk.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1sdk.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1sdk.elf  |tee "project1sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27168	    400	   2720	  30288	   7650	project1sdk.elf
+Finished building: project1sdk.elf.size
+ 
+02:21:17 **** Build of project standalone_bsp_0 ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/cpu_v2_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/intc_v3_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/nexys4IO_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/nexys4IO_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/PmodENC_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodENC_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/PmodOLEDrgb_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodOLEDrgb_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_4/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/tmrctr_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+"Running Make libs in microblaze_0/libsrc/cpu_v2_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/cpu_v2_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/intc_v3_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/nexys4IO_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/nexys4IO_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling nexys4IO..."
+"Running Make libs in microblaze_0/libsrc/PmodENC_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodENC_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling PmodENC..."
+"Running Make libs in microblaze_0/libsrc/PmodOLEDrgb_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodOLEDrgb_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling PmodOLEDrgb..."
+PmodOLEDrgb_selftest.c: In function 'PMODOLEDRGB_Reg_SelfTest':
+PmodOLEDrgb_selftest.c:52:60: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( PMODOLEDRGB_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                            ^~
+PmodOLEDrgb_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in microblaze_0/libsrc/standalone_v6_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:69:2: warning: #warning "May wait for more than the specified delay" [-Wcpp]
+ #warning "May wait for more than the specified delay"
+  ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_4/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/tmrctr_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling tmrctr"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+02:22:44 **** Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:394:6: warning: unused variable 'toggle' [-Wunused-variable]
+  int toggle = 0;
+      ^~~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: project1sdk.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1sdk.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1sdk.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1sdk.elf  |tee "project1sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27168	    400	   2720	  30288	   7650	project1sdk.elf
+Finished building: project1sdk.elf.size
+ 
+02:23:07 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+02:24:24 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+03:12:24 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+03:36:52 **** Incremental Build of project standalone_bsp_0 ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_4/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/tmrctr_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+cp: target `../../../include' is not a directory
+make[1]: *** [include] Error 1
+make: *** [microblaze_0/libsrc/tmrctr_v4_4/src/make.include] Error 2
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+cp: target `../../../include' is not a directory
+make[1]: *** [include] Error 1
+make: *** [microblaze_0/libsrc/uartlite_v3_2/src/make.include] Error 2
+make: Target `all' not remade because of errors.
+03:36:58 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+03:53:00 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+03:59:20 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+04:02:13 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+04:05:12 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c:51:10: fatal error: xstatus.h: No such file or directory
+ #include "xstatus.h"
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [src/ece544_IP_Test.o] Error 1
+04:23:09 **** Clean-only build of project standalone_bsp_0 ****
+make -k clean 
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/bram_v4_2/src -s clean 
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/cpu_v2_7/src -s clean 
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/gpio_v4_3/src -s clean 
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/intc_v3_7/src -s clean 
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/nexys4IO_v1_0/src -s clean 
+c:\Xilinx\SDK\2018.2\gnuwin\bin\rm.exe: cannot lstat `*.o': Invalid argument
+make[1]: *** [clean] Error 1
+make: *** [microblaze_0/libsrc/nexys4IO_v1_0/src/make.clean] Error 2
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodENC_v1_0/src -s clean 
+c:\Xilinx\SDK\2018.2\gnuwin\bin\rm.exe: cannot lstat `*.o': Invalid argument
+make[1]: *** [clean] Error 1
+make: *** [microblaze_0/libsrc/PmodENC_v1_0/src/make.clean] Error 2
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodOLEDrgb_v1_0/src -s clean 
+c:\Xilinx\SDK\2018.2\gnuwin\bin\rm.exe: cannot lstat `*.o': Invalid argument
+make[1]: *** [clean] Error 1
+make: *** [microblaze_0/libsrc/PmodOLEDrgb_v1_0/src/make.clean] Error 2
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/standalone_v6_7/src -s clean 
+c:\Xilinx\SDK\2018.2\gnuwin\bin\make: invalid option -- c
+c:\Xilinx\SDK\2018.2\gnuwin\bin\make: invalid option --  
+c:\Xilinx\SDK\2018.2\gnuwin\bin\make: invalid option -- E
+c:\Xilinx\SDK\2018.2\gnuwin\bin\make: invalid option -- X
+c:\Xilinx\SDK\2018.2\gnuwin\bin\make: invalid option -- T
+c:\Xilinx\SDK\2018.2\gnuwin\bin\make: invalid option -- A
+c:\Xilinx\SDK\2018.2\gnuwin\bin\make: invalid option -- _
+Usage: make [options] [target] ...
+Options:
+  -b, -m                      Ignored for compatibility.
+  -B, --always-make           Unconditionally make all targets.
+  -C DIRECTORY, --directory=DIRECTORY
+                              Change to DIRECTORY before doing anything.
+  -d                          Print lots of debugging information.
+  --debug[=FLAGS]             Print various types of debugging information.
+  -e, --environment-overrides
+                              Environment variables override makefiles.
+  -f FILE, --file=FILE, --makefile=FILE
+                              Read FILE as a makefile.
+  -h, --help                  Print this message and exit.
+  -i, --ignore-errors         Ignore errors from commands.
+  -I DIRECTORY, --include-dir=DIRECTORY
+                              Search DIRECTORY for included makefiles.
+  -j [N], --jobs[=N]          Allow N jobs at once; infinite jobs with no arg.
+  -k, --keep-going            Keep going when some targets can't be made.
+  -l [N], --load-average[=N], --max-load[=N]
+                              Don't start multiple jobs unless load is below N.
+  -L, --check-symlink-times   Use the latest mtime between symlinks and target.
+  -n, --just-print, --dry-run, --recon
+                              Don't actually run any commands; just print them.
+  -o FILE, --old-file=FILE, --assume-old=FILE
+                              Consider FILE to be very old and don't remake it.
+  -p, --print-data-base       Print make's internal database.
+  -q, --question              Run no commands; exit status says if up to date.
+  -r, --no-builtin-rules      Disable the built-in implicit rules.
+  -R, --no-builtin-variables  Disable the built-in variable settings.
+  -s, --silent, --quiet       Don't echo commands.
+  -S, --no-keep-going, --stop
+                              Turns off -k.
+  -t, --touch                 Touch targets instead of remaking them.
+  -v, --version               Print the version number of make and exit.
+  -w, --print-directory       Print the current directory.
+  --no-print-directory        Turn off -w, even if it was turned on implicitly.
+  -W FILE, --what-if=FILE, --new-file=FILE, --assume-new=FILE
+                              Consider FILE to be infinitely new.
+  --warn-undefined-variables  Warn when an undefined variable is referenced.
+
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/tmrctr_v4_4/src -s clean 
+This program built for i386-pc-mingw32
+Report bugs to <bug-make@gnu.org>
+make[1]: *** [clean] Error 2
+make: *** [microblaze_0/libsrc/standalone_v6_7/src/make.clean] Error 2
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/uartlite_v3_2/src -s clean 
+make: Target `clean' not remade because of errors.
+04:23:11 **** Clean-only build of configuration Debug for project project1sdk ****
+make clean 
+rm -rf  ./src/ece544_IP_Test.o ./src/platform.o  ./src/ece544_IP_Test.d ./src/platform.d  project1sdk.elf.size  project1sdk.elf
+ 
+04:23:27 **** Build of project standalone_bsp_0 ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/cpu_v2_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/intc_v3_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/nexys4IO_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/nexys4IO_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/PmodENC_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodENC_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/PmodOLEDrgb_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodOLEDrgb_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_4/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/tmrctr_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/cpu_v2_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/intc_v3_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/nexys4IO_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/nexys4IO_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling nexys4IO..."
+"Running Make libs in microblaze_0/libsrc/PmodENC_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodENC_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling PmodENC..."
+"Running Make libs in microblaze_0/libsrc/PmodOLEDrgb_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodOLEDrgb_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling PmodOLEDrgb..."
+PmodOLEDrgb_selftest.c: In function 'PMODOLEDRGB_Reg_SelfTest':
+PmodOLEDrgb_selftest.c:52:60: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( PMODOLEDRGB_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                            ^~
+PmodOLEDrgb_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in microblaze_0/libsrc/standalone_v6_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:69:2: warning: #warning "May wait for more than the specified delay" [-Wcpp]
+ #warning "May wait for more than the specified delay"
+  ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_4/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/tmrctr_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling tmrctr"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+04:25:10 **** Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:541:3: error: 'value' undeclared (first use in this function); did you mean 'val'?
+   value = XGpio_DiscreteRead(&GPIOInst1, GPIO_1_INPUT_0_CHANNEL);
+   ^~~~~
+   val
+../src/ece544_IP_Test.c:541:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/ece544_IP_Test.c:545:17: error: 'saturation' undeclared (first use in this function); did you mean 'strtok'?
+   NX4IO_setLEDs(saturation);
+                 ^~~~~~~~~~
+                 strtok
+../src/ece544_IP_Test.c:546:24: error: 'level' undeclared (first use in this function)
+   NX4IO_SSEG_putU32Dec(level, false);
+                        ^~~~~
+../src/ece544_IP_Test.c:399:6: warning: unused variable 'toggle' [-Wunused-variable]
+  int toggle = 0;
+      ^~~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+make: *** [src/ece544_IP_Test.o] Error 1
+04:29:45 **** Incremental Build of project standalone_bsp_0 ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/cpu_v2_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/intc_v3_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/nexys4IO_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/nexys4IO_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/PmodENC_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodENC_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/PmodOLEDrgb_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodOLEDrgb_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_4/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/tmrctr_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/cpu_v2_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/intc_v3_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/nexys4IO_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/nexys4IO_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling nexys4IO..."
+"Running Make libs in microblaze_0/libsrc/PmodENC_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodENC_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling PmodENC..."
+"Running Make libs in microblaze_0/libsrc/PmodOLEDrgb_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodOLEDrgb_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling PmodOLEDrgb..."
+PmodOLEDrgb_selftest.c: In function 'PMODOLEDRGB_Reg_SelfTest':
+PmodOLEDrgb_selftest.c:52:60: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( PMODOLEDRGB_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                            ^~
+PmodOLEDrgb_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in microblaze_0/libsrc/standalone_v6_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:69:2: warning: #warning "May wait for more than the specified delay" [-Wcpp]
+ #warning "May wait for more than the specified delay"
+  ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_4/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/tmrctr_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling tmrctr"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+04:31:04 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:545:17: error: 'saturation' undeclared (first use in this function); did you mean 'strtok'?
+   NX4IO_setLEDs(saturation);
+                 ^~~~~~~~~~
+                 strtok
+../src/ece544_IP_Test.c:545:17: note: each undeclared identifier is reported only once for each function it appears in
+../src/ece544_IP_Test.c:546:24: error: 'level' undeclared (first use in this function)
+   NX4IO_SSEG_putU32Dec(level, false);
+                        ^~~~~
+../src/ece544_IP_Test.c:399:6: warning: unused variable 'toggle' [-Wunused-variable]
+  int toggle = 0;
+      ^~~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+make: *** [src/ece544_IP_Test.o] Error 1
+04:31:13 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:560:36: error: 'saturation' undeclared (first use in this function); did you mean 'strtok'?
+    PMDIO_puthex(&pmodOLEDrgb_inst, saturation);
+                                    ^~~~~~~~~~
+                                    strtok
+../src/ece544_IP_Test.c:560:36: note: each undeclared identifier is reported only once for each function it appears in
+../src/ece544_IP_Test.c:399:6: warning: unused variable 'toggle' [-Wunused-variable]
+  int toggle = 0;
+      ^~~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+make: *** [src/ece544_IP_Test.o] Error 1
+04:33:00 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:399:6: warning: unused variable 'toggle' [-Wunused-variable]
+  int toggle = 0;
+      ^~~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:497:10: warning: 'hue' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   region = hue / 43;
+   ~~~~~~~^~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: project1sdk.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1sdk.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1sdk.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1sdk.elf  |tee "project1sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27288	    400	   2720	  30408	   76c8	project1sdk.elf
+Finished building: project1sdk.elf.size
+ 
+04:33:42 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+04:37:27 **** Clean-only build of configuration Debug for project project1sdk ****
+make clean 
+rm -rf  ./src/ece544_IP_Test.o ./src/platform.o  ./src/ece544_IP_Test.d ./src/platform.d  project1sdk.elf.size  project1sdk.elf
+rm: cannot remove `project1sdk.elf': Permission denied
+make: [clean] Error 1 (ignored)
+ 
+04:37:28 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:399:6: warning: unused variable 'toggle' [-Wunused-variable]
+  int toggle = 0;
+      ^~~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:497:10: warning: 'hue' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   region = hue / 43;
+   ~~~~~~~^~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: project1sdk.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1sdk.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1sdk.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1sdk.elf  |tee "project1sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27288	    400	   2720	  30408	   76c8	project1sdk.elf
+Finished building: project1sdk.elf.size
+ 
+04:37:44 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+09:41:12 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+09:44:52 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+09:50:57 **** Incremental Build of project standalone_bsp_0 ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/cpu_v2_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/intc_v3_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/nexys4IO_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/nexys4IO_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/PmodENC_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodENC_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/PmodOLEDrgb_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodOLEDrgb_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_4/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/tmrctr_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+"Running Make libs in microblaze_0/libsrc/cpu_v2_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/cpu_v2_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/intc_v3_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/nexys4IO_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/nexys4IO_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling nexys4IO..."
+"Running Make libs in microblaze_0/libsrc/PmodENC_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodENC_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling PmodENC..."
+"Running Make libs in microblaze_0/libsrc/PmodOLEDrgb_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodOLEDrgb_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling PmodOLEDrgb..."
+PmodOLEDrgb_selftest.c: In function 'PMODOLEDRGB_Reg_SelfTest':
+PmodOLEDrgb_selftest.c:52:60: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( PMODOLEDRGB_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                            ^~
+PmodOLEDrgb_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in microblaze_0/libsrc/standalone_v6_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:69:2: warning: #warning "May wait for more than the specified delay" [-Wcpp]
+ #warning "May wait for more than the specified delay"
+  ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_4/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/tmrctr_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling tmrctr"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+09:54:49 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:399:6: warning: unused variable 'toggle' [-Wunused-variable]
+  int toggle = 0;
+      ^~~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:497:10: warning: 'hue' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   region = hue / 43;
+   ~~~~~~~^~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: project1sdk.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1sdk.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1sdk.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1sdk.elf  |tee "project1sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27292	    400	   2724	  30416	   76d0	project1sdk.elf
+Finished building: project1sdk.elf.size
+ 
+09:55:05 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+09:58:15 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:399:6: warning: unused variable 'toggle' [-Wunused-variable]
+  int toggle = 0;
+      ^~~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building target: project1sdk.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1sdk.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1sdk.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1sdk.elf  |tee "project1sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27336	    400	   2720	  30456	   76f8	project1sdk.elf
+Finished building: project1sdk.elf.size
+ 
+09:59:16 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+10:06:42 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+10:18:40 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:399:6: warning: unused variable 'toggle' [-Wunused-variable]
+  int toggle = 0;
+      ^~~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building target: project1sdk.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1sdk.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1sdk.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1sdk.elf  |tee "project1sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27348	    400	   2724	  30472	   7708	project1sdk.elf
+Finished building: project1sdk.elf.size
+ 
+10:24:37 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:399:6: warning: unused variable 'toggle' [-Wunused-variable]
+  int toggle = 0;
+      ^~~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building target: project1sdk.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1sdk.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1sdk.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1sdk.elf  |tee "project1sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27352	    400	   2720	  30472	   7708	project1sdk.elf
+Finished building: project1sdk.elf.size
+ 
+10:27:55 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:399:6: warning: unused variable 'toggle' [-Wunused-variable]
+  int toggle = 0;
+      ^~~~~~
+../src/ece544_IP_Test.c:390:16: warning: variable 'value' set but not used [-Wunused-but-set-variable]
+   unsigned int value = 0;
+                ^~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building target: project1sdk.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1sdk.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1sdk.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1sdk.elf  |tee "project1sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27368	    400	   2720	  30488	   7718	project1sdk.elf
+Finished building: project1sdk.elf.size
+ 
+10:31:57 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+10:32:09 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+10:34:32 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:399:6: warning: unused variable 'toggle' [-Wunused-variable]
+  int toggle = 0;
+      ^~~~~~
+../src/ece544_IP_Test.c:390:16: warning: variable 'value' set but not used [-Wunused-but-set-variable]
+   unsigned int value = 0;
+                ^~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building target: project1sdk.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1sdk.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1sdk.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1sdk.elf  |tee "project1sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27332	    400	   2724	  30456	   76f8	project1sdk.elf
+Finished building: project1sdk.elf.size
+ 
+10:41:12 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:399:6: warning: unused variable 'toggle' [-Wunused-variable]
+  int toggle = 0;
+      ^~~~~~
+../src/ece544_IP_Test.c:390:16: warning: variable 'value' set but not used [-Wunused-but-set-variable]
+   unsigned int value = 0;
+                ^~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building target: project1sdk.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1sdk.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1sdk.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1sdk.elf  |tee "project1sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27368	    400	   2720	  30488	   7718	project1sdk.elf
+Finished building: project1sdk.elf.size
+ 
+10:42:42 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:399:6: warning: unused variable 'toggle' [-Wunused-variable]
+  int toggle = 0;
+      ^~~~~~
+../src/ece544_IP_Test.c:390:16: warning: variable 'value' set but not used [-Wunused-but-set-variable]
+   unsigned int value = 0;
+                ^~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building target: project1sdk.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1sdk.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1sdk.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1sdk.elf  |tee "project1sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27376	    400	   2720	  30496	   7720	project1sdk.elf
+Finished building: project1sdk.elf.size
+ 
+10:49:04 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+10:56:28 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+11:00:38 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:399:6: warning: unused variable 'toggle' [-Wunused-variable]
+  int toggle = 0;
+      ^~~~~~
+../src/ece544_IP_Test.c:390:16: warning: variable 'value' set but not used [-Wunused-but-set-variable]
+   unsigned int value = 0;
+                ^~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building target: project1sdk.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1sdk.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1sdk.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1sdk.elf  |tee "project1sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27376	    400	   2720	  30496	   7720	project1sdk.elf
+Finished building: project1sdk.elf.size
+ 
+11:04:09 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:399:6: warning: unused variable 'toggle' [-Wunused-variable]
+  int toggle = 0;
+      ^~~~~~
+../src/ece544_IP_Test.c:390:16: warning: variable 'value' set but not used [-Wunused-but-set-variable]
+   unsigned int value = 0;
+                ^~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building target: project1sdk.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1sdk.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1sdk.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1sdk.elf  |tee "project1sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27376	    400	   2720	  30496	   7720	project1sdk.elf
+Finished building: project1sdk.elf.size
+ 
+11:04:26 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+11:36:38 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+11:40:44 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+11:43:44 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+11:46:43 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+11:48:36 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+11:58:03 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:399:6: warning: unused variable 'toggle' [-Wunused-variable]
+  int toggle = 0;
+      ^~~~~~
+../src/ece544_IP_Test.c:390:16: warning: variable 'value' set but not used [-Wunused-but-set-variable]
+   unsigned int value = 0;
+                ^~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building target: project1sdk.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1sdk.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1sdk.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1sdk.elf  |tee "project1sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27384	    400	   2720	  30504	   7728	project1sdk.elf
+Finished building: project1sdk.elf.size
+ 
+11:59:37 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+make: Nothing to be done for `all'.
+12:04:14 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:399:6: warning: unused variable 'toggle' [-Wunused-variable]
+  int toggle = 0;
+      ^~~~~~
+../src/ece544_IP_Test.c:390:16: warning: variable 'value' set but not used [-Wunused-but-set-variable]
+   unsigned int value = 0;
+                ^~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building target: project1sdk.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1sdk.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1sdk.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1sdk.elf  |tee "project1sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27152	    400	   2720	  30272	   7640	project1sdk.elf
+Finished building: project1sdk.elf.size
+ 
+12:12:03 **** Incremental Build of configuration Debug for project project1sdk ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:399:6: warning: unused variable 'toggle' [-Wunused-variable]
+  int toggle = 0;
+      ^~~~~~
+../src/ece544_IP_Test.c:390:16: warning: variable 'value' set but not used [-Wunused-but-set-variable]
+   unsigned int value = 0;
+                ^~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building target: project1sdk.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1sdk.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1sdk.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1sdk.elf  |tee "project1sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27136	    400	   2720	  30256	   7630	project1sdk.elf
+Finished building: project1sdk.elf.size
+ 

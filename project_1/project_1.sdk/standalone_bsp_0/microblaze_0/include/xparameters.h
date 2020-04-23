@@ -663,7 +663,6 @@
 #define XPAR_NEXYS4IO_0_S00_AXI_BASEADDR 0x44a00000
 #define XPAR_NEXYS4IO_0_S00_AXI_HIGHADDR 0x44a0FFFF
 
-
 /******************************************************************/
 
 /* Definitions for driver TMRCTR */

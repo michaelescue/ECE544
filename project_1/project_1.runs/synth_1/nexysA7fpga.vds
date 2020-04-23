@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Apr 22 11:30:39 2020
-# Process ID: 38564
+# Start of session at: Thu Apr 23 04:01:23 2020
+# Process ID: 40864
 # Current directory: C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1
 # Command line: vivado.exe -log nexysA7fpga.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source nexysA7fpga.tcl
 # Log file: C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/nexysA7fpga.vds
@@ -14,15 +14,15 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ME/OneDrive/Documents/School/PSU/Spring2020/ECE544/Projects/Project Source Files/ece544ip-library-master'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ME/OneDrive/Documents/School/PSU/Spring2020/ECE544/Projects/Project Source Files/vivado-library-v2019.1-1'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 329.309 ; gain = 91.316
+add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 329.066 ; gain = 90.902
 Command: synth_design -top nexysA7fpga -part xc7a50tcsg324-1 -fanout_limit 1000 -directive FewerCarryChains -retiming
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a50t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a50t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 33444 
+INFO: Helper process launched with PID 25688 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 441.727 ; gain = 105.531
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 441.504 ; gain = 105.551
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'nexysA7fpga' [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/imports/hardware/nexysA7fpga.v:17]
 	Parameter DOUT_SIZE bound to: 8 - type: integer 
@@ -59,31 +59,31 @@ INFO: [Synth 8-226] default block is never used [C:/Users/ME/Vivado_Projects/pro
 WARNING: [Synth 8-567] referenced signal 'sw' should be on the sensitivity list [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/new/pwdet.v:189]
 INFO: [Synth 8-6155] done synthesizing module 'pwdet' (3#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/new/pwdet.v:23]
 INFO: [Synth 8-6157] synthesizing module 'embsys' [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/synth/embsys.v:13]
-INFO: [Synth 8-6157] synthesizing module 'embsys_PmodENC_0_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_PmodENC_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'embsys_PmodENC_0_1' (4#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_PmodENC_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'embsys_PmodOLEDrgb_0_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_PmodOLEDrgb_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'embsys_PmodOLEDrgb_0_1' (5#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_PmodOLEDrgb_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'embsys_axi_gpio_0_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'embsys_axi_gpio_0_1' (6#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'embsys_axi_gpio_1_0' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'embsys_axi_gpio_1_0' (7#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'embsys_axi_timer_0_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_axi_timer_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'embsys_axi_timer_0_1' (8#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_axi_timer_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'embsys_PmodENC_0_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_PmodENC_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'embsys_PmodENC_0_1' (4#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_PmodENC_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'embsys_PmodOLEDrgb_0_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_PmodOLEDrgb_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'embsys_PmodOLEDrgb_0_1' (5#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_PmodOLEDrgb_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'embsys_axi_gpio_0_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'embsys_axi_gpio_0_1' (6#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'embsys_axi_gpio_1_0' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'embsys_axi_gpio_1_0' (7#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'embsys_axi_timer_0_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_axi_timer_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'embsys_axi_timer_0_1' (8#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_axi_timer_0_1_stub.v:6]
 WARNING: [Synth 8-350] instance 'axi_timer_0' of module 'embsys_axi_timer_0_1' requires 26 connections, but only 24 given [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/synth/embsys.v:709]
-INFO: [Synth 8-6157] synthesizing module 'embsys_axi_uartlite_0_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_axi_uartlite_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'embsys_axi_uartlite_0_1' (9#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_axi_uartlite_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'embsys_axi_uartlite_0_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_axi_uartlite_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'embsys_axi_uartlite_0_1' (9#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_axi_uartlite_0_1_stub.v:6]
 WARNING: [Synth 8-350] instance 'axi_uartlite_0' of module 'embsys_axi_uartlite_0_1' requires 22 connections, but only 21 given [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/synth/embsys.v:734]
-INFO: [Synth 8-6157] synthesizing module 'embsys_clk_wiz_1_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_clk_wiz_1_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'embsys_clk_wiz_1_1' (10#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_clk_wiz_1_1_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'embsys_fit_timer_0_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_fit_timer_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'embsys_fit_timer_0_1' (11#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_fit_timer_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'embsys_mdm_1_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_mdm_1_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'embsys_mdm_1_1' (12#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_mdm_1_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'embsys_clk_wiz_1_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_clk_wiz_1_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'embsys_clk_wiz_1_1' (10#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_clk_wiz_1_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'embsys_fit_timer_0_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_fit_timer_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'embsys_fit_timer_0_1' (11#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_fit_timer_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'embsys_mdm_1_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_mdm_1_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'embsys_mdm_1_1' (12#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_mdm_1_1_stub.v:6]
 WARNING: [Synth 8-350] instance 'mdm_1' of module 'embsys_mdm_1_1' requires 30 connections, but only 29 given [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/synth/embsys.v:766]
-INFO: [Synth 8-6157] synthesizing module 'embsys_microblaze_0_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_microblaze_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'embsys_microblaze_0_1' (13#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_microblaze_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'embsys_microblaze_0_axi_intc_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_microblaze_0_axi_intc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'embsys_microblaze_0_axi_intc_1' (14#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_microblaze_0_axi_intc_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'embsys_microblaze_0_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_microblaze_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'embsys_microblaze_0_1' (13#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_microblaze_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'embsys_microblaze_0_axi_intc_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_microblaze_0_axi_intc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'embsys_microblaze_0_axi_intc_1' (14#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_microblaze_0_axi_intc_1_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'embsys_microblaze_0_axi_periph_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/synth/embsys.v:1175]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_OEGTNN' [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/synth/embsys.v:2739]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_OEGTNN' (15#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/synth/embsys.v:2739]
@@ -107,34 +107,34 @@ INFO: [Synth 8-6157] synthesizing module 'm09_couplers_imp_12FSMBH' [C:/Users/ME
 INFO: [Synth 8-6155] done synthesizing module 'm09_couplers_imp_12FSMBH' (24#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/synth/embsys.v:3969]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_QRRRG2' [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/synth/embsys.v:4335]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_QRRRG2' (25#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/synth/embsys.v:4335]
-INFO: [Synth 8-6157] synthesizing module 'embsys_xbar_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_xbar_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'embsys_xbar_1' (26#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_xbar_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'embsys_xbar_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_xbar_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'embsys_xbar_1' (26#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_xbar_1_stub.v:6]
 WARNING: [Synth 8-689] width (15) of port connection 'm_axi_arprot' does not match port width (30) of module 'embsys_xbar_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/synth/embsys.v:2700]
 WARNING: [Synth 8-689] width (15) of port connection 'm_axi_awprot' does not match port width (30) of module 'embsys_xbar_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/synth/embsys.v:2704]
 INFO: [Synth 8-6155] done synthesizing module 'embsys_microblaze_0_axi_periph_1' (27#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/synth/embsys.v:1175]
 INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_1SR2TDT' [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/synth/embsys.v:4101]
-INFO: [Synth 8-6157] synthesizing module 'embsys_dlmb_bram_if_cntlr_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_dlmb_bram_if_cntlr_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'embsys_dlmb_bram_if_cntlr_1' (28#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_dlmb_bram_if_cntlr_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'embsys_dlmb_v10_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_dlmb_v10_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'embsys_dlmb_v10_1' (29#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_dlmb_v10_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'embsys_dlmb_bram_if_cntlr_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_dlmb_bram_if_cntlr_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'embsys_dlmb_bram_if_cntlr_1' (28#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_dlmb_bram_if_cntlr_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'embsys_dlmb_v10_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_dlmb_v10_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'embsys_dlmb_v10_1' (29#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_dlmb_v10_1_stub.v:6]
 WARNING: [Synth 8-350] instance 'dlmb_v10' of module 'embsys_dlmb_v10_1' requires 25 connections, but only 24 given [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/synth/embsys.v:4247]
-INFO: [Synth 8-6157] synthesizing module 'embsys_ilmb_bram_if_cntlr_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_ilmb_bram_if_cntlr_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'embsys_ilmb_bram_if_cntlr_1' (30#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_ilmb_bram_if_cntlr_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'embsys_ilmb_v10_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_ilmb_v10_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'embsys_ilmb_v10_1' (31#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_ilmb_v10_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'embsys_ilmb_bram_if_cntlr_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_ilmb_bram_if_cntlr_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'embsys_ilmb_bram_if_cntlr_1' (30#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_ilmb_bram_if_cntlr_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'embsys_ilmb_v10_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_ilmb_v10_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'embsys_ilmb_v10_1' (31#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_ilmb_v10_1_stub.v:6]
 WARNING: [Synth 8-350] instance 'ilmb_v10' of module 'embsys_ilmb_v10_1' requires 25 connections, but only 24 given [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/synth/embsys.v:4293]
-INFO: [Synth 8-6157] synthesizing module 'embsys_lmb_bram_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_lmb_bram_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'embsys_lmb_bram_1' (32#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_lmb_bram_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'embsys_lmb_bram_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_lmb_bram_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'embsys_lmb_bram_1' (32#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_lmb_bram_1_stub.v:6]
 WARNING: [Synth 8-350] instance 'lmb_bram' of module 'embsys_lmb_bram_1' requires 16 connections, but only 14 given [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/synth/embsys.v:4318]
 INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_1SR2TDT' (33#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/synth/embsys.v:4101]
-INFO: [Synth 8-6157] synthesizing module 'embsys_microblaze_0_xlconcat_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_microblaze_0_xlconcat_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'embsys_microblaze_0_xlconcat_1' (34#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_microblaze_0_xlconcat_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'embsys_nexys4IO_0_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_nexys4IO_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'embsys_nexys4IO_0_1' (35#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_nexys4IO_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'embsys_rst_clk_wiz_1_100M_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_rst_clk_wiz_1_100M_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'embsys_rst_clk_wiz_1_100M_1' (36#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-38564-DESKTOP-J4B3MVP/realtime/embsys_rst_clk_wiz_1_100M_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'embsys_microblaze_0_xlconcat_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_microblaze_0_xlconcat_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'embsys_microblaze_0_xlconcat_1' (34#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_microblaze_0_xlconcat_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'embsys_nexys4IO_0_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_nexys4IO_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'embsys_nexys4IO_0_1' (35#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_nexys4IO_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'embsys_rst_clk_wiz_1_100M_1' [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_rst_clk_wiz_1_100M_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'embsys_rst_clk_wiz_1_100M_1' (36#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/.Xil/Vivado-40864-DESKTOP-J4B3MVP/realtime/embsys_rst_clk_wiz_1_100M_1_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'embsys' (37#1) [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/synth/embsys.v:13]
-WARNING: [Synth 8-350] instance 'EMBSYS' of module 'embsys' requires 75 connections, but only 72 given [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/imports/hardware/nexysA7fpga.v:149]
+WARNING: [Synth 8-350] instance 'EMBSYS' of module 'embsys' requires 75 connections, but only 72 given [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/imports/hardware/nexysA7fpga.v:150]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660]
 	Parameter DRIVE bound to: 12 - type: integer 
 	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
@@ -218,7 +218,7 @@ WARNING: [Synth 8-3331] design pwdet has unconnected port sw[4]
 WARNING: [Synth 8-3331] design pwdet has unconnected port sw[1]
 WARNING: [Synth 8-3331] design pwdet has unconnected port sw[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 498.168 ; gain = 161.973
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 497.707 ; gain = 161.754
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -231,13 +231,13 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 498.168 ; gain = 161.973
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 497.707 ; gain = 161.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 498.168 ; gain = 161.973
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 497.707 ; gain = 161.754
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7a50tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -295,17 +295,17 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 16 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 16 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 814.750 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 813.781 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'EMBSYS/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 814.750 ; gain = 478.555
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 813.781 ; gain = 477.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a50tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 814.750 ; gain = 478.555
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 813.781 ; gain = 477.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -335,12 +335,12 @@ Applied set_property DONT_TOUCH = true for EMBSYS/microblaze_0_local_memory/lmb_
 Applied set_property DONT_TOUCH = true for EMBSYS/PmodENC_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for EMBSYS/axi_gpio_1. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 814.750 ; gain = 478.555
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 813.781 ; gain = 477.828
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-327] inferring latch for variable 'pdc_reg' [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/new/pwdet.v:144]
 WARNING: [Synth 8-327] inferring latch for variable 'counter_reset_reg' [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/new/pwdet.v:83]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 814.750 ; gain = 478.555
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 813.781 ; gain = 477.828
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -467,7 +467,7 @@ WARNING: [Synth 8-3331] design pwdet has unconnected port pwm_channel[5]
 WARNING: [Synth 8-3331] design pwdet has unconnected port pwm_channel[4]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 814.750 ; gain = 478.555
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 813.781 ; gain = 477.828
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -487,13 +487,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'EMBSYS/microblaze_0_local
 INFO: [Synth 8-5578] Moved timing constraint from pin 'EMBSYS/microblaze_0_local_memory/ilmb_bram_if_cntlr/BRAM_Clk_A' to pin 'EMBSYS/microblaze_0_local_memory/ilmb_bram_if_cntlr/bbstub_BRAM_Clk_A/O'
 INFO: [Synth 8-5819] Moved 7 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 820.027 ; gain = 483.832
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 819.207 ; gain = 483.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 830.445 ; gain = 494.250
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 829.777 ; gain = 493.824
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -838,7 +838,7 @@ INFO: [Synth 8-5816] Retiming module `nexysA7fpga' done
 
 
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:11 ; elapsed = 00:02:17 . Memory (MB): peak = 874.637 ; gain = 538.441
+Finished Technology Mapping : Time (s): cpu = 00:02:14 ; elapsed = 00:02:18 . Memory (MB): peak = 873.609 ; gain = 537.656
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -862,7 +862,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:12 ; elapsed = 00:02:18 . Memory (MB): peak = 874.637 ; gain = 538.441
+Finished IO Insertion : Time (s): cpu = 00:02:15 ; elapsed = 00:02:19 . Memory (MB): peak = 873.609 ; gain = 537.656
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -875,7 +875,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:12 ; elapsed = 00:02:18 . Memory (MB): peak = 874.637 ; gain = 538.441
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:15 ; elapsed = 00:02:19 . Memory (MB): peak = 873.609 ; gain = 537.656
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -887,25 +887,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:12 ; elapsed = 00:02:18 . Memory (MB): peak = 874.637 ; gain = 538.441
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:15 ; elapsed = 00:02:20 . Memory (MB): peak = 873.609 ; gain = 537.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:12 ; elapsed = 00:02:18 . Memory (MB): peak = 874.637 ; gain = 538.441
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:15 ; elapsed = 00:02:20 . Memory (MB): peak = 873.609 ; gain = 537.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:12 ; elapsed = 00:02:18 . Memory (MB): peak = 874.637 ; gain = 538.441
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:15 ; elapsed = 00:02:20 . Memory (MB): peak = 873.609 ; gain = 537.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:12 ; elapsed = 00:02:18 . Memory (MB): peak = 874.637 ; gain = 538.441
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:15 ; elapsed = 00:02:20 . Memory (MB): peak = 873.609 ; gain = 537.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -963,7 +963,7 @@ Report Cell Usage:
 |20    |embsys_xbar_1                  |     1|
 |21    |CARRY4                         |   319|
 |22    |LUT1                           |    64|
-|23    |LUT2                           |    72|
+|23    |LUT2                           |    71|
 |24    |LUT3                           |  1024|
 |25    |LUT4                           |    25|
 |26    |LUT5                           |     4|
@@ -980,7 +980,7 @@ Report Instance Areas:
 +------+------------------------------+--------------------------------------+------+
 |      |Instance                      |Module                                |Cells |
 +------+------------------------------+--------------------------------------+------+
-|1     |top                           |                                      |  4134|
+|1     |top                           |                                      |  4133|
 |2     |  EMBSYS                      |embsys                                |  2438|
 |3     |    microblaze_0_axi_periph   |embsys_microblaze_0_axi_periph_1      |  1151|
 |4     |    microblaze_0_local_memory |microblaze_0_local_memory_imp_1SR2TDT |   496|
@@ -991,11 +991,11 @@ Report Instance Areas:
 |9     |    ff_1                      |ff_reg_0                              |     3|
 +------+------------------------------+--------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:12 ; elapsed = 00:02:18 . Memory (MB): peak = 874.637 ; gain = 538.441
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:15 ; elapsed = 00:02:20 . Memory (MB): peak = 873.609 ; gain = 537.656
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 62 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:00 ; elapsed = 00:02:06 . Memory (MB): peak = 874.637 ; gain = 221.859
-Synthesis Optimization Complete : Time (s): cpu = 00:02:12 ; elapsed = 00:02:18 . Memory (MB): peak = 874.637 ; gain = 538.441
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:06 ; elapsed = 00:02:12 . Memory (MB): peak = 873.609 ; gain = 221.582
+Synthesis Optimization Complete : Time (s): cpu = 00:02:15 ; elapsed = 00:02:20 . Memory (MB): peak = 873.609 ; gain = 537.656
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 368 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1010,9 +1010,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 114 Infos, 151 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:15 ; elapsed = 00:02:22 . Memory (MB): peak = 874.637 ; gain = 545.328
+synth_design: Time (s): cpu = 00:02:18 ; elapsed = 00:02:23 . Memory (MB): peak = 873.609 ; gain = 544.543
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/ME/Vivado_Projects/project_1/project_1.runs/synth_1/nexysA7fpga.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file nexysA7fpga_utilization_synth.rpt -pb nexysA7fpga_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.076 . Memory (MB): peak = 874.637 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Apr 22 11:33:15 2020...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 873.609 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 23 04:03:59 2020...

@@ -78,44 +78,20 @@
         <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_PmodOLEDrgb_0_1/embsys_PmodOLEDrgb_0_1.xci">
           <Proxy FileSetName="embsys_PmodOLEDrgb_0_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_axi_timer_0_1/embsys_axi_timer_0_1.xci">
-          <Proxy FileSetName="embsys_axi_timer_0_1"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_axi_gpio_0_1/embsys_axi_gpio_0_1.xci">
           <Proxy FileSetName="embsys_axi_gpio_0_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_clk_wiz_1_1/embsys_clk_wiz_1_1.xci">
-          <Proxy FileSetName="embsys_clk_wiz_1_1"/>
+        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_axi_timer_0_1/embsys_axi_timer_0_1.xci">
+          <Proxy FileSetName="embsys_axi_timer_0_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_dlmb_v10_1/embsys_dlmb_v10_1.xci">
           <Proxy FileSetName="embsys_dlmb_v10_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_axi_gpio_1_0/embsys_axi_gpio_1_0.xci">
-          <Proxy FileSetName="embsys_axi_gpio_1_0"/>
+        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_fit_timer_0_1/embsys_fit_timer_0_1.xci">
+          <Proxy FileSetName="embsys_fit_timer_0_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_dlmb_bram_if_cntlr_1/embsys_dlmb_bram_if_cntlr_1.xci">
           <Proxy FileSetName="embsys_dlmb_bram_if_cntlr_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_ilmb_v10_1/embsys_ilmb_v10_1.xci">
-          <Proxy FileSetName="embsys_ilmb_v10_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_ilmb_bram_if_cntlr_1/embsys_ilmb_bram_if_cntlr_1.xci">
-          <Proxy FileSetName="embsys_ilmb_bram_if_cntlr_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_PmodENC_0_1/embsys_PmodENC_0_1.xci">
-          <Proxy FileSetName="embsys_PmodENC_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_lmb_bram_1/embsys_lmb_bram_1.xci">
-          <Proxy FileSetName="embsys_lmb_bram_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_xbar_1/embsys_xbar_1.xci">
-          <Proxy FileSetName="embsys_xbar_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_axi_uartlite_0_1/embsys_axi_uartlite_0_1.xci">
-          <Proxy FileSetName="embsys_axi_uartlite_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_rst_clk_wiz_1_100M_1/embsys_rst_clk_wiz_1_100M_1.xci">
-          <Proxy FileSetName="embsys_rst_clk_wiz_1_100M_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_mdm_1_1/embsys_mdm_1_1.xci">
           <Proxy FileSetName="embsys_mdm_1_1"/>
@@ -123,11 +99,35 @@
         <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_microblaze_0_axi_intc_1/embsys_microblaze_0_axi_intc_1.xci">
           <Proxy FileSetName="embsys_microblaze_0_axi_intc_1"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_clk_wiz_1_1/embsys_clk_wiz_1_1.xci">
+          <Proxy FileSetName="embsys_clk_wiz_1_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_xbar_1/embsys_xbar_1.xci">
+          <Proxy FileSetName="embsys_xbar_1"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_microblaze_0_xlconcat_1/embsys_microblaze_0_xlconcat_1.xci">
           <Proxy FileSetName="embsys_microblaze_0_xlconcat_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_fit_timer_0_1/embsys_fit_timer_0_1.xci">
-          <Proxy FileSetName="embsys_fit_timer_0_1"/>
+        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_ilmb_bram_if_cntlr_1/embsys_ilmb_bram_if_cntlr_1.xci">
+          <Proxy FileSetName="embsys_ilmb_bram_if_cntlr_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_axi_uartlite_0_1/embsys_axi_uartlite_0_1.xci">
+          <Proxy FileSetName="embsys_axi_uartlite_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_axi_gpio_1_0/embsys_axi_gpio_1_0.xci">
+          <Proxy FileSetName="embsys_axi_gpio_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_ilmb_v10_1/embsys_ilmb_v10_1.xci">
+          <Proxy FileSetName="embsys_ilmb_v10_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_rst_clk_wiz_1_100M_1/embsys_rst_clk_wiz_1_100M_1.xci">
+          <Proxy FileSetName="embsys_rst_clk_wiz_1_100M_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_lmb_bram_1/embsys_lmb_bram_1.xci">
+          <Proxy FileSetName="embsys_lmb_bram_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_PmodENC_0_1/embsys_PmodENC_0_1.xci">
+          <Proxy FileSetName="embsys_PmodENC_0_1"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/counter.v">

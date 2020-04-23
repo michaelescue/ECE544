@@ -93,9 +93,10 @@ assign led = led_int;                   // LEDs are driven by led
 // make the connections
 // system-wide signals
 assign sysclk = clk;
-assign sysreset_n = btnCpuReset | btnC;		// The CPU reset pushbutton is asserted low.  The other pushbuttons are asserted high
+assign sysreset_n = btnCpuReset; 		// The CPU reset pushbutton is asserted low.  The other pushbuttons are asserted high
 										// but the Microblaze for Nexys 4 expects reset to be asserted low
-assign sysreset = ~sysreset_n;			// Generate a reset signal that is asserted high for any logic blocks expecting it.
+// End-point reset node.
+assign sysreset = ~sysreset_n | btnC;			// Generate a reset signal that is asserted high for any logic blocks expecting it.
 
 // Pmod OLED connections 
 assign JB[0] = pmodoledrgb_out_pin1_io;

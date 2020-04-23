@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Wed Apr 22 11:45:48 2020
+| Date         : Thu Apr 23 04:20:36 2020
 | Host         : DESKTOP-J4B3MVP running 64-bit major release  (build 9200)
 | Command      : report_methodology -file nexysA7fpga_methodology_drc_routed.rpt -pb nexysA7fpga_methodology_drc_routed.pb -rpx nexysA7fpga_methodology_drc_routed.rpx
 | Design       : nexysA7fpga
@@ -53,7 +53,7 @@ Related violations: <none>
 
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell EMBSYS/PmodOLEDrgb_0/inst/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_RST_AX2S_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to in site SLICE_X13Y25 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell EMBSYS/PmodOLEDrgb_0/inst/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_RST_AX2S_1_CDC_1 is not placed in the same (SLICE) site.
+The FDRE cell EMBSYS/PmodOLEDrgb_0/inst/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_RST_AX2S_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to in site SLICE_X48Y65 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell EMBSYS/PmodOLEDrgb_0/inst/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_RST_AX2S_1_CDC_1 is not placed in the same (SLICE) site.
 Related violations: <none>
 
 TIMING-6#1 Warning
@@ -103,17 +103,17 @@ Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -2.535 ns between EMBSYS/nexys4IO_0/inst/nexys4IO_v2_0_S00_AXI_inst/slv_reg2_reg[1]/C (clocked by clk_out1_embsys_clk_wiz_1_1_1) and pwdet0/ff_0/q_reg[1]/D (clocked by clk_out3_embsys_clk_wiz_1_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.429 ns between EMBSYS/nexys4IO_0/inst/nexys4IO_v2_0_S00_AXI_inst/slv_reg3_reg[2]/C (clocked by clk_out1_embsys_clk_wiz_1_1) and pwdet0/ff_0/q_reg[2]/D (clocked by clk_out3_embsys_clk_wiz_1_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -2.566 ns between EMBSYS/nexys4IO_0/inst/nexys4IO_v2_0_S00_AXI_inst/slv_reg2_reg[20]/C (clocked by clk_out1_embsys_clk_wiz_1_1_1) and pwdet0/ff_0/q_reg[2]/D (clocked by clk_out3_embsys_clk_wiz_1_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.783 ns between EMBSYS/nexys4IO_0/inst/nexys4IO_v2_0_S00_AXI_inst/slv_reg2_reg[9]/C (clocked by clk_out1_embsys_clk_wiz_1_1) and pwdet0/ff_0/q_reg[0]/D (clocked by clk_out3_embsys_clk_wiz_1_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -2.793 ns between EMBSYS/nexys4IO_0/inst/nexys4IO_v2_0_S00_AXI_inst/slv_reg2_reg[9]/C (clocked by clk_out1_embsys_clk_wiz_1_1) and pwdet0/ff_0/q_reg[0]/D (clocked by clk_out3_embsys_clk_wiz_1_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.817 ns between EMBSYS/nexys4IO_0/inst/nexys4IO_v2_0_S00_AXI_inst/slv_reg2_reg[1]/C (clocked by clk_out1_embsys_clk_wiz_1_1) and pwdet0/ff_0/q_reg[1]/D (clocked by clk_out3_embsys_clk_wiz_1_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-17#1 Warning
