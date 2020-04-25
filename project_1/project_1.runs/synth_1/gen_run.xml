@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a50tcsg324-1" LaunchTime="1587639652">
+<GenRun Id="synth_1" LaunchPart="xc7a50tcsg324-1" LaunchTime="1587680220">
   <File Type="PA-TCL" Name="nexysA7fpga.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="nexysA7fpga_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="nexysA7fpga_reports.tcl"/>

@@ -1,4 +1,4 @@
-09:50:57 **** Incremental Build of project standalone_bsp_0 ****
+11:14:24 **** Build of project standalone_bsp_0 ****
 make -k all 
 "Running Make include in microblaze_0/libsrc/bram_v4_2/src"
 C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
@@ -51,9 +51,9 @@ PmodOLEDrgb_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable
 "Running Make libs in microblaze_0/libsrc/standalone_v6_7/src"
 C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling standalone";
-microblaze_sleep.c:69:2: warning: #warning "May wait for more than the specified delay" [-Wcpp]
- #warning "May wait for more than the specified delay"
-  ^~~~~~~
+microblaze_sleep.c:74:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
 "Running Make libs in microblaze_0/libsrc/tmrctr_v4_4/src"
 C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/tmrctr_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling tmrctr"
@@ -62,5 +62,5 @@ C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/uartlite_v3_2/src -s
 "Compiling uartlite"
 'Finished building libraries'
 
-09:54:49 Build Finished (took 3m:51s.802ms)
+11:17:16 Build Finished (took 2m:52s.240ms)
 

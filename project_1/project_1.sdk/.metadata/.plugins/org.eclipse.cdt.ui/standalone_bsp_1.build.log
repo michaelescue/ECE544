@@ -1,4 +1,4 @@
-06:15:42 **** Auto Build of project standalone_bsp_1 ****
+16:16:05 **** Build of project standalone_bsp_1 ****
 make -k all 
 "Running Make include in microblaze_0/libsrc/bram_v4_2/src"
 C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
@@ -63,5 +63,5 @@ C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/uartlite_v3_2/src -s
 "Compiling uartlite"
 'Finished building libraries'
 
-06:17:02 Build Finished (took 1m:19s.904ms)
+16:17:36 Build Finished (took 1m:31s.225ms)
 
