@@ -42,6 +42,8 @@ module pwdet #(
     wire                            red,
                                     blue,
                                     green;
+    // Flip flop signals
+    reg [DIN_SIZE-1:0] q0;
     
     // Counter Signals
     wire     [COUNTER_BITS-1:0]        count_high,
@@ -67,8 +69,7 @@ module pwdet #(
                ALL_ON =       2'b11;
         
     // Synchronizer signals.
-    wire    [DIN_SIZE-1:0]      sync_data,      // Intermediary value.
-                                sync_output;    // Synchronized value.
+    reg    [DIN_SIZE-1:0]      sync_output;    // Synchronized value.
     
     // Signals Extracted from input channel.
     assign red =    sync_output[RED_BIT];
@@ -76,8 +77,20 @@ module pwdet #(
     assign green =  sync_output[GREEN_BIT];
     
     // Synchronize input: 2 clock cycle delay.
-    ff_reg ff_0(clk, pwm_channel, sync_data);       // First stage ff.
-    ff_reg ff_1(clk, sync_data, sync_output);       // Second stage ff.
+   
+    always @(posedge clk)
+        begin
+            if(reset)
+                begin
+                    q0 <= 0;
+                    sync_output <= 0;
+                end
+            else
+                begin
+                    q0 <= pwm_channel;
+                    sync_output <= q0;
+                end
+         end
     
     // Counters
     counter high(clk, counter_reset[1], increment[1], count_high);

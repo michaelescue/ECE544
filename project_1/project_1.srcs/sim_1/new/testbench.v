@@ -46,7 +46,7 @@ integer t_high,
         t_low;
 
 // Outputs of DUT.
-wire [31:0] pdc;
+wire [7:0] pdc;
 
 // Simulated Inputs to DUT.
 reg Clock, Reset;

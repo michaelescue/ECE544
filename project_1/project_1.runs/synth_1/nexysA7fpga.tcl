@@ -111,7 +111,7 @@ set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]
 
-synth_design -top nexysA7fpga -part xc7a50tcsg324-1 -fanout_limit 1000 -directive FewerCarryChains -retiming
+synth_design -top nexysA7fpga -part xc7a50tcsg324-1 -retiming
 
 
 # disable binary constraint mode for synth run checkpoints

@@ -100,7 +100,6 @@
 #define GPIO_0_OUTPUT_0_CHANNEL		2
 #define GPIO_1_DEVICE_ID			XPAR_AXI_GPIO_1_DEVICE_ID
 #define GPIO_1_INPUT_0_CHANNEL		1
-#define GPIO_1_OUTPUT_0_CHANNEL		2
 
 // Interrupt Controller parameters
 #define INTC_DEVICE_ID			XPAR_INTC_0_DEVICE_ID
@@ -140,24 +139,54 @@ int AXI_Timer_initialize(void);
 // Project 1 additions.
 void blink_dp1(unsigned int *dp_cnt);
 void initial_sseg_state(void);
-void button_scan(	unsigned char *val, 
-					unsigned char *sat, 
-					unsigned char *hue, 
-					unsigned int* ticks, 
-					unsigned int* state, 
-					unsigned int* laststate);
-void update_sseg(	unsigned char *digi1, 
-					unsigned char *digi2, 
-					unsigned char *digi3, 
-					unsigned char *digi4);
 void update_duty(u16 rgb_val);
-void update_oled(u16 rgb_val, unsigned char hue, unsigned char sat, unsigned char val);
+int my_hsv_builder(unsigned char *hue, unsigned char *sat, unsigned char * val);
 
-void RunTest1(void);
-void RunTest2(void);
-void RunTest3(void);
+void update_oled(		u16 *oled_rgb_val, 
+						unsigned char *hue, 
+						unsigned char *sat, 
+						unsigned char *val,
+						u16 *rgb_val);
+
+void button_scan(		unsigned char *val, 
+						unsigned char *sat, 
+						unsigned char *hue, 
+						unsigned int* ticks, 
+						unsigned int* state, 
+						unsigned int* laststate);
+
+void update_sseg(		unsigned char *digi1, 
+						unsigned char *digi2, 
+						unsigned char *digi3, 
+						unsigned char *digi4);
+
+void calculate_dc(	unsigned int *NX4IO_duty_cycle, 
+				unsigned char *digi1, 
+				unsigned char *digi2,
+				unsigned char *digi3,
+				unsigned char *digi4,
+				unsigned int *pwdet_select,
+				unsigned int *hardpwdet_value
+				);
+
+void channel_select(	unsigned int *switch_value,
+						unsigned int *NX4IO_duty_cycle,
+						unsigned int *rgb_val );
+
+void swdetect(void);
+
 void RunTest4(void);
-void RunTest5(void);
+
+/* global variables */
+unsigned int gpio_in_reg 			= 0;
+unsigned int high_count				= 0;
+unsigned int low_count				= 0;
+unsigned int hcount					= 0;
+unsigned int lcount					= 0;
+unsigned int dc						= 0;
+unsigned int channel_mask			= 0;
+unsigned int shftamnt				= 0;
+
 
 /************************** MAIN PROGRAM ************************************/
 int main(void)
@@ -244,6 +273,7 @@ int	 do_init(void)
 	// GPIO0 channel 2 is an 8-bit output port.
 	XGpio_SetDataDirection(&GPIOInst0, GPIO_0_INPUT_0_CHANNEL, 0xFF);
 	XGpio_SetDataDirection(&GPIOInst0, GPIO_0_OUTPUT_0_CHANNEL, 0x00);
+	
 	// Added for project 1.
 	XGpio_SetDataDirection(&GPIOInst1, GPIO_1_INPUT_0_CHANNEL, 0xFF);
 
@@ -304,7 +334,7 @@ int AXI_Timer_initialize(void){
 	XTmrCtr_SetControlStatusReg(AXI_TIMER_BASEADDR, TmrCtrNumber,ctlsts);														// Set Timer Control Status Reg
 
 	//Set the value that is loaded into the timer counter and cause it to be loaded into the timer counter
-	XTmrCtr_SetLoadReg(AXI_TIMER_BASEADDR, TmrCtrNumber, 2498);																	// Default count = 24998. (modified)
+	XTmrCtr_SetLoadReg(AXI_TIMER_BASEADDR, TmrCtrNumber, 24998);																	// Default count = 24998. (modified)
 	XTmrCtr_LoadTimerCounterReg(AXI_TIMER_BASEADDR, TmrCtrNumber);
 	ctlsts = XTmrCtr_GetControlStatusReg(AXI_TIMER_BASEADDR, TmrCtrNumber);
 	ctlsts &= (~XTC_CSR_LOAD_MASK);
@@ -487,7 +517,7 @@ void PMDIO_putnum(PmodOLEDrgb* InstancePtr, int32_t num, int32_t radix)
 * @return	*NONE*
 *
 *****************************************************************************/
-#define DP_BLINK_PERIOD 5000
+#define DP_BLINK_PERIOD 50000
 #define DP_1_MASK 0x2000000
 #define SWITCH123_MASK 0xD
 #define SWITCH23_MASK 0xC
@@ -496,8 +526,8 @@ void PMDIO_putnum(PmodOLEDrgb* InstancePtr, int32_t num, int32_t radix)
 void RunTest4(void){
 
 		// CoLoR WhEeL 
-		unsigned char 	hue 					= 0,  
-						sat 					= 0,  
+		unsigned char 	hue 					= 0,
+						sat 					= 0,
 						val 					= 0,
 						digi1 					= 0,
 						digi2 					= 0,
@@ -505,159 +535,134 @@ void RunTest4(void){
 						digi4 					= 0;
 
 		// Software PWDET Variables
-		unsigned int 	high_count				= 0, 
-						low_count				= 0, 
-						count 					= 0, 
-						dp_cnt 					= 0,
-						gpio_in_reg				= 0, 
-						dc						= 0,
-						last_dc					= 0,
+		unsigned int 	dp_cnt 					= 0,
 						channel_mask			= 0,
 						shftamnt				= 0,
-						gpio_in_signal			= 0,
 						NX4IO_duty_cycle		= 0,
 						rgb_state				= 0,
 						last_rgb_state			= 0,
 						switch_value 			= 0,
-						sw_state				= 0,
-						last_sw_state 			= 0,
-						hardpwdet_value	 		= 0,
-						last_hardpwdet_value 	= 0,
 						state					= 0,
 						laststate				= 0,
-						ticks 					= 0;
+						lastticks				= 0,
+						last_sw					= 0,
+						ticks 					= 0,
+						pwdet_select			= 0,
+						last_btn				= 0,
+						btn_state 				= 0,
+						gpio_in_signal 			= 0,
+						brgb8					= 0,
+						dcstate					= 0,
+						oled_rgb_val			= 0,
+						rgb_changed				= 0,
+						btn_changed				= 0,
+						sw_changed				= 0,
+						enc_changed				= 0,
+						ticks_changed			= 0;
+
+	volatile u8			hardpwdet_value			= 0;
+
 
 	u16					rgb_val					= 0;
 
-	bool 				edge_trigger 			= false;
 
 
 	// Initial State
 	// turn off all of the decimal points
 	initial_sseg_state();
+	// Turn off all leds excep those we care for.
+	NX4IO_setLEDs(NX4IO_getSwitches() & SWITCH123_MASK);
 
 	// get the previous state
 	laststate = ENC_getState(&pmodENC_inst);
-
+	rgb_state = 0;
+	
 	while(1) {
 
-		// get states.
-		state = ENC_getState(&pmodENC_inst);
-		rgb_state = (state<<24) | (hue << 8) | (val << 16) | (sat) ;
-		sw_state = NX4IO_getSwitches() & SWITCH123_MASK;
+		// Next state changes
 
-		// check if the rotary encoder pushbutton is pressed
-		// exit the loop if either one is pressed.
-		if (ENC_buttonPressed(state) && !ENC_buttonPressed(laststate)) break;
+		btn_changed =  NX4IO_getBtns();
 
+		sw_changed = last_sw != (switch_value = (NX4IO_getSwitches() & SWITCH123_MASK));
+
+		enc_changed = laststate != (state = ENC_getState(&pmodENC_inst));
+
+		ticks_changed = (lastticks != (ticks = (ticks + (5*ENC_getRotation(state, laststate)))));
+
+		// Outputs
+
+		if(enc_changed){	
+			if(ENC_buttonPressed(state) && !ENC_buttonPressed(laststate)/* ENC Button pressed */ ) break;
+
+			hue = (ticks % 255) & 0xFF;	// Update hue
+
+		}
+				
+		if(sw_changed){		
+			if((switch_value & SW0_MASK) != (last_sw & SW0_MASK)/* sw[0] changed */){
+				pwdet_select = NX4IO_getSwitches() & SW0_MASK;	// Select PWDET hardware or software
+			}
+		}
+
+
+		if(btn_changed) 
+			button_scan(&val, &sat, &hue, &ticks, &state, &laststate);	// Adjust values according to button push.
+
+		if(sw_changed || btn_changed || ticks_changed){
+
+			brgb8 = my_hsv_builder(&hue, &sat, &val);		// Build 8-bit RGB value for duty calc.
+
+			channel_select(&switch_value, &NX4IO_duty_cycle, &brgb8 );	// Select an RGB channel.
+		}
+
+		if(sw_changed || btn_changed || ticks_changed){
+
+			hardpwdet_value = XGpio_DiscreteRead(&GPIOInst1, GPIO_1_INPUT_0_CHANNEL); 	// Read the GPIO1 port to obtain HWPWDET data.
+
+
+			calculate_dc(&NX4IO_duty_cycle, &digi1, &digi2, &digi3, &digi4, &pwdet_select, &hardpwdet_value);
+		}
+
+		if(btn_changed || ticks_changed){
+			
+			rgb_val = OLEDrgb_BuildHSV(hue, sat, val);	// calculate 565 bit format RGB values.
+
+			update_duty(rgb_val);	// Update RGBled
+		}
+
+		if(btn_changed || ticks_changed){
+
+			// oled_rgb_val = ((((rgb_val >> 5)&0x7FF)) | ((rgb_val & 0x1F)<<11)); // Formatting for OLED
+
+			oled_rgb_val = ((rgb_val >> 6) & 0x07E0) | ((rgb_val & 0x1F)<<11) | (rgb_val & 0x07E0)>>5; // Formatting for OLED
+
+			update_oled(&oled_rgb_val, &hue, &sat, &val, &rgb_val);// Update OLED
+		}
+
+		if(sw_changed || btn_changed || ticks_changed)
+			update_sseg(&digi1, &digi2, &digi3, &digi4); // DIgits 2, 1 (tens, ones) of calculated
+
+		if(sw_changed) 
+			NX4IO_setLEDs(switch_value);	// Update LEDS
+
+		// ~Asynchronous
+	
 		blink_dp1(&dp_cnt);		// Blink the 1st decimal point.
 
-		initial_sseg_state();	// Initialize the SSEG display.
+		// Update current states
 
-		button_scan(&val, &sat, &hue, &ticks, &state, &laststate);	// Check for button pressed.
+		last_btn = btn_state;// Update button state
 
-		rgb_val = OLEDrgb_BuildHSV(hue, sat, val);	
+		last_sw = switch_value;// Update switch state
+
+		laststate = state;	// Update ENC state
+
+		lastticks = ticks;	// Update ticks
+
+		usleep(1000);
+
+	} // rotary button has been pressed - exit the loop
 	
-		// Display the channel selected on LEDs[3:2] and [0].
-		switch_value = (NX4IO_getSwitches() & SWITCH123_MASK);
-			
-		// Software PWDET
-		// Display the PWDET value on the SSEG from channel selected on LEDs[3:2].
-		// assign gpio_in = {5'b00000, w_RGB1_Red, w_RGB1_Blue, w_RGB1_Green}; //wire	[7:0]	    gpio_in;
-		switch((switch_value & SWITCH23_MASK) >> 2){
-			case 0: channel_mask = 0x4; shftamnt = 2; NX4IO_duty_cycle = ((((rgb_val>>11) & 0x1F)*100)/255); break;	//Red signal
-			case 1: channel_mask = 0x1; shftamnt = 0; NX4IO_duty_cycle = ((((rgb_val>>5) & 0x3F)*100)/255); break;	// Green Signal
-			case 2: channel_mask = 0x2; shftamnt = 1; NX4IO_duty_cycle = (((rgb_val & 0x1F)*100)/255); break;	// Blue Signal
-			default: break;
-		}
-
-		// Read the GPIO port to read back the generated PWM signal for RGB led's
-		gpio_in = XGpio_DiscreteRead(&GPIOInst0, GPIO_0_INPUT_0_CHANNEL);
-		hardpwdet_value = XGpio_DiscreteRead(&GPIOInst1, GPIO_1_INPUT_0_CHANNEL);
-
-		// Extract 1-bit signal from gpio_in.
-		gpio_in_signal = (gpio_in & channel_mask) >> shftamnt;
-
-		// Test for rising/falling edge.
-		edge_trigger = (gpio_in_signal != gpio_in_reg) ? true : false;
-
-		// If edge is present, assign count. 
-		if(edge_trigger){
-			if(gpio_in_signal){		// Rising edge.
-				low_count = count;
-				
-				// Calculate duty cycle (limit ceiling).
-				dc = (high_count * 100) / (high_count + low_count);
-				if(dc == 100) dc = 99;
-
-				// Reset for next period. 
-				count = 1;
-			}
-			else
-			{
-				high_count = count;	// Falling edge.
-				count = 1;
-			}
-			
-		}
-
-
-		// Calculated PW.
-		if(NX4IO_duty_cycle > 99){
-			digi2 = 0x9;
-			digi1 = 0x9;
-		}
-		else{
-			digi2 = (NX4IO_duty_cycle / 10);
-			digi1 = NX4IO_duty_cycle % 10;
-		}
-
-		// HW-SW switch.
-		if(NX4IO_getSwitches() & SW0_MASK){
-			// Hardware detect
-			digi4 = hardpwdet_value / 10;
-			digi3 = hardpwdet_value % 10;
-
-		}
-		else{// Software detect
-			digi4 = dc / 10;
-			digi3 = dc % 10;
-		} 
-
-		// Quality assurance.
-		if(digi2 > 10) digi2 = 0x9;
-
-		// Clock in the value for future comparison.
-		gpio_in_reg = gpio_in_signal;
-
-		// Increment counter (Always running).
-		count++;
-
-		// Update LEDs with switch values.
-		NX4IO_setLEDs(switch_value);
-
-		// Set up the display output
-		if((rgb_state != last_rgb_state)){
-
-			
-			 update_oled(((((rgb_val >> 5)&0x7FF)) |
-			 				((rgb_val & 0x1F)<<11)), hue, sat, 255);			
-			
-			//update_oled(rgb_val, hue, sat, 255);
-
-			update_sseg(&digi1, &digi2, &digi3, &digi4);
-
-			update_duty(rgb_val);
-
-			// Update states.
-			last_dc = dc;
-			last_sw_state = sw_state;
-			last_rgb_state = rgb_state;
-			laststate = state;
-
-			usleep(1000);
-		} // rotary button has been pressed - exit the loop
-	}
 	return;
 }
 
@@ -675,17 +680,50 @@ void RunTest4(void){
  *****************************************************************************/
 #define SW0_MASK 0x1
 
-void FIT_Handler(void)
-{
-	static int dp_cnt2 = 0;
+/* global variables */
+// unsigned int gpio_in_reg 			= 0;
+// unsigned int high_count				= 0;
+// unsigned int low_count				= 0;
+// unsigned int count					= 0;
+// unsigned int dc						= 0;
+// unsigned int channel_mask			= 0;
+// unsigned int shftamnt				= 0;
 
-	// Decimal Point blink routine
-	if(dp_cnt2 == DP_BLINK_PERIOD){
-		dp_cnt2 = 0;
-		if((DP_1_MASK ^ NX4IO_SSEG_getSSEG_DATA(SSEGLO))>>25) NX4IO_SSEG_setDecPt(SSEGLO, DIGIT1, 1);
-			else			NX4IO_SSEG_setDecPt(SSEGLO, DIGIT1, 0);
+void FIT_Handler(void)
+{	
+
+		// Read value
+	gpio_in = (XGpio_DiscreteRead(&GPIOInst0, GPIO_0_INPUT_0_CHANNEL) & channel_mask) >> shftamnt; 	// Read the GPIO for RGB PWM data.
+
+	// PWDet logic
+	if(gpio_in != gpio_in_reg){	// Edge detect
+		if(gpio_in == 1){ // Level is high
+			low_count = lcount;
+			lcount = 0;
+		}
+		else{			// Level is low
+			high_count = hcount;
+			hcount = 0;
+		}
 	}
-	dp_cnt2++;
+	else						// No Edge
+	{
+		if(gpio_in == 1){
+			hcount++;
+		}
+		else{
+			lcount++;
+		}
+	}
+	
+
+	// Register value
+	gpio_in_reg = gpio_in;
+
+		if((DP_1_MASK ^ NX4IO_SSEG_getSSEG_DATA(SSEGLO))>>25) 
+			NX4IO_SSEG_setDecPt(SSEGLO, DIGIT1, 1);
+		else			
+			NX4IO_SSEG_setDecPt(SSEGLO, DIGIT1, 0);
 
 }
 
@@ -708,6 +746,14 @@ void initial_sseg_state(void){
 	NX4IO_SSEG_setDecPt(SSEGLO, DIGIT2, false);
 	NX4IO_SSEG_setDecPt(SSEGLO, DIGIT1, false);
 	NX4IO_SSEG_setDecPt(SSEGLO, DIGIT0, false);
+	NX4IO_SSEG_setDigit(SSEGHI, DIGIT1, 0x1E);
+	NX4IO_SSEG_setDigit(SSEGHI, DIGIT4, 0x1E);
+	NX4IO_SSEG_setDigit(SSEGHI, DIGIT3, 0x1E);
+	NX4IO_SSEG_setDigit(SSEGHI, DIGIT2, 0x1E);
+	NX4IO_SSEG_setDigit(SSEGLO, DIGIT1, 0x0);
+	NX4IO_SSEG_setDigit(SSEGLO, DIGIT2, 0x0);
+	NX4IO_SSEG_setDigit(SSEGLO, DIGIT3, 0x0);
+	NX4IO_SSEG_setDigit(SSEGLO, DIGIT4, 0x0);
 }
 
 void button_scan(unsigned char *val, unsigned char *sat, unsigned char *hue, unsigned int* ticks, unsigned int* state, unsigned int* laststate){
@@ -718,16 +764,14 @@ void button_scan(unsigned char *val, unsigned char *sat, unsigned char *hue, uns
 			if(*val <= 255) *val = (*val << 1) | 0x1;
 			else *val = *val;
 			*val = *val & 0xFF;
-			while(NX4IO_isPressed(BTNU)); //1 second wait.
-			//while(NX4IO_isPressed(BTNU));
+			while(NX4IO_isPressed(BTNU));
 		}
 		if (NX4IO_isPressed(BTND))
 		{
 			if(*val >= 1) *val = (*val>> 1) & 0x7F;
 			else *val = *val;
 			*val = *val & 0xFF;
-			while(NX4IO_isPressed(BTND)); //1 second wait.
-			//while(NX4IO_isPressed(BTND));
+			while(NX4IO_isPressed(BTND));
 
 		}
 		if (NX4IO_isPressed(BTNL))
@@ -735,48 +779,48 @@ void button_scan(unsigned char *val, unsigned char *sat, unsigned char *hue, uns
 			if(*sat >=1) *sat = (*sat >> 1)  & 0x7F;
 			else *sat = *sat;
 			*sat = *sat & 0xFF;
-			while(NX4IO_isPressed(BTNL)); //1 second wait.
-			//while(NX4IO_isPressed(BTNL));
+			while(NX4IO_isPressed(BTNL));
 		}
 		if (NX4IO_isPressed(BTNR))
 		{
 			if(*sat <= 255) *sat = (*sat << 1) | 0x1;
 			else *sat = *sat;
 			*sat = *sat & 0xFF;
-			while(NX4IO_isPressed(BTNR)); //1 second wait.
-			//while(NX4IO_isPressed(BTNR));
+			while(NX4IO_isPressed(BTNR));
 		}
 		else
 		{
-			// BTNU is not pressed so increment count
-			*ticks += 5*(ENC_getRotation(*state, *laststate));
+			// *ticks = *ticks + 5*(ENC_getRotation(*state, *laststate));
 		}
 		
 		// Guard the tick value.
 		if(*val > 255) *val = 255;
 		if(*sat > 255) *sat = 255;
-		if(*ticks > 255) *ticks = 0;
-		else if(*ticks < 0) *ticks = 255;
-		else *hue = *ticks;
-		*hue = *hue & 0xFF;
 
 }
 
-void update_oled(u16 rgb_val, unsigned char hue, unsigned char sat, unsigned char val){
-		OLEDrgb_Clear(&pmodOLEDrgb_inst);
-		OLEDrgb_SetFontColor(&pmodOLEDrgb_inst, rgb_val); // Not correct args names
+void update_oled(u16 *oled_rgb_val, unsigned char *hue, unsigned char *sat, unsigned char *val, u16 *rgb_val){
+		OLEDrgb_SetFontColor(&pmodOLEDrgb_inst, *oled_rgb_val); // Not correct args names
+		// Clear the screen
+		for(int i = 0; i<6; i++){
+			OLEDrgb_SetCursor(&pmodOLEDrgb_inst, i, 0);
+			OLEDrgb_PutString(&pmodOLEDrgb_inst,"            ");
+		}
+		
+		// Write the screen Values
 		OLEDrgb_SetCursor(&pmodOLEDrgb_inst, 0, 2);
-		OLEDrgb_PutString(&pmodOLEDrgb_inst,"H:");
+		OLEDrgb_PutString(&pmodOLEDrgb_inst,"H:        ");
 		OLEDrgb_SetCursor(&pmodOLEDrgb_inst, 0, 3);
-		OLEDrgb_PutString(&pmodOLEDrgb_inst,"S:");
+		OLEDrgb_PutString(&pmodOLEDrgb_inst,"S:        ");
 		OLEDrgb_SetCursor(&pmodOLEDrgb_inst, 0, 4);
-		OLEDrgb_PutString(&pmodOLEDrgb_inst,"V:");
+		OLEDrgb_PutString(&pmodOLEDrgb_inst,"V:        ");
 		OLEDrgb_SetCursor(&pmodOLEDrgb_inst, 2, 2);
-		PMDIO_putnum(&pmodOLEDrgb_inst, hue, 10);
+		PMDIO_putnum(&pmodOLEDrgb_inst, *hue, 10);
 		OLEDrgb_SetCursor(&pmodOLEDrgb_inst, 2, 3);
-		PMDIO_putnum(&pmodOLEDrgb_inst, sat, 10);
+		PMDIO_putnum(&pmodOLEDrgb_inst, *sat, 10);
 		OLEDrgb_SetCursor(&pmodOLEDrgb_inst, 2, 4);
-		PMDIO_putnum(&pmodOLEDrgb_inst, val, 10);
+		PMDIO_putnum(&pmodOLEDrgb_inst, *val, 10);
+		OLEDrgb_DrawRectangle(&pmodOLEDrgb_inst, 48, 12, 80, 48, *rgb_val, TRUE, *rgb_val );
 }
 
 void update_sseg(	unsigned char *digi1, 
@@ -785,17 +829,118 @@ void update_sseg(	unsigned char *digi1,
 					unsigned char *digi4){
 		// FInally write to SSEG:
 		NX4IO_SSEG_setDigit(SSEGLO, DIGIT1, *digi4);
-		NX4IO_SSEG_setDigit(SSEGLO, DIGIT4, *digi3);
+		NX4IO_SSEG_setDigit(SSEGLO, DIGIT2, *digi1);
 		NX4IO_SSEG_setDigit(SSEGLO, DIGIT3, *digi2);
-		NX4IO_SSEG_setDigit(SSEGLO, DIGIT2, *digi1);	
-		NX4IO_SSEG_setDigit(SSEGHI, DIGIT1, 0x1E);
-		NX4IO_SSEG_setDigit(SSEGHI, DIGIT4, 0x1E);
-		NX4IO_SSEG_setDigit(SSEGHI, DIGIT3, 0x1E);
-		NX4IO_SSEG_setDigit(SSEGHI, DIGIT2, 0x1E);
+		NX4IO_SSEG_setDigit(SSEGLO, DIGIT4, *digi3);
+
 }
 
 void update_duty(u16 rgb_val){
 
 		NX4IO_RGBLED_setDutyCycle(RGB1, ((rgb_val>>11) & 0x1F), ((rgb_val>>5) & 0x3F), (rgb_val & 0x1F));
 		NX4IO_RGBLED_setChnlEn(RGB1, true, true, true);
+}
+
+void calculate_dc(	unsigned int *NX4IO_duty_cycle, 
+				unsigned char *digi1, 
+				unsigned char *digi2,
+				unsigned char *digi3,
+				unsigned char *digi4,
+				unsigned int *pwdet_select,
+				unsigned int *hardpwdet_value
+				){
+
+
+	dc = (high_count * 100)/(high_count + low_count);
+	if(dc > 99) dc = 99;
+
+	// Calculated PW.
+	if(*NX4IO_duty_cycle > 99){
+		*digi2 = 0x9;
+		*digi1 = 0x9;
+	}
+	else{
+		*digi2 = (*NX4IO_duty_cycle / 10);
+		*digi1 = *NX4IO_duty_cycle % 10;
+	}
+
+	// HW-SW switch.
+	if(*pwdet_select){
+		
+		// Hardware detect
+		*digi4 = *hardpwdet_value / 10;
+		*digi3 = *hardpwdet_value % 10;
+
+	}
+	else{// Software detect
+		*digi4 = dc / 10;
+		*digi3 = dc % 10;
+	} 
+
+	// Quality assurance.
+	if(*digi2 > 10) *digi2 = 0x9;
+}
+
+void channel_select(unsigned int *switch_value, unsigned int *NX4IO_duty_cycle, unsigned int *rgb_val ){
+		// Software PWDET
+		// Display the PWDET value on the SSEG from channel selected on LEDs[3:2].
+		// assign gpio_in = {5'b00000, w_RGB1_Red, w_RGB1_Blue, w_RGB1_Green}; //wire	[7:0]	    gpio_in;
+		switch((*switch_value & SWITCH23_MASK) >> 2){
+			case 0: channel_mask = 0x4; shftamnt = 2; *NX4IO_duty_cycle = ((((*rgb_val>>16) & 0xFF)*100)/255); break;	//Red signal
+			case 1: channel_mask = 0x1; shftamnt = 0; *NX4IO_duty_cycle = ((((*rgb_val>>8) & 0xFF)*100)/255); break;	// Green Signal
+			case 2: channel_mask = 0x2; shftamnt = 1; *NX4IO_duty_cycle = (((*rgb_val & 0xFF)*100)/255); break;	// Blue Signal
+			default: break;
+		}
+}
+
+
+int my_hsv_builder(unsigned char *hue, unsigned char *sat, unsigned char * val){
+	
+	u8 region, remain, p, q, t;
+   	u8 R, G, B;
+	region = *hue / 43;
+	remain = (*hue - (region * 43)) * 6;
+	p = (*val * (255 - *sat)) >> 8;
+	q = (*val * (255 - ((*sat * remain) >> 8))) >> 8;
+	t = (*val * (255 - ((*sat * (255 - remain)) >> 8))) >> 8;
+
+	switch (region) {
+	case 0:
+		R = *val;
+		G = t;
+		B = p;
+		break;
+	case 1:
+		R = q;
+		G = *val;
+		B = p;
+		break;
+	case 2:
+		R = p;
+		G = *val;
+		B = t;
+		break;
+	case 3:
+		R = p;
+		G = q;
+		B = *val;
+		break;
+	case 4:
+		R = t;
+		G = p;
+		B = *val;
+		break;
+	default:
+		R = *val;
+		G = p;
+		B = q;
+		break;
+	}
+	return ( (R<<16) | (G<<8) | B );
+}
+
+void swdetect(void){
+
+
+
 }

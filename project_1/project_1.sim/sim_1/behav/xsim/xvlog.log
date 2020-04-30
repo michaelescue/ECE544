@@ -1,11 +1,78 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ipshared/5bf9/src/rgbpwm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rgbpwm
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ipshared/5bf9/src/sevensegment.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sevensegment
+INFO: [VRFC 10-311] analyzing module Digit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ipshared/5bf9/src/debounce.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debounce
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ipshared/5bf9/hdl/nexys4IO_v2_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nexys4IO_v2_0_S00_AXI
+WARNING: [VRFC 10-756] identifier btnsw_in is used before its declaration [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ipshared/5bf9/hdl/nexys4IO_v2_0_S00_AXI.v:502]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ipshared/5bf9/hdl/nexys4IO_v2_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nexys4IO_v2_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.ip_user_files/bd/embsys/ip/embsys_nexys4IO_0_1/sim/embsys_nexys4IO_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module embsys_nexys4IO_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_PmodOLEDrgb_0_1/ip/PmodOLEDrgb_pmod_bridge_0_0/src/pmod_concat.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pmod_concat
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.ip_user_files/bd/embsys/ip/embsys_PmodOLEDrgb_0_1/ip/PmodOLEDrgb_pmod_bridge_0_0/sim/PmodOLEDrgb_pmod_bridge_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PmodOLEDrgb_pmod_bridge_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ipshared/d9e9/hdl/PmodOLEDrgb_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PmodOLEDrgb_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.ip_user_files/bd/embsys/ip/embsys_PmodOLEDrgb_0_1/sim/embsys_PmodOLEDrgb_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module embsys_PmodOLEDrgb_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.ip_user_files/bd/embsys/ip/embsys_microblaze_0_xlconcat_1/sim/embsys_microblaze_0_xlconcat_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module embsys_microblaze_0_xlconcat_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.ip_user_files/bd/embsys/ip/embsys_clk_wiz_1_1/embsys_clk_wiz_1_1_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module embsys_clk_wiz_1_1_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.ip_user_files/bd/embsys/ip/embsys_clk_wiz_1_1/embsys_clk_wiz_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module embsys_clk_wiz_1_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.ip_user_files/bd/embsys/ip/embsys_xbar_1/sim/embsys_xbar_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module embsys_xbar_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.ip_user_files/bd/embsys/ip/embsys_lmb_bram_1/sim/embsys_lmb_bram_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module embsys_lmb_bram_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_PmodENC_0_1/src/PmodENC_pmod_bridge_0_0/src/pmod_concat.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pmod_concat
+WARNING: [VRFC 10-2845] overwriting previous definition of module pmod_concat [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ip/embsys_PmodENC_0_1/src/PmodENC_pmod_bridge_0_0/src/pmod_concat.v:12]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.ip_user_files/bd/embsys/ip/embsys_PmodENC_0_1/src/PmodENC_pmod_bridge_0_0/sim/PmodENC_pmod_bridge_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PmodENC_pmod_bridge_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.ip_user_files/bd/embsys/ip/embsys_PmodENC_0_1/src/PmodENC_xlslice_0_0/sim/PmodENC_xlslice_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PmodENC_xlslice_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.ip_user_files/bd/embsys/ip/embsys_PmodENC_0_1/src/PmodENC_xlslice_0_1/sim/PmodENC_xlslice_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PmodENC_xlslice_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.ip_user_files/bd/embsys/ip/embsys_PmodENC_0_1/src/PmodENC_xlslice_0_2/sim/PmodENC_xlslice_0_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PmodENC_xlslice_0_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.ip_user_files/bd/embsys/ip/embsys_PmodENC_0_1/src/PmodENC_xlslice_t_0_0/sim/PmodENC_xlslice_t_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PmodENC_xlslice_t_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.ip_user_files/bd/embsys/ip/embsys_PmodENC_0_1/src/PmodENC_xlconcat_0_0/sim/PmodENC_xlconcat_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PmodENC_xlconcat_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/bd/embsys/ipshared/4239/src/PmodENC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PmodENC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.ip_user_files/bd/embsys/ip/embsys_PmodENC_0_1/sim/embsys_PmodENC_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module embsys_PmodENC_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.ip_user_files/bd/embsys/sim/embsys.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module embsys
+INFO: [VRFC 10-311] analyzing module embsys_microblaze_0_axi_periph_1
+INFO: [VRFC 10-311] analyzing module m00_couplers_imp_OEGTNN
+INFO: [VRFC 10-311] analyzing module m01_couplers_imp_1X988FM
+INFO: [VRFC 10-311] analyzing module m02_couplers_imp_1LSUSSG
+INFO: [VRFC 10-311] analyzing module m03_couplers_imp_Z0V64X
+INFO: [VRFC 10-311] analyzing module m04_couplers_imp_10K59R8
+INFO: [VRFC 10-311] analyzing module m05_couplers_imp_CO79RP
+INFO: [VRFC 10-311] analyzing module m06_couplers_imp_17TSQV
+INFO: [VRFC 10-311] analyzing module m07_couplers_imp_1B6JKGM
+INFO: [VRFC 10-311] analyzing module m08_couplers_imp_A8EFSC
+INFO: [VRFC 10-311] analyzing module m09_couplers_imp_12FSMBH
+INFO: [VRFC 10-311] analyzing module microblaze_0_local_memory_imp_1SR2TDT
+INFO: [VRFC 10-311] analyzing module s00_couplers_imp_QRRRG2
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/new/counter.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module counter
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/new/ff_reg.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ff_reg
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/new/pwdet.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pwdet
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sources_1/imports/hardware/nexysA7fpga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nexysA7fpga
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sim_1/new/testbench.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module testbench
 WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sim_1/new/testbench.v:93]
 WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sim_1/new/testbench.v:146]
-WARNING: [VRFC 10-1581] illegal format specifier - for monitor [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sim_1/new/testbench.v:69]

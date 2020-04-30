@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a50tcsg324-1" LaunchTime="1587680222">
+<GenRun Id="impl_1" LaunchPart="xc7a50tcsg324-1" LaunchTime="1588059971">
   <File Type="BITSTR-BMM" Name="nexysA7fpga_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="nexysA7fpga_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="nexysA7fpga_timing_summary_init.rpt"/>
@@ -132,25 +132,15 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="best_so_far" Flow="Vivado Implementation 2018"/>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
     <Step Id="init_design"/>
-    <Step Id="opt_design">
-      <Option Id="Directive">2</Option>
-    </Step>
+    <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
-    <Step Id="place_design">
-      <Option Id="Directive">18</Option>
-    </Step>
+    <Step Id="place_design"/>
     <Step Id="post_place_power_opt_design"/>
-    <Step Id="phys_opt_design" EnableStepBool="1">
-      <Option Id="Directive">6</Option>
-    </Step>
-    <Step Id="route_design">
-      <Option Id="Directive">7</Option>
-    </Step>
-    <Step Id="post_route_phys_opt_design" EnableStepBool="1">
-      <Option Id="Directive">3</Option>
-    </Step>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="embsys_microblaze_0_1"/>

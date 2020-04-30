@@ -101,7 +101,7 @@ start_step opt_design
 set ACTIVE_STEP opt_design
 set rc [catch {
   create_msg_db opt_design.pb
-  opt_design -directive ExploreSequentialArea
+  opt_design 
   write_checkpoint -force nexysA7fpga_opt.dcp
   create_report "impl_1_opt_report_drc_0" "report_drc -file nexysA7fpga_drc_opted.rpt -pb nexysA7fpga_drc_opted.pb -rpx nexysA7fpga_drc_opted.rpx"
   close_msg_db -file opt_design.pb
@@ -121,7 +121,7 @@ set rc [catch {
   if { [llength [get_debug_cores -quiet] ] > 0 }  { 
     implement_debug_core 
   } 
-  place_design -directive EarlyBlockPlacement
+  place_design 
   write_checkpoint -force nexysA7fpga_placed.dcp
   create_report "impl_1_place_report_io_0" "report_io -file nexysA7fpga_io_placed.rpt"
   create_report "impl_1_place_report_utilization_0" "report_utilization -file nexysA7fpga_utilization_placed.rpt -pb nexysA7fpga_utilization_placed.pb"
@@ -136,34 +136,17 @@ if {$rc} {
   unset ACTIVE_STEP 
 }
 
-start_step phys_opt_design
-set ACTIVE_STEP phys_opt_design
-set rc [catch {
-  create_msg_db phys_opt_design.pb
-  phys_opt_design -directive AlternateFlowWithRetiming
-  write_checkpoint -force nexysA7fpga_physopt.dcp
-  close_msg_db -file phys_opt_design.pb
-} RESULT]
-if {$rc} {
-  step_failed phys_opt_design
-  return -code error $RESULT
-} else {
-  end_step phys_opt_design
-  unset ACTIVE_STEP 
-}
-
-  set_msg_config -source 4 -id {Route 35-39} -severity "critical warning" -new_severity warning
 start_step route_design
 set ACTIVE_STEP route_design
 set rc [catch {
   create_msg_db route_design.pb
-  route_design -directive AlternateCLBRouting
+  route_design 
   write_checkpoint -force nexysA7fpga_routed.dcp
   create_report "impl_1_route_report_drc_0" "report_drc -file nexysA7fpga_drc_routed.rpt -pb nexysA7fpga_drc_routed.pb -rpx nexysA7fpga_drc_routed.rpx"
   create_report "impl_1_route_report_methodology_0" "report_methodology -file nexysA7fpga_methodology_drc_routed.rpt -pb nexysA7fpga_methodology_drc_routed.pb -rpx nexysA7fpga_methodology_drc_routed.rpx"
   create_report "impl_1_route_report_power_0" "report_power -file nexysA7fpga_power_routed.rpt -pb nexysA7fpga_power_summary_routed.pb -rpx nexysA7fpga_power_routed.rpx"
   create_report "impl_1_route_report_route_status_0" "report_route_status -file nexysA7fpga_route_status.rpt -pb nexysA7fpga_route_status.pb"
-  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file nexysA7fpga_timing_summary_routed.rpt -pb nexysA7fpga_timing_summary_routed.pb -rpx nexysA7fpga_timing_summary_routed.rpx"
+  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file nexysA7fpga_timing_summary_routed.rpt -pb nexysA7fpga_timing_summary_routed.pb -rpx nexysA7fpga_timing_summary_routed.rpx -warn_on_violation "
   create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file nexysA7fpga_incremental_reuse_routed.rpt"
   create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file nexysA7fpga_clock_utilization_routed.rpt"
   create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file nexysA7fpga_bus_skew_routed.rpt -pb nexysA7fpga_bus_skew_routed.pb -rpx nexysA7fpga_bus_skew_routed.rpx"
@@ -175,24 +158,6 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
-  unset ACTIVE_STEP 
-}
-
-start_step post_route_phys_opt_design
-set ACTIVE_STEP post_route_phys_opt_design
-set rc [catch {
-  create_msg_db post_route_phys_opt_design.pb
-  phys_opt_design -directive ExploreWithAggressiveHoldFix
-  write_checkpoint -force nexysA7fpga_postroute_physopt.dcp
-  create_report "impl_1_post_route_phys_opt_report_timing_summary_0" "report_timing_summary -max_paths 10 -warn_on_violation -file nexysA7fpga_timing_summary_postroute_physopted.rpt -pb nexysA7fpga_timing_summary_postroute_physopted.pb -rpx nexysA7fpga_timing_summary_postroute_physopted.rpx"
-  create_report "impl_1_post_route_phys_opt_report_bus_skew_0" "report_bus_skew -warn_on_violation -file nexysA7fpga_bus_skew_postroute_physopted.rpt -pb nexysA7fpga_bus_skew_postroute_physopted.pb -rpx nexysA7fpga_bus_skew_postroute_physopted.rpx"
-  close_msg_db -file post_route_phys_opt_design.pb
-} RESULT]
-if {$rc} {
-  step_failed post_route_phys_opt_design
-  return -code error $RESULT
-} else {
-  end_step post_route_phys_opt_design
   unset ACTIVE_STEP 
 }
 
