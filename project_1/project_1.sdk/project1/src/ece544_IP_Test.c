@@ -175,7 +175,7 @@ void channel_select(	unsigned int *switch_value,
 
 void swdetect(void);
 
-void RunTest4(void);
+void myfunc(void);
 
 /* global variables */
 unsigned int gpio_in_reg 			= 0;
@@ -191,7 +191,8 @@ unsigned int shftamnt				= 0;
 /************************** MAIN PROGRAM ************************************/
 int main(void)
 {
-    init_platform();
+
+	init_platform();
 
 	uint32_t sts;
 	uint32_t state, laststate;
@@ -208,7 +209,7 @@ int main(void)
 	xil_printf("By Roy Kravitz. 31-Mar-2020\n\n\r");
 
 
-	RunTest4();
+	myfunc();
 	
 	// clear the displays and power down the pmodOLEDrbg
 	NX410_SSEG_setAllDigits(SSEGHI, CC_BLANK, CC_B, CC_LCY, CC_E, DP_NONE);
@@ -523,7 +524,7 @@ void PMDIO_putnum(PmodOLEDrgb* InstancePtr, int32_t num, int32_t radix)
 #define SWITCH23_MASK 0xC
 #define SW0_MASK	0x1
 
-void RunTest4(void){
+void myfunc(void){
 
 		// CoLoR WhEeL 
 		unsigned char 	hue 					= 0,
@@ -536,7 +537,6 @@ void RunTest4(void){
 
 		// Software PWDET Variables
 		unsigned int 	dp_cnt 					= 0,
-						channel_mask			= 0,
 						shftamnt				= 0,
 						NX4IO_duty_cycle		= 0,
 						rgb_state				= 0,
@@ -552,13 +552,14 @@ void RunTest4(void){
 						btn_state 				= 0,
 						gpio_in_signal 			= 0,
 						brgb8					= 0,
-						dcstate					= 0,
 						oled_rgb_val			= 0,
 						rgb_changed				= 0,
 						btn_changed				= 0,
 						sw_changed				= 0,
 						enc_changed				= 0,
-						ticks_changed			= 0;
+						ticks_changed			= 0,
+						last_dc					= 0,
+						dc_changed				= 0;
 
 	volatile u8			hardpwdet_value			= 0;
 
@@ -575,7 +576,6 @@ void RunTest4(void){
 
 	// get the previous state
 	laststate = ENC_getState(&pmodENC_inst);
-	rgb_state = 0;
 	
 	while(1) {
 
@@ -589,6 +589,10 @@ void RunTest4(void){
 
 		ticks_changed = (lastticks != (ticks = (ticks + (5*ENC_getRotation(state, laststate)))));
 
+		swdetect();
+
+		dc_changed = (last_dc != dc);
+
 		// Outputs
 
 		if(enc_changed){	
@@ -599,6 +603,9 @@ void RunTest4(void){
 		}
 				
 		if(sw_changed){		
+			high_count = 0;
+			low_count = 0;
+
 			if((switch_value & SW0_MASK) != (last_sw & SW0_MASK)/* sw[0] changed */){
 				pwdet_select = NX4IO_getSwitches() & SW0_MASK;	// Select PWDET hardware or software
 			}
@@ -608,17 +615,16 @@ void RunTest4(void){
 		if(btn_changed) 
 			button_scan(&val, &sat, &hue, &ticks, &state, &laststate);	// Adjust values according to button push.
 
-		if(sw_changed || btn_changed || ticks_changed){
+		if(sw_changed || btn_changed || ticks_changed || dc_changed){
 
 			brgb8 = my_hsv_builder(&hue, &sat, &val);		// Build 8-bit RGB value for duty calc.
 
 			channel_select(&switch_value, &NX4IO_duty_cycle, &brgb8 );	// Select an RGB channel.
 		}
 
-		if(sw_changed || btn_changed || ticks_changed){
+		if(sw_changed || btn_changed || ticks_changed || dc_changed){
 
 			hardpwdet_value = XGpio_DiscreteRead(&GPIOInst1, GPIO_1_INPUT_0_CHANNEL); 	// Read the GPIO1 port to obtain HWPWDET data.
-
 
 			calculate_dc(&NX4IO_duty_cycle, &digi1, &digi2, &digi3, &digi4, &pwdet_select, &hardpwdet_value);
 		}
@@ -632,24 +638,24 @@ void RunTest4(void){
 
 		if(btn_changed || ticks_changed){
 
-			// oled_rgb_val = ((((rgb_val >> 5)&0x7FF)) | ((rgb_val & 0x1F)<<11)); // Formatting for OLED
-
 			oled_rgb_val = ((rgb_val >> 6) & 0x07E0) | ((rgb_val & 0x1F)<<11) | (rgb_val & 0x07E0)>>5; // Formatting for OLED
 
 			update_oled(&oled_rgb_val, &hue, &sat, &val, &rgb_val);// Update OLED
 		}
 
-		if(sw_changed || btn_changed || ticks_changed)
+		if(sw_changed || btn_changed || ticks_changed || dc_changed)
 			update_sseg(&digi1, &digi2, &digi3, &digi4); // DIgits 2, 1 (tens, ones) of calculated
 
 		if(sw_changed) 
 			NX4IO_setLEDs(switch_value);	// Update LEDS
 
 		// ~Asynchronous
-	
+
 		blink_dp1(&dp_cnt);		// Blink the 1st decimal point.
 
 		// Update current states
+
+		last_dc = dc;
 
 		last_btn = btn_state;// Update button state
 
@@ -691,15 +697,16 @@ void RunTest4(void){
 
 void FIT_Handler(void)
 {	
+	static int fit_count = 0;
 
-		// Read value
+	// Read value
 	gpio_in = (XGpio_DiscreteRead(&GPIOInst0, GPIO_0_INPUT_0_CHANNEL) & channel_mask) >> shftamnt; 	// Read the GPIO for RGB PWM data.
 
 	// PWDet logic
 	if(gpio_in != gpio_in_reg){
 		high_count = hcount;
 		low_count = lcount;
-		if(gpio_in == 1) hcount = 1;
+		if(gpio_in == 1)hcount = 1;
 		if(gpio_in == 0) lcount = 1;
 	}
 
@@ -711,10 +718,12 @@ void FIT_Handler(void)
 	// Register value
 	gpio_in_reg = gpio_in;
 
+	if(fit_count == 1.5*DP_BLINK_PERIOD){
 		if((DP_1_MASK ^ NX4IO_SSEG_getSSEG_DATA(SSEGLO))>>25) 
 			NX4IO_SSEG_setDecPt(SSEGLO, DIGIT1, 1);
 		else			
 			NX4IO_SSEG_setDecPt(SSEGLO, DIGIT1, 0);
+	}
 
 }
 
@@ -842,9 +851,6 @@ void calculate_dc(	unsigned int *NX4IO_duty_cycle,
 				){
 
 
-	dc = (high_count * 100)/(high_count + low_count);
-	if(dc > 99) dc = 99;
-
 	// Calculated PW.
 	if(*NX4IO_duty_cycle > 99){
 		*digi2 = 0x9;
@@ -932,6 +938,16 @@ int my_hsv_builder(unsigned char *hue, unsigned char *sat, unsigned char * val){
 
 void swdetect(void){
 
+	int scalar = 0;
 
+	switch(channel_mask){
+			case 0x4:  scalar = 17; break;	//Red signal
+			case 0x1:  scalar = 8; break;	// Green Signal
+			case 0x2:  scalar = 17; break;	// Blue Signal
+			default: scalar = 0; break;
+		}
+
+	dc = (high_count * 100 * scalar)/(high_count + low_count);
+	if(dc > 99) dc = 99;
 
 }
