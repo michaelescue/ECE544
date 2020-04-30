@@ -696,25 +696,16 @@ void FIT_Handler(void)
 	gpio_in = (XGpio_DiscreteRead(&GPIOInst0, GPIO_0_INPUT_0_CHANNEL) & channel_mask) >> shftamnt; 	// Read the GPIO for RGB PWM data.
 
 	// PWDet logic
-	if(gpio_in != gpio_in_reg){	// Edge detect
-		if(gpio_in == 1){ // Level is high
-			low_count = lcount;
-			lcount = 0;
-		}
-		else{			// Level is low
-			high_count = hcount;
-			hcount = 0;
-		}
+	if(gpio_in != gpio_in_reg){
+		high_count = hcount;
+		low_count = lcount;
+		if(gpio_in == 1) hcount = 1;
+		if(gpio_in == 0) lcount = 1;
 	}
-	else						// No Edge
-	{
-		if(gpio_in == 1){
-			hcount++;
-		}
-		else{
-			lcount++;
-		}
-	}
+
+	if(gpio_in == 1) hcount++;
+	if(gpio_in == 0) lcount++;
+
 	
 
 	// Register value

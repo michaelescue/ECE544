@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Tue Apr 28 00:52:50 2020
+| Date             : Thu Apr 30 10:23:02 2020
 | Host             : DESKTOP-J4B3MVP running 64-bit major release  (build 9200)
 | Command          : report_power -file nexysA7fpga_power_routed.rpt -pb nexysA7fpga_power_summary_routed.pb -rpx nexysA7fpga_power_routed.rpx
 | Design           : nexysA7fpga
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.232        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.159        |
+| Dynamic (W)              | 0.158        |
 | Device Static (W)        | 0.074        |
 | Effective TJA (C/W)      | 4.8          |
 | Max Ambient (C)          | 83.9         |
@@ -54,14 +54,14 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.017 |       14 |       --- |             --- |
 | Slice Logic              |     0.007 |    10092 |       --- |             --- |
-|   LUT as Logic           |     0.005 |     3955 |     32600 |           12.13 |
+|   LUT as Logic           |     0.005 |     3951 |     32600 |           12.12 |
 |   LUT as Distributed RAM |    <0.001 |      112 |      9600 |            1.17 |
 |   Register               |    <0.001 |     3826 |     65200 |            5.87 |
 |   CARRY4                 |    <0.001 |      415 |      8150 |            5.09 |
 |   F7/F8 Muxes            |    <0.001 |      215 |     32600 |            0.66 |
 |   LUT as Shift Register  |    <0.001 |       95 |      9600 |            0.99 |
 |   Others                 |    <0.001 |      775 |       --- |             --- |
-| Signals                  |     0.013 |     7282 |       --- |             --- |
+| Signals                  |     0.013 |     7271 |       --- |             --- |
 | Block RAM                |     0.014 |       32 |        75 |           42.67 |
 | MMCM                     |     0.098 |        1 |         5 |           20.00 |
 | I/O                      |     0.009 |       95 |       210 |           45.24 |
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.062 |       0.051 |      0.011 |
+| Vccint    |       1.000 |     0.061 |       0.051 |      0.011 |
 | Vccaux    |       1.800 |     0.067 |       0.055 |      0.013 |
 | Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -156,7 +156,7 @@ Table of Contents
 +-------------------------------------------------------------------------------------------------+-----------+
 | Name                                                                                            | Power (W) |
 +-------------------------------------------------------------------------------------------------+-----------+
-| nexysA7fpga                                                                                     |     0.159 |
+| nexysA7fpga                                                                                     |     0.158 |
 |   EMBSYS                                                                                        |     0.148 |
 |     PmodENC_0                                                                                   |    <0.001 |
 |       inst                                                                                      |    <0.001 |
@@ -174,8 +174,8 @@ Table of Contents
 |         xlslice_o_1                                                                             |     0.000 |
 |         xlslice_t_0                                                                             |     0.000 |
 |         xlslice_t_1                                                                             |     0.000 |
-|     PmodOLEDrgb_0                                                                               |     0.005 |
-|       inst                                                                                      |     0.005 |
+|     PmodOLEDrgb_0                                                                               |     0.004 |
+|       inst                                                                                      |     0.004 |
 |         axi_gpio_0                                                                              |    <0.001 |
 |           U0                                                                                    |    <0.001 |
 |             AXI_LITE_IPIF_I                                                                     |    <0.001 |
@@ -645,7 +645,7 @@ Table of Contents
 |                 Part_Of_Zero_Carry_Start                                                        |    <0.001 |
 |                 Zero_Detecting[2].I_Part_Of_Zero_Detect                                         |     0.000 |
 |                 Zero_Detecting[3].I_Part_Of_Zero_Detect                                         |    <0.001 |
-|               exception_registers_I1                                                            |    <0.001 |
+|               exception_registers_I1                                                            |     0.001 |
 |                 CarryIn_MUXCY                                                                   |    <0.001 |
 |                 Using_FPGA_LUT6.Gen_Ret_Addr[0].I_RET_ADDR_WB                                   |    <0.001 |
 |                   Using_FPGA.Native                                                             |    <0.001 |
@@ -1033,20 +1033,20 @@ Table of Contents
 |                 MUXCY_I                                                                         |    <0.001 |
 |               if_pc_incr_carry_and_3                                                            |     0.000 |
 |                 MUXCY_I                                                                         |     0.000 |
-|               jump_logic_I1                                                                     |     0.003 |
+|               jump_logic_I1                                                                     |     0.002 |
 |                 MUXCY_JUMP_CARRY                                                                |     0.000 |
 |                 MUXCY_JUMP_CARRY2                                                               |    <0.001 |
 |                 MUXCY_JUMP_CARRY3                                                               |    <0.001 |
 |                 MUXCY_JUMP_CARRY4                                                               |     0.000 |
 |                 MUXCY_JUMP_CARRY5                                                               |     0.000 |
-|                 MUXCY_JUMP_CARRY6                                                               |     0.003 |
+|                 MUXCY_JUMP_CARRY6                                                               |     0.002 |
 |               mem_PipeRun_carry_and                                                             |    <0.001 |
 |                 MUXCY_I                                                                         |    <0.001 |
 |               mem_wait_on_ready_N_carry_or                                                      |    <0.001 |
 |                 MUXCY_I                                                                         |    <0.001 |
 |             Use_DBUS.DAXI_Interface_I1                                                          |    <0.001 |
 |             Use_DLMB.Using_Latch_AS_Logic.AND2B1L_I1                                            |    <0.001 |
-|             Use_Debug_Logic.Master_Core.Debug_Perf                                              |     0.001 |
+|             Use_Debug_Logic.Master_Core.Debug_Perf                                              |    <0.001 |
 |               Serial_Dbg_Intf.SRL16E_1                                                          |    <0.001 |
 |               Serial_Dbg_Intf.SRL16E_3                                                          |    <0.001 |
 |               Serial_Dbg_Intf.SRL16E_4                                                          |    <0.001 |

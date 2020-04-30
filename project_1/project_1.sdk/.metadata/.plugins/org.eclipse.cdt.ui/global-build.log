@@ -27312,3 +27312,1256 @@ Finished building: project1.elf.size
 09:45:20 **** Incremental Build of configuration Debug for project project1 ****
 make all 
 make: Nothing to be done for `all'.
+10:02:37 **** Incremental Build of configuration Debug for project project1 ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c:193:5: error: expected '=', ',', ';', 'asm' or '__attribute__' before ':' token
+ main:
+     ^
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:625:83: warning: passing argument 7 of 'calculate_dc' from incompatible pointer type [-Wincompatible-pointer-types]
+    calculate_dc(&NX4IO_duty_cycle, &digi1, &digi2, &digi3, &digi4, &pwdet_select, &hardpwdet_value);
+                                                                                   ^
+../src/ece544_IP_Test.c:163:6: note: expected 'unsigned int *' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ void calculate_dc( unsigned int *NX4IO_duty_cycle,
+      ^~~~~~~~~~~~
+../src/ece544_IP_Test.c:641:16: warning: passing argument 1 of 'update_oled' from incompatible pointer type [-Wincompatible-pointer-types]
+    update_oled(&oled_rgb_val, &hue, &sat, &val, &rgb_val);// Update OLED
+                ^
+../src/ece544_IP_Test.c:145:6: note: expected 'u16 * {aka short unsigned int *}' but argument is of type 'unsigned int *'
+ void update_oled(  u16 *oled_rgb_val,
+      ^~~~~~~~~~~
+../src/ece544_IP_Test.c:559:7: warning: unused variable 'rgb_changed' [-Wunused-variable]
+       rgb_changed    = 0,
+       ^~~~~~~~~~~
+../src/ece544_IP_Test.c:557:7: warning: unused variable 'dcstate' [-Wunused-variable]
+       dcstate     = 0,
+       ^~~~~~~
+../src/ece544_IP_Test.c:555:7: warning: unused variable 'gpio_in_signal' [-Wunused-variable]
+       gpio_in_signal    = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:553:7: warning: variable 'last_btn' set but not used [-Wunused-but-set-variable]
+       last_btn    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:545:7: warning: unused variable 'last_rgb_state' [-Wunused-variable]
+       last_rgb_state   = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:544:7: warning: variable 'rgb_state' set but not used [-Wunused-but-set-variable]
+       rgb_state    = 0,
+       ^~~~~~~~~
+../src/ece544_IP_Test.c:542:7: warning: unused variable 'shftamnt' [-Wunused-variable]
+       shftamnt    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:541:7: warning: unused variable 'channel_mask' [-Wunused-variable]
+       channel_mask   = 0,
+       ^~~~~~~~~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+make: *** [src/ece544_IP_Test.o] Error 1
+10:02:58 **** Incremental Build of configuration Debug for project project1 ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c:193:1: error: expected identifier or '(' before ':' token
+ :main
+ ^
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:625:83: warning: passing argument 7 of 'calculate_dc' from incompatible pointer type [-Wincompatible-pointer-types]
+    calculate_dc(&NX4IO_duty_cycle, &digi1, &digi2, &digi3, &digi4, &pwdet_select, &hardpwdet_value);
+                                                                                   ^
+../src/ece544_IP_Test.c:163:6: note: expected 'unsigned int *' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ void calculate_dc( unsigned int *NX4IO_duty_cycle,
+      ^~~~~~~~~~~~
+../src/ece544_IP_Test.c:641:16: warning: passing argument 1 of 'update_oled' from incompatible pointer type [-Wincompatible-pointer-types]
+    update_oled(&oled_rgb_val, &hue, &sat, &val, &rgb_val);// Update OLED
+                ^
+../src/ece544_IP_Test.c:145:6: note: expected 'u16 * {aka short unsigned int *}' but argument is of type 'unsigned int *'
+ void update_oled(  u16 *oled_rgb_val,
+      ^~~~~~~~~~~
+../src/ece544_IP_Test.c:559:7: warning: unused variable 'rgb_changed' [-Wunused-variable]
+       rgb_changed    = 0,
+       ^~~~~~~~~~~
+../src/ece544_IP_Test.c:557:7: warning: unused variable 'dcstate' [-Wunused-variable]
+       dcstate     = 0,
+       ^~~~~~~
+../src/ece544_IP_Test.c:555:7: warning: unused variable 'gpio_in_signal' [-Wunused-variable]
+       gpio_in_signal    = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:553:7: warning: variable 'last_btn' set but not used [-Wunused-but-set-variable]
+       last_btn    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:545:7: warning: unused variable 'last_rgb_state' [-Wunused-variable]
+       last_rgb_state   = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:544:7: warning: variable 'rgb_state' set but not used [-Wunused-but-set-variable]
+       rgb_state    = 0,
+       ^~~~~~~~~
+../src/ece544_IP_Test.c:542:7: warning: unused variable 'shftamnt' [-Wunused-variable]
+       shftamnt    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:541:7: warning: unused variable 'channel_mask' [-Wunused-variable]
+       channel_mask   = 0,
+       ^~~~~~~~~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+make: *** [src/ece544_IP_Test.o] Error 1
+10:03:39 **** Incremental Build of configuration Debug for project project1 ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'main':
+../src/ece544_IP_Test.c:197:18: warning: unused variable 'laststate' [-Wunused-variable]
+  uint32_t state, laststate;
+                  ^~~~~~~~~
+../src/ece544_IP_Test.c:197:11: warning: unused variable 'state' [-Wunused-variable]
+  uint32_t state, laststate;
+           ^~~~~
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:623:83: warning: passing argument 7 of 'calculate_dc' from incompatible pointer type [-Wincompatible-pointer-types]
+    calculate_dc(&NX4IO_duty_cycle, &digi1, &digi2, &digi3, &digi4, &pwdet_select, &hardpwdet_value);
+                                                                                   ^
+../src/ece544_IP_Test.c:163:6: note: expected 'unsigned int *' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ void calculate_dc( unsigned int *NX4IO_duty_cycle,
+      ^~~~~~~~~~~~
+../src/ece544_IP_Test.c:639:16: warning: passing argument 1 of 'update_oled' from incompatible pointer type [-Wincompatible-pointer-types]
+    update_oled(&oled_rgb_val, &hue, &sat, &val, &rgb_val);// Update OLED
+                ^
+../src/ece544_IP_Test.c:145:6: note: expected 'u16 * {aka short unsigned int *}' but argument is of type 'unsigned int *'
+ void update_oled(  u16 *oled_rgb_val,
+      ^~~~~~~~~~~
+../src/ece544_IP_Test.c:557:7: warning: unused variable 'rgb_changed' [-Wunused-variable]
+       rgb_changed    = 0,
+       ^~~~~~~~~~~
+../src/ece544_IP_Test.c:555:7: warning: unused variable 'dcstate' [-Wunused-variable]
+       dcstate     = 0,
+       ^~~~~~~
+../src/ece544_IP_Test.c:553:7: warning: unused variable 'gpio_in_signal' [-Wunused-variable]
+       gpio_in_signal    = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:551:7: warning: variable 'last_btn' set but not used [-Wunused-but-set-variable]
+       last_btn    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:543:7: warning: unused variable 'last_rgb_state' [-Wunused-variable]
+       last_rgb_state   = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:542:7: warning: variable 'rgb_state' set but not used [-Wunused-but-set-variable]
+       rgb_state    = 0,
+       ^~~~~~~~~
+../src/ece544_IP_Test.c:540:7: warning: unused variable 'shftamnt' [-Wunused-variable]
+       shftamnt    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:539:7: warning: unused variable 'channel_mask' [-Wunused-variable]
+       channel_mask   = 0,
+       ^~~~~~~~~~~~
+../src/ece544_IP_Test.c: In function 'button_scan':
+../src/ece544_IP_Test.c:794:4: error: label 'main' used but not defined
+    goto main;
+    ^~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+make: *** [src/ece544_IP_Test.o] Error 1
+10:04:13 **** Incremental Build of configuration Debug for project project1 ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'main':
+../src/ece544_IP_Test.c:198:18: warning: unused variable 'laststate' [-Wunused-variable]
+  uint32_t state, laststate;
+                  ^~~~~~~~~
+../src/ece544_IP_Test.c:198:11: warning: unused variable 'state' [-Wunused-variable]
+  uint32_t state, laststate;
+           ^~~~~
+../src/ece544_IP_Test.c:194:2: warning: label 'main' defined but not used [-Wunused-label]
+  main:
+  ^~~~
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:624:83: warning: passing argument 7 of 'calculate_dc' from incompatible pointer type [-Wincompatible-pointer-types]
+    calculate_dc(&NX4IO_duty_cycle, &digi1, &digi2, &digi3, &digi4, &pwdet_select, &hardpwdet_value);
+                                                                                   ^
+../src/ece544_IP_Test.c:163:6: note: expected 'unsigned int *' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ void calculate_dc( unsigned int *NX4IO_duty_cycle,
+      ^~~~~~~~~~~~
+../src/ece544_IP_Test.c:640:16: warning: passing argument 1 of 'update_oled' from incompatible pointer type [-Wincompatible-pointer-types]
+    update_oled(&oled_rgb_val, &hue, &sat, &val, &rgb_val);// Update OLED
+                ^
+../src/ece544_IP_Test.c:145:6: note: expected 'u16 * {aka short unsigned int *}' but argument is of type 'unsigned int *'
+ void update_oled(  u16 *oled_rgb_val,
+      ^~~~~~~~~~~
+../src/ece544_IP_Test.c:558:7: warning: unused variable 'rgb_changed' [-Wunused-variable]
+       rgb_changed    = 0,
+       ^~~~~~~~~~~
+../src/ece544_IP_Test.c:556:7: warning: unused variable 'dcstate' [-Wunused-variable]
+       dcstate     = 0,
+       ^~~~~~~
+../src/ece544_IP_Test.c:554:7: warning: unused variable 'gpio_in_signal' [-Wunused-variable]
+       gpio_in_signal    = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:552:7: warning: variable 'last_btn' set but not used [-Wunused-but-set-variable]
+       last_btn    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:544:7: warning: unused variable 'last_rgb_state' [-Wunused-variable]
+       last_rgb_state   = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:543:7: warning: variable 'rgb_state' set but not used [-Wunused-but-set-variable]
+       rgb_state    = 0,
+       ^~~~~~~~~
+../src/ece544_IP_Test.c:541:7: warning: unused variable 'shftamnt' [-Wunused-variable]
+       shftamnt    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:540:7: warning: unused variable 'channel_mask' [-Wunused-variable]
+       channel_mask   = 0,
+       ^~~~~~~~~~~~
+../src/ece544_IP_Test.c: In function 'button_scan':
+../src/ece544_IP_Test.c:795:4: error: label 'main' used but not defined
+    goto main;
+    ^~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+make: *** [src/ece544_IP_Test.o] Error 1
+10:04:54 **** Incremental Build of configuration Debug for project project1 ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'main':
+../src/ece544_IP_Test.c:197:18: warning: unused variable 'laststate' [-Wunused-variable]
+  uint32_t state, laststate;
+                  ^~~~~~~~~
+../src/ece544_IP_Test.c:197:11: warning: unused variable 'state' [-Wunused-variable]
+  uint32_t state, laststate;
+           ^~~~~
+../src/ece544_IP_Test.c:194:2: warning: label 'main' defined but not used [-Wunused-label]
+  main: init_platform();
+  ^~~~
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:623:83: warning: passing argument 7 of 'calculate_dc' from incompatible pointer type [-Wincompatible-pointer-types]
+    calculate_dc(&NX4IO_duty_cycle, &digi1, &digi2, &digi3, &digi4, &pwdet_select, &hardpwdet_value);
+                                                                                   ^
+../src/ece544_IP_Test.c:163:6: note: expected 'unsigned int *' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ void calculate_dc( unsigned int *NX4IO_duty_cycle,
+      ^~~~~~~~~~~~
+../src/ece544_IP_Test.c:639:16: warning: passing argument 1 of 'update_oled' from incompatible pointer type [-Wincompatible-pointer-types]
+    update_oled(&oled_rgb_val, &hue, &sat, &val, &rgb_val);// Update OLED
+                ^
+../src/ece544_IP_Test.c:145:6: note: expected 'u16 * {aka short unsigned int *}' but argument is of type 'unsigned int *'
+ void update_oled(  u16 *oled_rgb_val,
+      ^~~~~~~~~~~
+../src/ece544_IP_Test.c:557:7: warning: unused variable 'rgb_changed' [-Wunused-variable]
+       rgb_changed    = 0,
+       ^~~~~~~~~~~
+../src/ece544_IP_Test.c:555:7: warning: unused variable 'dcstate' [-Wunused-variable]
+       dcstate     = 0,
+       ^~~~~~~
+../src/ece544_IP_Test.c:553:7: warning: unused variable 'gpio_in_signal' [-Wunused-variable]
+       gpio_in_signal    = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:551:7: warning: variable 'last_btn' set but not used [-Wunused-but-set-variable]
+       last_btn    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:543:7: warning: unused variable 'last_rgb_state' [-Wunused-variable]
+       last_rgb_state   = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:542:7: warning: variable 'rgb_state' set but not used [-Wunused-but-set-variable]
+       rgb_state    = 0,
+       ^~~~~~~~~
+../src/ece544_IP_Test.c:540:7: warning: unused variable 'shftamnt' [-Wunused-variable]
+       shftamnt    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:539:7: warning: unused variable 'channel_mask' [-Wunused-variable]
+       channel_mask   = 0,
+       ^~~~~~~~~~~~
+../src/ece544_IP_Test.c: In function 'button_scan':
+../src/ece544_IP_Test.c:794:4: error: label 'main' used but not defined
+    goto main;
+    ^~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+make: *** [src/ece544_IP_Test.o] Error 1
+10:05:45 **** Incremental Build of configuration Debug for project project1 ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'main':
+../src/ece544_IP_Test.c:197:18: warning: unused variable 'laststate' [-Wunused-variable]
+  uint32_t state, laststate;
+                  ^~~~~~~~~
+../src/ece544_IP_Test.c:197:11: warning: unused variable 'state' [-Wunused-variable]
+  uint32_t state, laststate;
+           ^~~~~
+../src/ece544_IP_Test.c:194:2: warning: label 'reset' defined but not used [-Wunused-label]
+  reset: init_platform();
+  ^~~~~
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:623:83: warning: passing argument 7 of 'calculate_dc' from incompatible pointer type [-Wincompatible-pointer-types]
+    calculate_dc(&NX4IO_duty_cycle, &digi1, &digi2, &digi3, &digi4, &pwdet_select, &hardpwdet_value);
+                                                                                   ^
+../src/ece544_IP_Test.c:163:6: note: expected 'unsigned int *' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ void calculate_dc( unsigned int *NX4IO_duty_cycle,
+      ^~~~~~~~~~~~
+../src/ece544_IP_Test.c:639:16: warning: passing argument 1 of 'update_oled' from incompatible pointer type [-Wincompatible-pointer-types]
+    update_oled(&oled_rgb_val, &hue, &sat, &val, &rgb_val);// Update OLED
+                ^
+../src/ece544_IP_Test.c:145:6: note: expected 'u16 * {aka short unsigned int *}' but argument is of type 'unsigned int *'
+ void update_oled(  u16 *oled_rgb_val,
+      ^~~~~~~~~~~
+../src/ece544_IP_Test.c:557:7: warning: unused variable 'rgb_changed' [-Wunused-variable]
+       rgb_changed    = 0,
+       ^~~~~~~~~~~
+../src/ece544_IP_Test.c:555:7: warning: unused variable 'dcstate' [-Wunused-variable]
+       dcstate     = 0,
+       ^~~~~~~
+../src/ece544_IP_Test.c:553:7: warning: unused variable 'gpio_in_signal' [-Wunused-variable]
+       gpio_in_signal    = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:551:7: warning: variable 'last_btn' set but not used [-Wunused-but-set-variable]
+       last_btn    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:543:7: warning: unused variable 'last_rgb_state' [-Wunused-variable]
+       last_rgb_state   = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:542:7: warning: variable 'rgb_state' set but not used [-Wunused-but-set-variable]
+       rgb_state    = 0,
+       ^~~~~~~~~
+../src/ece544_IP_Test.c:540:7: warning: unused variable 'shftamnt' [-Wunused-variable]
+       shftamnt    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:539:7: warning: unused variable 'channel_mask' [-Wunused-variable]
+       channel_mask   = 0,
+       ^~~~~~~~~~~~
+../src/ece544_IP_Test.c: In function 'button_scan':
+../src/ece544_IP_Test.c:794:4: error: label 'reset' used but not defined
+    goto reset;
+    ^~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+make: *** [src/ece544_IP_Test.o] Error 1
+10:24:38 **** Incremental Build of configuration Debug for project project1 ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'main':
+../src/ece544_IP_Test.c:197:18: warning: unused variable 'laststate' [-Wunused-variable]
+  uint32_t state, laststate;
+                  ^~~~~~~~~
+../src/ece544_IP_Test.c:197:11: warning: unused variable 'state' [-Wunused-variable]
+  uint32_t state, laststate;
+           ^~~~~
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:623:83: warning: passing argument 7 of 'calculate_dc' from incompatible pointer type [-Wincompatible-pointer-types]
+    calculate_dc(&NX4IO_duty_cycle, &digi1, &digi2, &digi3, &digi4, &pwdet_select, &hardpwdet_value);
+                                                                                   ^
+../src/ece544_IP_Test.c:163:6: note: expected 'unsigned int *' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ void calculate_dc( unsigned int *NX4IO_duty_cycle,
+      ^~~~~~~~~~~~
+../src/ece544_IP_Test.c:637:16: warning: passing argument 1 of 'update_oled' from incompatible pointer type [-Wincompatible-pointer-types]
+    update_oled(&oled_rgb_val, &hue, &sat, &val, &rgb_val);// Update OLED
+                ^
+../src/ece544_IP_Test.c:145:6: note: expected 'u16 * {aka short unsigned int *}' but argument is of type 'unsigned int *'
+ void update_oled(  u16 *oled_rgb_val,
+      ^~~~~~~~~~~
+../src/ece544_IP_Test.c:557:7: warning: unused variable 'rgb_changed' [-Wunused-variable]
+       rgb_changed    = 0,
+       ^~~~~~~~~~~
+../src/ece544_IP_Test.c:555:7: warning: unused variable 'dcstate' [-Wunused-variable]
+       dcstate     = 0,
+       ^~~~~~~
+../src/ece544_IP_Test.c:553:7: warning: unused variable 'gpio_in_signal' [-Wunused-variable]
+       gpio_in_signal    = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:551:7: warning: variable 'last_btn' set but not used [-Wunused-but-set-variable]
+       last_btn    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:543:7: warning: unused variable 'last_rgb_state' [-Wunused-variable]
+       last_rgb_state   = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:542:7: warning: variable 'rgb_state' set but not used [-Wunused-but-set-variable]
+       rgb_state    = 0,
+       ^~~~~~~~~
+../src/ece544_IP_Test.c:540:7: warning: unused variable 'shftamnt' [-Wunused-variable]
+       shftamnt    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:539:7: warning: unused variable 'channel_mask' [-Wunused-variable]
+       channel_mask   = 0,
+       ^~~~~~~~~~~~
+../src/ece544_IP_Test.c: At top level:
+../src/ece544_IP_Test.c:705:2: error: expected identifier or '(' before 'if'
+  if(!gpio_in){
+  ^~
+../src/ece544_IP_Test.c:710:2: warning: data definition has no type or storage class
+  gpio_in_reg = gpio_in;
+  ^~~~~~~~~~~
+../src/ece544_IP_Test.c:710:2: warning: type defaults to 'int' in declaration of 'gpio_in_reg' [-Wimplicit-int]
+../src/ece544_IP_Test.c:710:2: error: conflicting types for 'gpio_in_reg'
+../src/ece544_IP_Test.c:181:14: note: previous definition of 'gpio_in_reg' was here
+ unsigned int gpio_in_reg    = 0;
+              ^~~~~~~~~~~
+../src/ece544_IP_Test.c:710:16: error: initializer element is not constant
+  gpio_in_reg = gpio_in;
+                ^~~~~~~
+../src/ece544_IP_Test.c:712:3: error: expected identifier or '(' before 'if'
+   if((DP_1_MASK ^ NX4IO_SSEG_getSSEG_DATA(SSEGLO))>>25)
+   ^~
+../src/ece544_IP_Test.c:714:3: error: expected identifier or '(' before 'else'
+   else
+   ^~~~
+../src/ece544_IP_Test.c:717:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+In file included from ../src/ece544_IP_Test.c:52:0:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+make: *** [src/ece544_IP_Test.o] Error 1
+10:25:26 **** Incremental Build of configuration Debug for project project1 ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'main':
+../src/ece544_IP_Test.c:197:18: warning: unused variable 'laststate' [-Wunused-variable]
+  uint32_t state, laststate;
+                  ^~~~~~~~~
+../src/ece544_IP_Test.c:197:11: warning: unused variable 'state' [-Wunused-variable]
+  uint32_t state, laststate;
+           ^~~~~
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:623:83: warning: passing argument 7 of 'calculate_dc' from incompatible pointer type [-Wincompatible-pointer-types]
+    calculate_dc(&NX4IO_duty_cycle, &digi1, &digi2, &digi3, &digi4, &pwdet_select, &hardpwdet_value);
+                                                                                   ^
+../src/ece544_IP_Test.c:163:6: note: expected 'unsigned int *' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ void calculate_dc( unsigned int *NX4IO_duty_cycle,
+      ^~~~~~~~~~~~
+../src/ece544_IP_Test.c:637:16: warning: passing argument 1 of 'update_oled' from incompatible pointer type [-Wincompatible-pointer-types]
+    update_oled(&oled_rgb_val, &hue, &sat, &val, &rgb_val);// Update OLED
+                ^
+../src/ece544_IP_Test.c:145:6: note: expected 'u16 * {aka short unsigned int *}' but argument is of type 'unsigned int *'
+ void update_oled(  u16 *oled_rgb_val,
+      ^~~~~~~~~~~
+../src/ece544_IP_Test.c:557:7: warning: unused variable 'rgb_changed' [-Wunused-variable]
+       rgb_changed    = 0,
+       ^~~~~~~~~~~
+../src/ece544_IP_Test.c:555:7: warning: unused variable 'dcstate' [-Wunused-variable]
+       dcstate     = 0,
+       ^~~~~~~
+../src/ece544_IP_Test.c:553:7: warning: unused variable 'gpio_in_signal' [-Wunused-variable]
+       gpio_in_signal    = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:551:7: warning: variable 'last_btn' set but not used [-Wunused-but-set-variable]
+       last_btn    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:543:7: warning: unused variable 'last_rgb_state' [-Wunused-variable]
+       last_rgb_state   = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:542:7: warning: variable 'rgb_state' set but not used [-Wunused-but-set-variable]
+       rgb_state    = 0,
+       ^~~~~~~~~
+../src/ece544_IP_Test.c:540:7: warning: unused variable 'shftamnt' [-Wunused-variable]
+       shftamnt    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:539:7: warning: unused variable 'channel_mask' [-Wunused-variable]
+       channel_mask   = 0,
+       ^~~~~~~~~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building target: project1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1.elf  |tee "project1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29220	    400	   2748	  32368	   7e70	project1.elf
+Finished building: project1.elf.size
+ 
+10:27:17 **** Incremental Build of configuration Debug for project project1 ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'main':
+../src/ece544_IP_Test.c:197:18: warning: unused variable 'laststate' [-Wunused-variable]
+  uint32_t state, laststate;
+                  ^~~~~~~~~
+../src/ece544_IP_Test.c:197:11: warning: unused variable 'state' [-Wunused-variable]
+  uint32_t state, laststate;
+           ^~~~~
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:623:83: warning: passing argument 7 of 'calculate_dc' from incompatible pointer type [-Wincompatible-pointer-types]
+    calculate_dc(&NX4IO_duty_cycle, &digi1, &digi2, &digi3, &digi4, &pwdet_select, &hardpwdet_value);
+                                                                                   ^
+../src/ece544_IP_Test.c:163:6: note: expected 'unsigned int *' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ void calculate_dc( unsigned int *NX4IO_duty_cycle,
+      ^~~~~~~~~~~~
+../src/ece544_IP_Test.c:637:16: warning: passing argument 1 of 'update_oled' from incompatible pointer type [-Wincompatible-pointer-types]
+    update_oled(&oled_rgb_val, &hue, &sat, &val, &rgb_val);// Update OLED
+                ^
+../src/ece544_IP_Test.c:145:6: note: expected 'u16 * {aka short unsigned int *}' but argument is of type 'unsigned int *'
+ void update_oled(  u16 *oled_rgb_val,
+      ^~~~~~~~~~~
+../src/ece544_IP_Test.c:557:7: warning: unused variable 'rgb_changed' [-Wunused-variable]
+       rgb_changed    = 0,
+       ^~~~~~~~~~~
+../src/ece544_IP_Test.c:555:7: warning: unused variable 'dcstate' [-Wunused-variable]
+       dcstate     = 0,
+       ^~~~~~~
+../src/ece544_IP_Test.c:553:7: warning: unused variable 'gpio_in_signal' [-Wunused-variable]
+       gpio_in_signal    = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:551:7: warning: variable 'last_btn' set but not used [-Wunused-but-set-variable]
+       last_btn    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:543:7: warning: unused variable 'last_rgb_state' [-Wunused-variable]
+       last_rgb_state   = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:542:7: warning: variable 'rgb_state' set but not used [-Wunused-but-set-variable]
+       rgb_state    = 0,
+       ^~~~~~~~~
+../src/ece544_IP_Test.c:540:7: warning: unused variable 'shftamnt' [-Wunused-variable]
+       shftamnt    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:539:7: warning: unused variable 'channel_mask' [-Wunused-variable]
+       channel_mask   = 0,
+       ^~~~~~~~~~~~
+../src/ece544_IP_Test.c: In function 'FIT_Handler':
+../src/ece544_IP_Test.c:699:6: error: 'gpio' undeclared (first use in this function); did you mean 'XGpio'?
+   if(gpio) hcount = 1;
+      ^~~~
+      XGpio
+../src/ece544_IP_Test.c:699:6: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+make: *** [src/ece544_IP_Test.o] Error 1
+10:27:34 **** Incremental Build of configuration Debug for project project1 ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'main':
+../src/ece544_IP_Test.c:197:18: warning: unused variable 'laststate' [-Wunused-variable]
+  uint32_t state, laststate;
+                  ^~~~~~~~~
+../src/ece544_IP_Test.c:197:11: warning: unused variable 'state' [-Wunused-variable]
+  uint32_t state, laststate;
+           ^~~~~
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:623:83: warning: passing argument 7 of 'calculate_dc' from incompatible pointer type [-Wincompatible-pointer-types]
+    calculate_dc(&NX4IO_duty_cycle, &digi1, &digi2, &digi3, &digi4, &pwdet_select, &hardpwdet_value);
+                                                                                   ^
+../src/ece544_IP_Test.c:163:6: note: expected 'unsigned int *' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ void calculate_dc( unsigned int *NX4IO_duty_cycle,
+      ^~~~~~~~~~~~
+../src/ece544_IP_Test.c:637:16: warning: passing argument 1 of 'update_oled' from incompatible pointer type [-Wincompatible-pointer-types]
+    update_oled(&oled_rgb_val, &hue, &sat, &val, &rgb_val);// Update OLED
+                ^
+../src/ece544_IP_Test.c:145:6: note: expected 'u16 * {aka short unsigned int *}' but argument is of type 'unsigned int *'
+ void update_oled(  u16 *oled_rgb_val,
+      ^~~~~~~~~~~
+../src/ece544_IP_Test.c:557:7: warning: unused variable 'rgb_changed' [-Wunused-variable]
+       rgb_changed    = 0,
+       ^~~~~~~~~~~
+../src/ece544_IP_Test.c:555:7: warning: unused variable 'dcstate' [-Wunused-variable]
+       dcstate     = 0,
+       ^~~~~~~
+../src/ece544_IP_Test.c:553:7: warning: unused variable 'gpio_in_signal' [-Wunused-variable]
+       gpio_in_signal    = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:551:7: warning: variable 'last_btn' set but not used [-Wunused-but-set-variable]
+       last_btn    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:543:7: warning: unused variable 'last_rgb_state' [-Wunused-variable]
+       last_rgb_state   = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:542:7: warning: variable 'rgb_state' set but not used [-Wunused-but-set-variable]
+       rgb_state    = 0,
+       ^~~~~~~~~
+../src/ece544_IP_Test.c:540:7: warning: unused variable 'shftamnt' [-Wunused-variable]
+       shftamnt    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:539:7: warning: unused variable 'channel_mask' [-Wunused-variable]
+       channel_mask   = 0,
+       ^~~~~~~~~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building target: project1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1.elf  |tee "project1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29272	    400	   2744	  32416	   7ea0	project1.elf
+Finished building: project1.elf.size
+ 
+10:27:39 **** Incremental Build of configuration Debug for project project1 ****
+make all 
+make: Nothing to be done for `all'.
+10:41:40 **** Incremental Build of configuration Debug for project project1 ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'main':
+../src/ece544_IP_Test.c:197:18: warning: unused variable 'laststate' [-Wunused-variable]
+  uint32_t state, laststate;
+                  ^~~~~~~~~
+../src/ece544_IP_Test.c:197:11: warning: unused variable 'state' [-Wunused-variable]
+  uint32_t state, laststate;
+           ^~~~~
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:623:83: warning: passing argument 7 of 'calculate_dc' from incompatible pointer type [-Wincompatible-pointer-types]
+    calculate_dc(&NX4IO_duty_cycle, &digi1, &digi2, &digi3, &digi4, &pwdet_select, &hardpwdet_value);
+                                                                                   ^
+../src/ece544_IP_Test.c:163:6: note: expected 'unsigned int *' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ void calculate_dc( unsigned int *NX4IO_duty_cycle,
+      ^~~~~~~~~~~~
+../src/ece544_IP_Test.c:637:16: warning: passing argument 1 of 'update_oled' from incompatible pointer type [-Wincompatible-pointer-types]
+    update_oled(&oled_rgb_val, &hue, &sat, &val, &rgb_val);// Update OLED
+                ^
+../src/ece544_IP_Test.c:145:6: note: expected 'u16 * {aka short unsigned int *}' but argument is of type 'unsigned int *'
+ void update_oled(  u16 *oled_rgb_val,
+      ^~~~~~~~~~~
+../src/ece544_IP_Test.c:557:7: warning: unused variable 'rgb_changed' [-Wunused-variable]
+       rgb_changed    = 0,
+       ^~~~~~~~~~~
+../src/ece544_IP_Test.c:555:7: warning: unused variable 'dcstate' [-Wunused-variable]
+       dcstate     = 0,
+       ^~~~~~~
+../src/ece544_IP_Test.c:553:7: warning: unused variable 'gpio_in_signal' [-Wunused-variable]
+       gpio_in_signal    = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:551:7: warning: variable 'last_btn' set but not used [-Wunused-but-set-variable]
+       last_btn    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:543:7: warning: unused variable 'last_rgb_state' [-Wunused-variable]
+       last_rgb_state   = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:542:7: warning: variable 'rgb_state' set but not used [-Wunused-but-set-variable]
+       rgb_state    = 0,
+       ^~~~~~~~~
+../src/ece544_IP_Test.c:540:7: warning: unused variable 'shftamnt' [-Wunused-variable]
+       shftamnt    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:539:7: warning: unused variable 'channel_mask' [-Wunused-variable]
+       channel_mask   = 0,
+       ^~~~~~~~~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building target: project1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1.elf  |tee "project1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29276	    400	   2748	  32424	   7ea8	project1.elf
+Finished building: project1.elf.size
+ 
+10:41:50 **** Incremental Build of configuration Debug for project project1 ****
+make all 
+make: Nothing to be done for `all'.
+10:45:12 **** Incremental Build of configuration Debug for project project1 ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'main':
+../src/ece544_IP_Test.c:197:18: warning: unused variable 'laststate' [-Wunused-variable]
+  uint32_t state, laststate;
+                  ^~~~~~~~~
+../src/ece544_IP_Test.c:197:11: warning: unused variable 'state' [-Wunused-variable]
+  uint32_t state, laststate;
+           ^~~~~
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:623:83: warning: passing argument 7 of 'calculate_dc' from incompatible pointer type [-Wincompatible-pointer-types]
+    calculate_dc(&NX4IO_duty_cycle, &digi1, &digi2, &digi3, &digi4, &pwdet_select, &hardpwdet_value);
+                                                                                   ^
+../src/ece544_IP_Test.c:163:6: note: expected 'unsigned int *' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ void calculate_dc( unsigned int *NX4IO_duty_cycle,
+      ^~~~~~~~~~~~
+../src/ece544_IP_Test.c:637:16: warning: passing argument 1 of 'update_oled' from incompatible pointer type [-Wincompatible-pointer-types]
+    update_oled(&oled_rgb_val, &hue, &sat, &val, &rgb_val);// Update OLED
+                ^
+../src/ece544_IP_Test.c:145:6: note: expected 'u16 * {aka short unsigned int *}' but argument is of type 'unsigned int *'
+ void update_oled(  u16 *oled_rgb_val,
+      ^~~~~~~~~~~
+../src/ece544_IP_Test.c:557:7: warning: unused variable 'rgb_changed' [-Wunused-variable]
+       rgb_changed    = 0,
+       ^~~~~~~~~~~
+../src/ece544_IP_Test.c:555:7: warning: unused variable 'dcstate' [-Wunused-variable]
+       dcstate     = 0,
+       ^~~~~~~
+../src/ece544_IP_Test.c:553:7: warning: unused variable 'gpio_in_signal' [-Wunused-variable]
+       gpio_in_signal    = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:551:7: warning: variable 'last_btn' set but not used [-Wunused-but-set-variable]
+       last_btn    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:543:7: warning: unused variable 'last_rgb_state' [-Wunused-variable]
+       last_rgb_state   = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:542:7: warning: variable 'rgb_state' set but not used [-Wunused-but-set-variable]
+       rgb_state    = 0,
+       ^~~~~~~~~
+../src/ece544_IP_Test.c:540:7: warning: unused variable 'shftamnt' [-Wunused-variable]
+       shftamnt    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:539:7: warning: unused variable 'channel_mask' [-Wunused-variable]
+       channel_mask   = 0,
+       ^~~~~~~~~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building target: project1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1.elf  |tee "project1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29320	    400	   2744	  32464	   7ed0	project1.elf
+Finished building: project1.elf.size
+ 
+10:45:18 **** Incremental Build of configuration Debug for project project1 ****
+make all 
+make: Nothing to be done for `all'.
+10:47:40 **** Incremental Build of configuration Debug for project project1 ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'main':
+../src/ece544_IP_Test.c:197:18: warning: unused variable 'laststate' [-Wunused-variable]
+  uint32_t state, laststate;
+                  ^~~~~~~~~
+../src/ece544_IP_Test.c:197:11: warning: unused variable 'state' [-Wunused-variable]
+  uint32_t state, laststate;
+           ^~~~~
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:623:83: warning: passing argument 7 of 'calculate_dc' from incompatible pointer type [-Wincompatible-pointer-types]
+    calculate_dc(&NX4IO_duty_cycle, &digi1, &digi2, &digi3, &digi4, &pwdet_select, &hardpwdet_value);
+                                                                                   ^
+../src/ece544_IP_Test.c:163:6: note: expected 'unsigned int *' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ void calculate_dc( unsigned int *NX4IO_duty_cycle,
+      ^~~~~~~~~~~~
+../src/ece544_IP_Test.c:639:16: warning: passing argument 1 of 'update_oled' from incompatible pointer type [-Wincompatible-pointer-types]
+    update_oled(&oled_rgb_val, &hue, &sat, &val, &rgb_val);// Update OLED
+                ^
+../src/ece544_IP_Test.c:145:6: note: expected 'u16 * {aka short unsigned int *}' but argument is of type 'unsigned int *'
+ void update_oled(  u16 *oled_rgb_val,
+      ^~~~~~~~~~~
+../src/ece544_IP_Test.c:557:7: warning: unused variable 'rgb_changed' [-Wunused-variable]
+       rgb_changed    = 0,
+       ^~~~~~~~~~~
+../src/ece544_IP_Test.c:555:7: warning: unused variable 'dcstate' [-Wunused-variable]
+       dcstate     = 0,
+       ^~~~~~~
+../src/ece544_IP_Test.c:553:7: warning: unused variable 'gpio_in_signal' [-Wunused-variable]
+       gpio_in_signal    = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:551:7: warning: variable 'last_btn' set but not used [-Wunused-but-set-variable]
+       last_btn    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:543:7: warning: unused variable 'last_rgb_state' [-Wunused-variable]
+       last_rgb_state   = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:542:7: warning: variable 'rgb_state' set but not used [-Wunused-but-set-variable]
+       rgb_state    = 0,
+       ^~~~~~~~~
+../src/ece544_IP_Test.c:540:7: warning: unused variable 'shftamnt' [-Wunused-variable]
+       shftamnt    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:539:7: warning: unused variable 'channel_mask' [-Wunused-variable]
+       channel_mask   = 0,
+       ^~~~~~~~~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building target: project1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1.elf  |tee "project1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29320	    400	   2744	  32464	   7ed0	project1.elf
+Finished building: project1.elf.size
+ 
+10:47:45 **** Incremental Build of configuration Debug for project project1 ****
+make all 
+make: Nothing to be done for `all'.
+10:52:31 **** Clean-only build of project standalone_bsp_0 ****
+make -k clean 
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/bram_v4_2/src -s clean 
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/cpu_v2_7/src -s clean 
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/gpio_v4_3/src -s clean 
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/intc_v3_7/src -s clean 
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/nexys4IO_v1_0/src -s clean 
+c:\Xilinx\SDK\2018.2\gnuwin\bin\rm.exe: cannot lstat `*.o': Invalid argument
+make[1]: *** [clean] Error 1
+make: *** [microblaze_0/libsrc/nexys4IO_v1_0/src/make.clean] Error 2
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodENC_v1_0/src -s clean 
+c:\Xilinx\SDK\2018.2\gnuwin\bin\rm.exe: cannot lstat `*.o': Invalid argument
+make[1]: *** [clean] Error 1
+make: *** [microblaze_0/libsrc/PmodENC_v1_0/src/make.clean] Error 2
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodOLEDrgb_v1_0/src -s clean 
+c:\Xilinx\SDK\2018.2\gnuwin\bin\rm.exe: cannot lstat `*.o': Invalid argument
+make[1]: *** [clean] Error 1
+make: *** [microblaze_0/libsrc/PmodOLEDrgb_v1_0/src/make.clean] Error 2
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/standalone_v6_7/src -s clean 
+c:\Xilinx\SDK\2018.2\gnuwin\bin\make: invalid option -- c
+c:\Xilinx\SDK\2018.2\gnuwin\bin\make: invalid option --  
+c:\Xilinx\SDK\2018.2\gnuwin\bin\make: invalid option -- E
+c:\Xilinx\SDK\2018.2\gnuwin\bin\make: invalid option -- X
+c:\Xilinx\SDK\2018.2\gnuwin\bin\make: invalid option -- T
+c:\Xilinx\SDK\2018.2\gnuwin\bin\make: invalid option -- A
+c:\Xilinx\SDK\2018.2\gnuwin\bin\make: invalid option -- _
+Usage: make [options] [target] ...
+Options:
+  -b, -m                      Ignored for compatibility.
+  -B, --always-make           Unconditionally make all targets.
+  -C DIRECTORY, --directory=DIRECTORY
+                              Change to DIRECTORY before doing anything.
+  -d                          Print lots of debugging information.
+  --debug[=FLAGS]             Print various types of debugging information.
+  -e, --environment-overrides
+                              Environment variables override makefiles.
+  -f FILE, --file=FILE, --makefile=FILE
+                              Read FILE as a makefile.
+  -h, --help                  Print this message and exit.
+  -i, --ignore-errors         Ignore errors from commands.
+  -I DIRECTORY, --include-dir=DIRECTORY
+                              Search DIRECTORY for included makefiles.
+  -j [N], --jobs[=N]          Allow N jobs at once; infinite jobs with no arg.
+  -k, --keep-going            Keep going when some targets can't be made.
+  -l [N], --load-average[=N], --max-load[=N]
+                              Don't start multiple jobs unless load is below N.
+  -L, --check-symlink-times   Use the latest mtime between symlinks and target.
+  -n, --just-print, --dry-run, --recon
+                              Don't actually run any commands; just print them.
+  -o FILE, --old-file=FILE, --assume-old=FILE
+                              Consider FILE to be very old and don't remake it.
+  -p, --print-data-base       Print make's internal database.
+  -q, --question              Run no commands; exit status says if up to date.
+  -r, --no-builtin-rules      Disable the built-in implicit rules.
+  -R, --no-builtin-variables  Disable the built-in variable settings.
+  -s, --silent, --quiet       Don't echo commands.
+  -S, --no-keep-going, --stop
+                              Turns off -k.
+  -t, --touch                 Touch targets instead of remaking them.
+  -v, --version               Print the version number of make and exit.
+  -w, --print-directory       Print the current directory.
+  --no-print-directory        Turn off -w, even if it was turned on implicitly.
+  -W FILE, --what-if=FILE, --new-file=FILE, --assume-new=FILE
+                              Consider FILE to be infinitely new.
+  --warn-undefined-variables  Warn when an undefined variable is referenced.
+
+This program built for i386-pc-mingw32
+Report bugs to <bug-make@gnu.org>
+make[1]: *** [clean] Error 2
+make: *** [microblaze_0/libsrc/standalone_v6_7/src/make.clean] Error 2
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/tmrctr_v4_4/src -s clean 
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/uartlite_v3_2/src -s clean 
+make: Target `clean' not remade because of errors.
+10:52:33 **** Clean-only build of configuration Debug for project project1 ****
+make clean 
+rm -rf  ./src/ece544_IP_Test.o ./src/platform.o  ./src/ece544_IP_Test.d ./src/platform.d  project1.elf.size  project1.elf
+rm: cannot remove `project1.elf': Permission denied
+make: [clean] Error 1 (ignored)
+ 
+10:54:23 **** Build of project standalone_bsp_0 ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/cpu_v2_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/intc_v3_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/nexys4IO_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/nexys4IO_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/PmodENC_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodENC_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/PmodOLEDrgb_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodOLEDrgb_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_4/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/tmrctr_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/cpu_v2_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/intc_v3_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/nexys4IO_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/nexys4IO_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling nexys4IO..."
+"Running Make libs in microblaze_0/libsrc/PmodENC_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodENC_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling PmodENC..."
+"Running Make libs in microblaze_0/libsrc/PmodOLEDrgb_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodOLEDrgb_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling PmodOLEDrgb..."
+PmodOLEDrgb_selftest.c: In function 'PMODOLEDRGB_Reg_SelfTest':
+PmodOLEDrgb_selftest.c:52:60: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( PMODOLEDRGB_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                            ^~
+PmodOLEDrgb_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in microblaze_0/libsrc/standalone_v6_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:69:2: warning: #warning "May wait for more than the specified delay" [-Wcpp]
+ #warning "May wait for more than the specified delay"
+  ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_4/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/tmrctr_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling tmrctr"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+10:55:36 **** Clean-only build of configuration Debug for project project1 ****
+make clean 
+rm -rf  ./src/ece544_IP_Test.o ./src/platform.o  ./src/ece544_IP_Test.d ./src/platform.d  project1.elf.size  project1.elf
+rm: cannot remove `project1.elf': Permission denied
+make: [clean] Error 1 (ignored)
+ 
+10:55:36 **** Build of configuration Debug for project project1 ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'main':
+../src/ece544_IP_Test.c:197:18: warning: unused variable 'laststate' [-Wunused-variable]
+  uint32_t state, laststate;
+                  ^~~~~~~~~
+../src/ece544_IP_Test.c:197:11: warning: unused variable 'state' [-Wunused-variable]
+  uint32_t state, laststate;
+           ^~~~~
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:623:83: warning: passing argument 7 of 'calculate_dc' from incompatible pointer type [-Wincompatible-pointer-types]
+    calculate_dc(&NX4IO_duty_cycle, &digi1, &digi2, &digi3, &digi4, &pwdet_select, &hardpwdet_value);
+                                                                                   ^
+../src/ece544_IP_Test.c:163:6: note: expected 'unsigned int *' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ void calculate_dc( unsigned int *NX4IO_duty_cycle,
+      ^~~~~~~~~~~~
+../src/ece544_IP_Test.c:639:16: warning: passing argument 1 of 'update_oled' from incompatible pointer type [-Wincompatible-pointer-types]
+    update_oled(&oled_rgb_val, &hue, &sat, &val, &rgb_val);// Update OLED
+                ^
+../src/ece544_IP_Test.c:145:6: note: expected 'u16 * {aka short unsigned int *}' but argument is of type 'unsigned int *'
+ void update_oled(  u16 *oled_rgb_val,
+      ^~~~~~~~~~~
+../src/ece544_IP_Test.c:557:7: warning: unused variable 'rgb_changed' [-Wunused-variable]
+       rgb_changed    = 0,
+       ^~~~~~~~~~~
+../src/ece544_IP_Test.c:555:7: warning: unused variable 'dcstate' [-Wunused-variable]
+       dcstate     = 0,
+       ^~~~~~~
+../src/ece544_IP_Test.c:553:7: warning: unused variable 'gpio_in_signal' [-Wunused-variable]
+       gpio_in_signal    = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:551:7: warning: variable 'last_btn' set but not used [-Wunused-but-set-variable]
+       last_btn    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:543:7: warning: unused variable 'last_rgb_state' [-Wunused-variable]
+       last_rgb_state   = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:542:7: warning: variable 'rgb_state' set but not used [-Wunused-but-set-variable]
+       rgb_state    = 0,
+       ^~~~~~~~~
+../src/ece544_IP_Test.c:540:7: warning: unused variable 'shftamnt' [-Wunused-variable]
+       shftamnt    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:539:7: warning: unused variable 'channel_mask' [-Wunused-variable]
+       channel_mask   = 0,
+       ^~~~~~~~~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: project1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1.elf  |tee "project1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29320	    400	   2744	  32464	   7ed0	project1.elf
+Finished building: project1.elf.size
+ 
+11:01:49 **** Incremental Build of configuration Debug for project project1 ****
+make all 
+make: Nothing to be done for `all'.
+11:02:42 **** Incremental Build of configuration Debug for project project1 ****
+make all 
+make: Nothing to be done for `all'.
+11:02:50 **** Incremental Build of configuration Debug for project project1 ****
+make all 
+make: Nothing to be done for `all'.
+11:07:54 **** Incremental Build of project standalone_bsp_0 ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/cpu_v2_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/intc_v3_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/nexys4IO_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/nexys4IO_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/PmodENC_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodENC_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/PmodOLEDrgb_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodOLEDrgb_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_4/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/tmrctr_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/cpu_v2_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/intc_v3_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/nexys4IO_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/nexys4IO_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling nexys4IO..."
+"Running Make libs in microblaze_0/libsrc/PmodENC_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodENC_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling PmodENC..."
+"Running Make libs in microblaze_0/libsrc/PmodOLEDrgb_v1_0/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/PmodOLEDrgb_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling PmodOLEDrgb..."
+PmodOLEDrgb_selftest.c: In function 'PMODOLEDRGB_Reg_SelfTest':
+PmodOLEDrgb_selftest.c:52:60: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( PMODOLEDRGB_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                            ^~
+PmodOLEDrgb_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in microblaze_0/libsrc/standalone_v6_7/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:69:2: warning: #warning "May wait for more than the specified delay" [-Wcpp]
+ #warning "May wait for more than the specified delay"
+  ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_4/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/tmrctr_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling tmrctr"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+11:09:06 **** Clean-only build of configuration Debug for project project1 ****
+make clean 
+rm -rf  ./src/ece544_IP_Test.o ./src/platform.o  ./src/ece544_IP_Test.d ./src/platform.d  project1.elf.size  project1.elf
+rm: cannot remove `project1.elf': Permission denied
+make: [clean] Error 1 (ignored)
+ 
+11:09:07 **** Incremental Build of configuration Debug for project project1 ****
+make all 
+Building file: ../src/ece544_IP_Test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ece544_IP_Test.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ece544_IP_Test.d" -MT"src/ece544_IP_Test.o" -o "src/ece544_IP_Test.o" "../src/ece544_IP_Test.c"
+../src/ece544_IP_Test.c: In function 'main':
+../src/ece544_IP_Test.c:197:18: warning: unused variable 'laststate' [-Wunused-variable]
+  uint32_t state, laststate;
+                  ^~~~~~~~~
+../src/ece544_IP_Test.c:197:11: warning: unused variable 'state' [-Wunused-variable]
+  uint32_t state, laststate;
+           ^~~~~
+../src/ece544_IP_Test.c: In function 'RunTest4':
+../src/ece544_IP_Test.c:623:83: warning: passing argument 7 of 'calculate_dc' from incompatible pointer type [-Wincompatible-pointer-types]
+    calculate_dc(&NX4IO_duty_cycle, &digi1, &digi2, &digi3, &digi4, &pwdet_select, &hardpwdet_value);
+                                                                                   ^
+../src/ece544_IP_Test.c:163:6: note: expected 'unsigned int *' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ void calculate_dc( unsigned int *NX4IO_duty_cycle,
+      ^~~~~~~~~~~~
+../src/ece544_IP_Test.c:639:16: warning: passing argument 1 of 'update_oled' from incompatible pointer type [-Wincompatible-pointer-types]
+    update_oled(&oled_rgb_val, &hue, &sat, &val, &rgb_val);// Update OLED
+                ^
+../src/ece544_IP_Test.c:145:6: note: expected 'u16 * {aka short unsigned int *}' but argument is of type 'unsigned int *'
+ void update_oled(  u16 *oled_rgb_val,
+      ^~~~~~~~~~~
+../src/ece544_IP_Test.c:557:7: warning: unused variable 'rgb_changed' [-Wunused-variable]
+       rgb_changed    = 0,
+       ^~~~~~~~~~~
+../src/ece544_IP_Test.c:555:7: warning: unused variable 'dcstate' [-Wunused-variable]
+       dcstate     = 0,
+       ^~~~~~~
+../src/ece544_IP_Test.c:553:7: warning: unused variable 'gpio_in_signal' [-Wunused-variable]
+       gpio_in_signal    = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:551:7: warning: variable 'last_btn' set but not used [-Wunused-but-set-variable]
+       last_btn    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:543:7: warning: unused variable 'last_rgb_state' [-Wunused-variable]
+       last_rgb_state   = 0,
+       ^~~~~~~~~~~~~~
+../src/ece544_IP_Test.c:542:7: warning: variable 'rgb_state' set but not used [-Wunused-but-set-variable]
+       rgb_state    = 0,
+       ^~~~~~~~~
+../src/ece544_IP_Test.c:540:7: warning: unused variable 'shftamnt' [-Wunused-variable]
+       shftamnt    = 0,
+       ^~~~~~~~
+../src/ece544_IP_Test.c:539:7: warning: unused variable 'channel_mask' [-Wunused-variable]
+       channel_mask   = 0,
+       ^~~~~~~~~~~~
+In file included from ../src/ece544_IP_Test.c:52:0:
+../src/ece544_IP_Test.c: At top level:
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:120:13: warning: 'Xil_SleepAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void Xil_SleepAxiTimer(u32 delay, u64 frequency);
+             ^~~~~~~~~~~~~~~~~
+../../standalone_bsp_0/microblaze_0/include/microblaze_sleep.h:121:13: warning: 'XTime_StartAxiTimer' declared 'static' but never defined [-Wunused-function]
+ static void XTime_StartAxiTimer();
+             ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/ece544_IP_Test.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: project1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project1.elf"  ./src/ece544_IP_Test.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size project1.elf  |tee "project1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29320	    400	   2744	  32464	   7ed0	project1.elf
+Finished building: project1.elf.size
+ 
+11:13:54 **** Incremental Build of configuration Debug for project project1 ****
+make all 
+make: Nothing to be done for `all'.
