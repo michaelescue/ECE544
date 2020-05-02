@@ -11,9 +11,6 @@
 set_property -dict {PACKAGE_PIN E3 IOSTANDARD LVCMOS33} [get_ports clk]
 create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk]
 
-## Added for ECE 544 Project 1
-##create_clock -period 200.000 -name pwdet_clk_pin -waveform {0.000 5.000} -add [get_ports pwdet_clk]
-
 ##set_clock_groups -asynchronous -group [get_clocks clk]
 
 

@@ -2,8 +2,8 @@
 # Webtalk v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Mon Apr 27 21:33:01 2020
-# Process ID: 21304
+# Start of session at: Fri May  1 21:23:07 2020
+# Process ID: 30024
 # Current directory: C:/Users/ME/Vivado_Projects/project_1/project_1.sim/sim_1/impl/func/xsim
 # Command line: wbtcv.exe -mode batch -source C:/Users/ME/Vivado_Projects/project_1/project_1.sim/sim_1/impl/func/xsim/xsim.dir/testbench_func_impl/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/ME/Vivado_Projects/project_1/project_1.sim/sim_1/impl/func/xsim/webtalk.log

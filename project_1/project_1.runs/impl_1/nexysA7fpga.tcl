@@ -164,24 +164,3 @@ if {$rc} {
   unset ACTIVE_STEP 
 }
 
-start_step write_bitstream
-set ACTIVE_STEP write_bitstream
-set rc [catch {
-  create_msg_db write_bitstream.pb
-  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  catch { write_mem_info -force nexysA7fpga.mmi }
-  catch { write_bmm -force nexysA7fpga_bd.bmm }
-  write_bitstream -force nexysA7fpga.bit 
-  catch { write_sysdef -hwdef nexysA7fpga.hwdef -bitfile nexysA7fpga.bit -meminfo nexysA7fpga.mmi -file nexysA7fpga.sysdef }
-  catch {write_debug_probes -quiet -force nexysA7fpga}
-  catch {file copy -force nexysA7fpga.ltx debug_nets.ltx}
-  close_msg_db -file write_bitstream.pb
-} RESULT]
-if {$rc} {
-  step_failed write_bitstream
-  return -code error $RESULT
-} else {
-  end_step write_bitstream
-  unset ACTIVE_STEP 
-}
-

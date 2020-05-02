@@ -1,6 +1,6 @@
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.sim/sim_1/impl/func/xsim/testbench_func_impl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module counter
-INFO: [VRFC 10-311] analyzing module counter_1
+INFO: [VRFC 10-311] analyzing module counter_0
 INFO: [VRFC 10-311] analyzing module embsys
 INFO: [VRFC 10-311] analyzing module embsys_PmodENC_0_1
 INFO: [VRFC 10-311] analyzing module embsys_PmodENC_0_1_GPIO_Core
@@ -291,8 +291,6 @@ INFO: [VRFC 10-311] analyzing module embsys_xbar_1__axi_crossbar_v2_1_18_decerr_
 INFO: [VRFC 10-311] analyzing module embsys_xbar_1__axi_crossbar_v2_1_18_splitter
 INFO: [VRFC 10-311] analyzing module embsys_xbar_1__axi_crossbar_v2_1_18_splitter__parameterized0
 INFO: [VRFC 10-311] analyzing module embsys_xbar_1__axi_register_slice_v2_1_17_axic_register_slice
-INFO: [VRFC 10-311] analyzing module ff_reg
-INFO: [VRFC 10-311] analyzing module ff_reg_0
 INFO: [VRFC 10-311] analyzing module microblaze_0_local_memory_imp_1SR2TDT
 INFO: [VRFC 10-311] analyzing module nexysA7fpga
 INFO: [VRFC 10-311] analyzing module pwdet
@@ -998,5 +996,5 @@ INFO: [VRFC 10-311] analyzing module embsys_microblaze_0_1_mux_bus
 INFO: [VRFC 10-311] analyzing module glbl
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sim_1/new/testbench.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module testbench
-WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sim_1/new/testbench.v:93]
-WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sim_1/new/testbench.v:146]
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sim_1/new/testbench.v:89]
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [C:/Users/ME/Vivado_Projects/project_1/project_1.srcs/sim_1/new/testbench.v:142]

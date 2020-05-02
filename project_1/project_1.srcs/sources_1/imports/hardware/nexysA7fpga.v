@@ -3,6 +3,7 @@
 // nexysA7fpga.v - Top level module for the Nexys A7 version of the ECE 544 Getting Started project
 //
 // Created By:	Roy Kravitz
+// Appropriated By: Michael Escue
 // Date:		30-March-2020
 // Version:		1.0
 //

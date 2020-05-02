@@ -2,12 +2,16 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="FIT_Handler" key="selection"/>
+		<item value="cleanup_platform" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="cleanup_platform"/>
+			<item value="exit"/>
+			<item value="gpio"/>
+			<item value="gpio_"/>
 			<item value="FIT_Handler"/>
 			<item value="NX4IO_SSEG_setDecPt"/>
 			<item value="switch"/>

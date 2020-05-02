@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Thu Apr 30 10:22:02 2020
+| Date         : Thu Apr 30 19:22:47 2020
 | Host         : DESKTOP-J4B3MVP running 64-bit major release  (build 9200)
 | Command      : report_utilization -file nexysA7fpga_utilization_placed.rpt -pb nexysA7fpga_utilization_placed.pb
 | Design       : nexysA7fpga
@@ -58,9 +58,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 6     |          Yes |           - |          Set |
-| 344   |          Yes |           - |        Reset |
+| 268   |          Yes |           - |        Reset |
 | 125   |          Yes |         Set |            - |
-| 3353  |          Yes |       Reset |            - |
+| 3429  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -186,14 +186,14 @@ Table of Contents
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| FDRE       | 3353 |        Flop & Latch |
+| FDRE       | 3429 |        Flop & Latch |
 | LUT3       | 1606 |                 LUT |
 | LUT6       | 1052 |                 LUT |
 | LUT5       |  791 |                 LUT |
 | LUT4       |  496 |                 LUT |
 | LUT2       |  434 |                 LUT |
 | CARRY4     |  415 |          CarryLogic |
-| FDCE       |  334 |        Flop & Latch |
+| FDCE       |  258 |        Flop & Latch |
 | RAMD32     |  184 |  Distributed Memory |
 | MUXF7      |  183 |               MuxFx |
 | SRL16E     |  132 |  Distributed Memory |

@@ -2,7 +2,7 @@
 *
 * @file ece544ip_test.c
 *
-* @author Roy Kravitz (roy.kravitz@pdx.edu)
+* @author Roy Kravitz (roy.kravitz@pdx.edu), Modified by Michael Escue (mescue@pdx.edu)
 * @copyright Portland State University, 2016-2020
 *
 * This file implements a test program for the Nexys4IO and Digilent Pmod peripherals
@@ -30,6 +30,7 @@
 *							connected to the system.
 * 3.00	rk	05-Apr-2018		Modified for Digilent PmodENC and PmodOLEDrgb.  Replaced MB_Sleep() w/ usleep.
 * 4.00	rk	30-Mar-2020		Modified to support both the Nexys A7 and Basys 3 FPGA platforms
+* 5.00  me  01-Apr-2020		Repurposed for use in ECE544 Project1, Spring 2020.
 * </pre>
 *
 * @note
@@ -108,6 +109,11 @@
 /**************************** Type Definitions ******************************/
 
 /***************** Macros (Inline Functions) Definitions ********************/
+#define DP_BLINK_PERIOD 50000	// Used for Decimal Point 1 Blinking Intervals
+#define DP_1_MASK 0x2000000		// Used for Decimal Point 1 Masking of the SSEGLO_data reg.
+#define SWITCH023_MASK 0xD		// Used to mask the switch[3:2] and sw[0] values from the BTNSW_IN reg
+#define SWITCH23_MASK 0xC		// Used to mask the switch[3:2] values from the BTNSW_IN reg
+#define SW0_MASK	0x1			// Used to mask the switch[0] value from the BTNSW_IN reg
 
 /************************** Variable Definitions ****************************/
 // Microblaze peripheral instances
@@ -127,10 +133,18 @@ XTmrCtr		AXITimerInst;				// PWM timer instance
 
 volatile uint32_t			gpio_in;			// GPIO input port
 
+unsigned int gpio_in_reg 			= 0;
+unsigned int high_count				= 0;
+unsigned int low_count				= 0;
+unsigned int hcount					= 0;
+unsigned int lcount					= 0;
+unsigned int dc						= 0;
+unsigned int channel_mask			= 0;
+unsigned int shftamnt				= 0;
+
 
 /************************** Function Prototypes *****************************/
 void PMDIO_itoa(int32_t value, char *string, int32_t radix);
-void PMDIO_puthex(PmodOLEDrgb* InstancePtr, uint32_t num);
 void PMDIO_putnum(PmodOLEDrgb* InstancePtr, int32_t num, int32_t radix);
 int	 do_init(void);											// initialize system
 void FIT_Handler(void);										// fixed interval timer interrupt handler
@@ -141,52 +155,36 @@ void blink_dp1(unsigned int *dp_cnt);
 void initial_sseg_state(void);
 void update_duty(u16 rgb_val);
 int my_hsv_builder(unsigned char *hue, unsigned char *sat, unsigned char * val);
-
+void swdetect(void);
+void myfunc(void);
+void exit_func(void);
 void update_oled(		u16 *oled_rgb_val, 
 						unsigned char *hue, 
 						unsigned char *sat, 
 						unsigned char *val,
-						u16 *rgb_val);
-
+						u16 *rgb_val
+						);
 void button_scan(		unsigned char *val, 
 						unsigned char *sat, 
-						unsigned char *hue, 
-						unsigned int* ticks, 
-						unsigned int* state, 
-						unsigned int* laststate);
-
+						unsigned char *hue
+						);
 void update_sseg(		unsigned char *digi1, 
 						unsigned char *digi2, 
 						unsigned char *digi3, 
-						unsigned char *digi4);
-
-void calculate_dc(	unsigned int *NX4IO_duty_cycle, 
-				unsigned char *digi1, 
-				unsigned char *digi2,
-				unsigned char *digi3,
-				unsigned char *digi4,
-				unsigned int *pwdet_select,
-				unsigned int *hardpwdet_value
-				);
-
+						unsigned char *digi4
+						);
+void calculate_dc(		unsigned int *NX4IO_duty_cycle, 
+						unsigned char *digi1, 
+						unsigned char *digi2,
+						unsigned char *digi3,
+						unsigned char *digi4,
+						unsigned int *pwdet_select,
+						volatile u8  *hardpwdet_value
+						);
 void channel_select(	unsigned int *switch_value,
 						unsigned int *NX4IO_duty_cycle,
-						unsigned int *rgb_val );
-
-void swdetect(void);
-
-void myfunc(void);
-
-/* global variables */
-unsigned int gpio_in_reg 			= 0;
-unsigned int high_count				= 0;
-unsigned int low_count				= 0;
-unsigned int hcount					= 0;
-unsigned int lcount					= 0;
-unsigned int dc						= 0;
-unsigned int channel_mask			= 0;
-unsigned int shftamnt				= 0;
-
+						unsigned int *rgb_val
+						);
 
 /************************** MAIN PROGRAM ************************************/
 int main(void)
@@ -205,21 +203,15 @@ int main(void)
 
 	microblaze_enable_interrupts();
 
-	xil_printf("ECE 544 Nexys4io test program\n\r");
-	xil_printf("By Roy Kravitz. 31-Mar-2020\n\n\r");
-
-
-	myfunc();
+	myfunc(); // Implementation for Project 1 ECE 544 Spring 2020.
 	
 	// clear the displays and power down the pmodOLEDrbg
 	NX410_SSEG_setAllDigits(SSEGHI, CC_BLANK, CC_B, CC_LCY, CC_E, DP_NONE);
 	NX410_SSEG_setAllDigits(SSEGLO, CC_B, CC_LCY, CC_E, CC_BLANK, DP_NONE);
 	OLEDrgb_Clear(&pmodOLEDrgb_inst);
 	OLEDrgb_end(&pmodOLEDrgb_inst);
-	
-	// cleanup and exit
-    cleanup_platform();
-    exit(0);
+
+	exit_func();
 }
 
 
@@ -424,49 +416,6 @@ void PMDIO_itoa(int32_t value, char *string, int32_t radix)
 
 /****************************************************************************/
 /**
-* Write a 32-bit unsigned hex number to PmodOLEDrgb in Hex
-*       
-* Writes  32-bit unsigned number to the pmodOLEDrgb display starting at the current
-* cursor position.
-*
-* @param num is the number to display as a hex value
-*
-* @return  *NONE*
-*
-* @note
-* No size checking is done to make sure the string will fit into a single line,
-* or the entire display, for that matter.  Watch your string sizes.
-*****************************************************************************/ 
-void PMDIO_puthex(PmodOLEDrgb* InstancePtr, uint32_t num)
-{
-  char  buf[9];
-  int32_t   cnt;
-  char  *ptr;
-  int32_t  digit;
-  
-  ptr = buf;
-  for (cnt = 7; cnt >= 0; cnt--) {
-    digit = (num >> (cnt * 4)) & 0xF;
-    
-    if (digit <= 9)
-	{
-      *ptr++ = (char) ('0' + digit);
-	}
-    else
-	{
-      *ptr++ = (char) ('a' - 10 + digit);
-	}
-  }
-
-  *ptr = (char) 0;
-  OLEDrgb_PutString(InstancePtr,buf);
-  
-  return;
-}
-
-
-/****************************************************************************/
-/**
 * Write a 32-bit number in Radix "radix" to LCD display
 *
 * Writes a 32-bit number to the LCD display starting at the current
@@ -518,14 +467,42 @@ void PMDIO_putnum(PmodOLEDrgb* InstancePtr, int32_t num, int32_t radix)
 * @return	*NONE*
 *
 *****************************************************************************/
-#define DP_BLINK_PERIOD 50000
-#define DP_1_MASK 0x2000000
-#define SWITCH123_MASK 0xD
-#define SWITCH23_MASK 0xC
-#define SW0_MASK	0x1
 
+/**
+ * @brief "myfunc" contains the code required to meet specifications for Project 1 (mostly). All valus are automatic and passed by reference to called functions.
+ *
+ * @param hue The hue value modified by the ENC rotary.
+ * @param sat The sat value modified by the left and right buttons.
+ * @param val The val value modified by the up and down buttons.
+ * @param digi1 The value displayed on Digit one of the lower SSEG bank.
+ * @param digi2 The value displayed on Digit two of the lower SSEG bank.
+ * @param digi3 The value displayed on Digit three of the lower SSEG bank.
+ * @param digi4 The value displayed on Digit four of the lower SSEG bank.
+ * @param dp_cnt The counter value controlling the blink rate of Decimal Point 1.
+ * @param shftamnt The shift amount used depending on sw[3:2] value which selects the RGBled driver signal (red, blue, or green) for Pulse Width Detection and NX4IO duty cycle calculations.
+ * @param NX4IO_duty_cycle The calculated duty cycle based on 8 bit values for R, G, and B. Depends on sw[3:2] value.
+ * @param switch_value The value of switches obtained from the BTNSW reg of the NX4IO core.
+ * @param last_sw The previous value of switches.
+ * @param state The retrieved state of the ENC Pmod.
+ * @param laststate The previous retrieved state of the ENC Pmod. Used for rotation detection.
+ * @param ticks The value of rotation ticks.
+ * @param lastticks The previous value of rotation ticks.
+ * @param pwdet_select The switch between Software and Hardware Pulse Width Detection selection based on sw[0] value.
+ * @param btn_state The value of the buttons.
+ * @param last_btn The previous value of the buttons.
+ * @param gpio_in_signal The single bit signal representing Green, Blue, or Red drive wire from NX4IO which drives the RGBLED1. Read from GPIO0 Determined by sw[3:2] value.
+ * @param brgb8 The 888 bit rgb duty cycle format based on Hue, Sat, and Val variables.
+ * @param oled_rgb_val The 565 rgb duty cycle format shifted for color matching in the OLEDrgb display.
+ * @param btn_changed Used as a conditional test. Directly represents/registers the value of the btns in the current state of the loop.
+ * @param sw_changed Used as a conditional test to see if the switch value changed from the previous loop.
+ * @param enc_changed Used as a conditional test to see if the ENC state changed from the previous loop.
+ * @param ticks_chanted Used as a conditional test to see if the rotation count changed from the previous loop.
+ * @param last_dc The previous value of the Software Detect Duty Cycle calculation.
+ * @param dc_changed Used as a conditional test to see if the Duty Cycle changed from the previous loop.
+ * @param hardpwdet_value The Duty Cycle Value calculated by the Hardware Pulse Width detection module. Read from GPIO1
+ * @param rgb_val The 16 bit 565 rgb format duty cycle value based on Hue, Sat, and Val variables.
+ */
 void myfunc(void){
-
 		// CoLoR WhEeL 
 		unsigned char 	hue 					= 0,
 						sat 					= 0,
@@ -539,21 +516,18 @@ void myfunc(void){
 		unsigned int 	dp_cnt 					= 0,
 						shftamnt				= 0,
 						NX4IO_duty_cycle		= 0,
-						rgb_state				= 0,
-						last_rgb_state			= 0,
 						switch_value 			= 0,
+						last_sw					= 0,
 						state					= 0,
 						laststate				= 0,
-						lastticks				= 0,
-						last_sw					= 0,
 						ticks 					= 0,
+						lastticks				= 0,
 						pwdet_select			= 0,
-						last_btn				= 0,
 						btn_state 				= 0,
+						last_btn				= 0,
 						gpio_in_signal 			= 0,
 						brgb8					= 0,
 						oled_rgb_val			= 0,
-						rgb_changed				= 0,
 						btn_changed				= 0,
 						sw_changed				= 0,
 						enc_changed				= 0,
@@ -563,7 +537,6 @@ void myfunc(void){
 
 	volatile u8			hardpwdet_value			= 0;
 
-
 	u16					rgb_val					= 0;
 
 
@@ -571,10 +544,11 @@ void myfunc(void){
 	// Initial State
 	// turn off all of the decimal points
 	initial_sseg_state();
-	// Turn off all leds excep those we care for.
-	NX4IO_setLEDs(NX4IO_getSwitches() & SWITCH123_MASK);
 
-	// get the previous state
+	// Turn off all leds excep those we care for.
+	NX4IO_setLEDs(NX4IO_getSwitches() & SWITCH023_MASK);
+
+	// Initial state of ENC pmod.
 	laststate = ENC_getState(&pmodENC_inst);
 	
 	while(1) {
@@ -583,7 +557,7 @@ void myfunc(void){
 
 		btn_changed =  NX4IO_getBtns();
 
-		sw_changed = last_sw != (switch_value = (NX4IO_getSwitches() & SWITCH123_MASK));
+		sw_changed = last_sw != (switch_value = (NX4IO_getSwitches() & SWITCH023_MASK));
 
 		enc_changed = laststate != (state = ENC_getState(&pmodENC_inst));
 
@@ -596,7 +570,7 @@ void myfunc(void){
 		// Outputs
 
 		if(enc_changed){	
-			if(ENC_buttonPressed(state) && !ENC_buttonPressed(laststate)/* ENC Button pressed */ ) break;
+			if(ENC_buttonPressed(state) && !ENC_buttonPressed(laststate)) /* ENC Button pressed */ break;
 
 			hue = (ticks % 255) & 0xFF;	// Update hue
 
@@ -606,14 +580,13 @@ void myfunc(void){
 			high_count = 0;
 			low_count = 0;
 
-			if((switch_value & SW0_MASK) != (last_sw & SW0_MASK)/* sw[0] changed */){
+			if((switch_value & SW0_MASK) != (last_sw & SW0_MASK)){ /* sw[0] changed */
 				pwdet_select = NX4IO_getSwitches() & SW0_MASK;	// Select PWDET hardware or software
 			}
 		}
 
-
 		if(btn_changed) 
-			button_scan(&val, &sat, &hue, &ticks, &state, &laststate);	// Adjust values according to button push.
+			button_scan(&val, &sat, &hue);	// Adjust values according to button push.
 
 		if(sw_changed || btn_changed || ticks_changed || dc_changed){
 
@@ -623,8 +596,6 @@ void myfunc(void){
 		}
 
 		if(sw_changed || btn_changed || ticks_changed || dc_changed){
-
-			hardpwdet_value = XGpio_DiscreteRead(&GPIOInst1, GPIO_1_INPUT_0_CHANNEL); 	// Read the GPIO1 port to obtain HWPWDET data.
 
 			calculate_dc(&NX4IO_duty_cycle, &digi1, &digi2, &digi3, &digi4, &pwdet_select, &hardpwdet_value);
 		}
@@ -649,13 +620,13 @@ void myfunc(void){
 		if(sw_changed) 
 			NX4IO_setLEDs(switch_value);	// Update LEDS
 
-		// ~Asynchronous
+		// Always
 
 		blink_dp1(&dp_cnt);		// Blink the 1st decimal point.
 
 		// Update current states
 
-		last_dc = dc;
+		last_dc = dc;	// Update the DC state
 
 		last_btn = btn_state;// Update button state
 
@@ -665,8 +636,6 @@ void myfunc(void){
 
 		lastticks = ticks;	// Update ticks
 
-		usleep(1000);
-
 	} // rotary button has been pressed - exit the loop
 	
 	return;
@@ -674,27 +643,10 @@ void myfunc(void){
 
 /**************************** INTERRUPT HANDLERS ******************************/
 
-/****************************************************************************/
 /**
-* Fixed interval timer interrupt handler
-*
-* Reads the GPIO port which reads back the hardware generated PWM wave for the RGB Leds
-*
-* @note
-* ECE 544 students - When you implement your software solution for pulse width detection in
-* Project 1 this could be a reasonable place to do that processing.
- *****************************************************************************/
-#define SW0_MASK 0x1
-
-/* global variables */
-// unsigned int gpio_in_reg 			= 0;
-// unsigned int high_count				= 0;
-// unsigned int low_count				= 0;
-// unsigned int count					= 0;
-// unsigned int dc						= 0;
-// unsigned int channel_mask			= 0;
-// unsigned int shftamnt				= 0;
-
+ * @brief FIT_Handler is used for Software Pulse Width Detection. It both counts the HIgh and low times, as well as blinks Decimal Point 1 periodically.
+ * 
+ */
 void FIT_Handler(void)
 {	
 	static int fit_count = 0;
@@ -702,13 +654,21 @@ void FIT_Handler(void)
 	// Read value
 	gpio_in = (XGpio_DiscreteRead(&GPIOInst0, GPIO_0_INPUT_0_CHANNEL) & channel_mask) >> shftamnt; 	// Read the GPIO for RGB PWM data.
 
-	// PWDet logic
-	if(gpio_in != gpio_in_reg){
-		high_count = hcount;
-		low_count = lcount;
-		if(gpio_in == 1)hcount = 1;
-		if(gpio_in == 0) lcount = 1;
+	if((gpio_in_reg == 0) && (gpio_in == 0)){	// Rising Edge
+		lcount++;
 	}
+	else if((gpio_in_reg == 0) && (gpio_in == 1)){	// Negative Edge
+		low_count = lcount;
+		lcount = 0;
+	}
+	else if((gpio_in_reg == 1) && (gpio_in == 0)){	// Negative Edge
+		high_count = hcount;
+		hcount = 0;
+	}
+	else if((gpio_in_reg == 1) && (gpio_in == 1)){	// Negative Edge
+		hcount++;
+	}	
+	
 
 	if(gpio_in == 1) hcount++;
 	if(gpio_in == 0) lcount++;
@@ -727,6 +687,11 @@ void FIT_Handler(void)
 
 }
 
+/**
+ * @brief blink_dp1 is responsible for blinking Decimal Point 1 at about once per second.
+ * 
+ * @param dp_cnt The active count which determines when to toggle the Decimal Point.
+ */
 void blink_dp1(unsigned int *dp_cnt){
 	// Decimal Point blink routine
 		if(*dp_cnt == DP_BLINK_PERIOD){
@@ -737,6 +702,10 @@ void blink_dp1(unsigned int *dp_cnt){
 		*dp_cnt = *dp_cnt + 1;
 }
 
+/**
+ * @brief This routine initializes the SSEG display at the start of the program.
+ * 
+ */
 void initial_sseg_state(void){
 	NX4IO_SSEG_setDecPt(SSEGHI, DIGIT7, false);
 	NX4IO_SSEG_setDecPt(SSEGHI, DIGIT6, false);
@@ -756,7 +725,15 @@ void initial_sseg_state(void){
 	NX4IO_SSEG_setDigit(SSEGLO, DIGIT4, 0x0);
 }
 
-void button_scan(unsigned char *val, unsigned char *sat, unsigned char *hue, unsigned int* ticks, unsigned int* state, unsigned int* laststate){
+/**
+ * @brief button_scan is called when a button press is detected to determine which button was pressed and alter the associated value (val, sat) based on which putton pressed.
+ * 
+ * @param val val is the "V" of HSV. Altered by up and down buttons.
+ * @param sat sat is the "S" of HSV. Altered by left and right buttons.
+ * @param hue hue is the "H" of HSV. Altered by
+ * 
+ */
+void button_scan(unsigned char *val, unsigned char *sat, unsigned char *hue){
 		// check BTNU and clear count if it's pressed
 		// update the count if it is not
 		if (NX4IO_isPressed(BTNU))
@@ -788,17 +765,22 @@ void button_scan(unsigned char *val, unsigned char *sat, unsigned char *hue, uns
 			*sat = *sat & 0xFF;
 			while(NX4IO_isPressed(BTNR));
 		}
-		else
-		{
-			// *ticks = *ticks + 5*(ENC_getRotation(*state, *laststate));
-		}
-		
+
 		// Guard the tick value.
 		if(*val > 255) *val = 255;
 		if(*sat > 255) *sat = 255;
 
 }
 
+/**
+ * @brief update_oled handles the writes to the OLEDrgb Pmod display. 
+ * 
+ * @param oled_rgb_val The passed value is the 565 format rgb value, but re-arranged in order to match the OLED display color to the RGB LED.
+ * @param hue The hue value written to the OLED display.
+ * @param sat The sat value written to the OLED display.
+ * @param val The val value written to the OLED display.
+ * @param rgb_val The non-rearranged 565 rgb value format used to match color between the rectangle, font, and RGB led.
+ */
 void update_oled(u16 *oled_rgb_val, unsigned char *hue, unsigned char *sat, unsigned char *val, u16 *rgb_val){
 		OLEDrgb_SetFontColor(&pmodOLEDrgb_inst, *oled_rgb_val); // Not correct args names
 		// Clear the screen
@@ -823,31 +805,56 @@ void update_oled(u16 *oled_rgb_val, unsigned char *hue, unsigned char *sat, unsi
 		OLEDrgb_DrawRectangle(&pmodOLEDrgb_inst, 48, 12, 80, 48, *rgb_val, TRUE, *rgb_val );
 }
 
+/**
+ * @brief update_sseg writes the digit values produced by the NX4IO duty cycle and Software or Hardware duty cycle detection. 
+ * 
+ * @param digi1 Value written to DIGIT1 of the SSEGLO register.
+ * @param digi2 Value written to DIGIT2 of the SSEGLO register.
+ * @param digi3 Value written to DIGIT3 of the SSEGLO register.
+ * @param digi4 Value written to DIGIT4 of the SSEGLO register.
+ */
 void update_sseg(	unsigned char *digi1, 
 					unsigned char *digi2, 
 					unsigned char *digi3, 
 					unsigned char *digi4){
-		// FInally write to SSEG:
-		NX4IO_SSEG_setDigit(SSEGLO, DIGIT1, *digi4);
-		NX4IO_SSEG_setDigit(SSEGLO, DIGIT2, *digi1);
-		NX4IO_SSEG_setDigit(SSEGLO, DIGIT3, *digi2);
-		NX4IO_SSEG_setDigit(SSEGLO, DIGIT4, *digi3);
+
+	// Write to SSEG. Ordering not 1:1 in the derived system.
+	NX4IO_SSEG_setDigit(SSEGLO, DIGIT1, *digi4);
+	NX4IO_SSEG_setDigit(SSEGLO, DIGIT2, *digi1);
+	NX4IO_SSEG_setDigit(SSEGLO, DIGIT3, *digi2);
+	NX4IO_SSEG_setDigit(SSEGLO, DIGIT4, *digi3);
 
 }
 
+/**
+ * @brief update_duty simply writes the NX4IO RGB led duty cycle suing the 565 rgb formatted value produced by OLEDrgb_HSVBuilder() function. Ensures all LEDs are always enabled, even if not driven.
+ * 
+ * @param rgb_val The duty cycle values written to the NX4IO RGBled driver registers. 565 rgb format.
+ */
 void update_duty(u16 rgb_val){
 
-		NX4IO_RGBLED_setDutyCycle(RGB1, ((rgb_val>>11) & 0x1F), ((rgb_val>>5) & 0x3F), (rgb_val & 0x1F));
-		NX4IO_RGBLED_setChnlEn(RGB1, true, true, true);
+	NX4IO_RGBLED_setDutyCycle(RGB1, ((rgb_val>>11) & 0x1F), ((rgb_val>>5) & 0x3F), (rgb_val & 0x1F));
+	NX4IO_RGBLED_setChnlEn(RGB1, true, true, true);
 }
 
+/**
+ * @brief calculate_dc is more of a multiplexer for the software and hardware pwdetect values than the name indicates. Does calculations for the single digit values to be displayed on the SSEG using the HW (hardpwdet_value) and SW (dc) duty cycle values.
+ * 
+ * @param NX4IO_duty_cycle The calculated duty cycle based on the 8-bit R, G, and B values calculated from the Hue, Sat, and Val variables. Dependent on switches[3:2] values.
+ * @param digi1 The SSEG Digit 1 value to be displayed in the proper NX4IO_SSEG_SetDigit() format.
+ * @param digi2 The SSEG Digit 2 value to be displayed in the proper NX4IO_SSEG_SetDigit() format.
+ * @param digi3 The SSEG Digit 3 value to be displayed in the proper NX4IO_SSEG_SetDigit() format.
+ * @param digi4 The SSEG Digit 4 value to be displayed in the proper NX4IO_SSEG_SetDigit() format.
+ * @param pwdet_select The selector based on the Switch[0] value. Determines which Digit 1 and Digit 2 values to display from hardware or software duty cycle calculations.
+ * @param hardpwdet_value The value read from the GPIO1 input register. The calculated duty cycle from pwdet.v module in 8 bit format. 
+ */
 void calculate_dc(	unsigned int *NX4IO_duty_cycle, 
 				unsigned char *digi1, 
 				unsigned char *digi2,
 				unsigned char *digi3,
 				unsigned char *digi4,
 				unsigned int *pwdet_select,
-				unsigned int *hardpwdet_value
+				volatile u8  *hardpwdet_value
 				){
 
 
@@ -863,6 +870,8 @@ void calculate_dc(	unsigned int *NX4IO_duty_cycle,
 
 	// HW-SW switch.
 	if(*pwdet_select){
+
+		*hardpwdet_value = XGpio_DiscreteRead(&GPIOInst1, GPIO_1_INPUT_0_CHANNEL); 	// Read the GPIO1 port to obtain HWPWDET data.
 		
 		// Hardware detect
 		*digi4 = *hardpwdet_value / 10;
@@ -878,10 +887,16 @@ void calculate_dc(	unsigned int *NX4IO_duty_cycle,
 	if(*digi2 > 10) *digi2 = 0x9;
 }
 
+/**
+ * @brief channel_select is called to provide filter variables for extracting 1 bit signals from the concatenated R, G, and B signals driving the RGBled.
+ * 
+ * @param switch_value The value of the switch bank.
+ * @param NX4IO_duty_cycle The calculated duty cycle based on the 24-bit value "brgbj8" returned by my_hsv_builder(), passed into *rbg_val used in this function. 
+ * @param rgb_val The brgb8 value produced by my_hsv_builder which represents the duty cycle for each Red, Blue, and Green 
+ */
 void channel_select(unsigned int *switch_value, unsigned int *NX4IO_duty_cycle, unsigned int *rgb_val ){
-		// Software PWDET
-		// Display the PWDET value on the SSEG from channel selected on LEDs[3:2].
-		// assign gpio_in = {5'b00000, w_RGB1_Red, w_RGB1_Blue, w_RGB1_Green}; //wire	[7:0]	    gpio_in;
+		// Extracts the calculated duty cycle based on the switch[3:2] value.
+		// Provides mask and shift values for the RGBled driver signals from gpio_in based on switch[3:2] values.
 		switch((*switch_value & SWITCH23_MASK) >> 2){
 			case 0: channel_mask = 0x4; shftamnt = 2; *NX4IO_duty_cycle = ((((*rgb_val>>16) & 0xFF)*100)/255); break;	//Red signal
 			case 1: channel_mask = 0x1; shftamnt = 0; *NX4IO_duty_cycle = ((((*rgb_val>>8) & 0xFF)*100)/255); break;	// Green Signal
@@ -890,7 +905,14 @@ void channel_select(unsigned int *switch_value, unsigned int *NX4IO_duty_cycle, 
 		}
 }
 
-
+/**
+ * @brief my_hsv_builder is a rip from the PMODOLEDrgb Driver code, repurposed to return 8 bit RGB values.
+ * 
+ * @param hue The hue value, passed by reference as an 8 bit value.
+ * @param sat The saturation value, passed by reference as an 8 bit value. 
+ * @param val The value, passed by reference as an 8 bit value.
+ * @return int is returned as a 24 bit value consisting of the concatenated Red, Green, and Blue calculated values of Duty Cycle per the hue, sat, and val values.
+ */
 int my_hsv_builder(unsigned char *hue, unsigned char *sat, unsigned char * val){
 	
 	u8 region, remain, p, q, t;
@@ -936,9 +958,14 @@ int my_hsv_builder(unsigned char *hue, unsigned char *sat, unsigned char * val){
 	return ( (R<<16) | (G<<8) | B );
 }
 
+/**
+ * @brief swdetect is called when the Software Pulse Width Detection Duty Cycle is calculated.
+ * 
+ */
 void swdetect(void){
 
 	int scalar = 0;
+	int period = 0;
 
 	switch(channel_mask){
 			case 0x4:  scalar = 17; break;	//Red signal
@@ -947,7 +974,39 @@ void swdetect(void){
 			default: scalar = 0; break;
 		}
 
-	dc = (high_count * 100 * scalar)/(high_count + low_count);
+	// Period of the measured signal
+	period = high_count + low_count;
+	
+
+	// The formula for calculating Duty Cycle. High time divided by the period.
+	dc = ((high_count * 100*scalar)/(low_count + high_count));
 	if(dc > 99) dc = 99;
+
+}
+
+/**
+ * @brief exit_func is the last function to run once the ENC button is pressed, ending the loop operation.
+ * 
+ */
+void exit_func(void){
+	NX4IO_SSEG_setDecPt(SSEGHI, DIGIT7, false);
+	NX4IO_SSEG_setDecPt(SSEGHI, DIGIT6, false);
+	NX4IO_SSEG_setDecPt(SSEGHI, DIGIT5, false);
+	NX4IO_SSEG_setDecPt(SSEGHI, DIGIT4, false);
+	NX4IO_SSEG_setDecPt(SSEGLO, DIGIT3, false);
+	NX4IO_SSEG_setDecPt(SSEGLO, DIGIT2, false);
+	NX4IO_SSEG_setDecPt(SSEGLO, DIGIT1, false);
+	NX4IO_SSEG_setDecPt(SSEGLO, DIGIT0, false);
+	NX4IO_SSEG_setDigit(SSEGHI, DIGIT1, 0x1E);
+	NX4IO_SSEG_setDigit(SSEGHI, DIGIT4, 0x1E);
+	NX4IO_SSEG_setDigit(SSEGHI, DIGIT3, 0x1E);
+	NX4IO_SSEG_setDigit(SSEGHI, DIGIT2, 0x1E);
+	NX4IO_SSEG_setDigit(SSEGLO, DIGIT1, 0x1E);
+	NX4IO_SSEG_setDigit(SSEGLO, DIGIT2, 0x1E);
+	NX4IO_SSEG_setDigit(SSEGLO, DIGIT3, 0x1E);
+	NX4IO_SSEG_setDigit(SSEGLO, DIGIT4, 0x1E);
+
+	update_duty(0);	// Update RGBled
+
 
 }

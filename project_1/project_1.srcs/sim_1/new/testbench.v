@@ -50,18 +50,14 @@ wire [7:0] pdc;
 
 // Simulated Inputs to DUT.
 reg Clock, Reset;
+wire wClock;
 reg [15:0] sw;
 reg [7:0] pwm;
 
-
-// DUTs
-//ff_reg ff0(Clock, d, q);
-//ff_reg ff1(Clock, q, q1);
-//counter counter0(Clock, Reset, q1, count0);
-//counter counter1(Clock, Reset, 1'b1, count1);
+assign wClock = Clock;
 
 //    pwdet detector1 (Clock, Reset, sw, pwm, pdc);
-        pwdet detector1 (Clock, Reset, sw, pwm, pdc);
+        pwdet detector1 (wClock, Reset, sw, pwm, pdc);
 
 // Establish monitor block
 initial
